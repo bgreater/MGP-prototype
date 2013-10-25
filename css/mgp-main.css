@@ -1782,6 +1782,7 @@ fieldset[disabled] .btn-link:focus {
   }
   .navbar .nav-collapse {
     width: 100%;
+    *zoom: 1;
   }
   .navbar .nav-collapse:before,
   .navbar .nav-collapse:after {
@@ -1791,6 +1792,15 @@ fieldset[disabled] .btn-link:focus {
     display: table;
     /* 2 */
   
+  }
+  .navbar .nav-collapse:after {
+    clear: both;
+  }
+  .navbar .nav-collapse:before,
+  .navbar .nav-collapse:after {
+    display: table;
+    content: "";
+    line-height: 0;
   }
   .navbar .nav-collapse:after {
     clear: both;
@@ -1821,6 +1831,7 @@ fieldset[disabled] .btn-link:focus {
   float: none;
   margin-left: 0;
   width: auto;
+  *zoom: 1;
 }
 .select.select-block:before,
 .select.select-block:after {
@@ -1830,6 +1841,15 @@ fieldset[disabled] .btn-link:focus {
   display: table;
   /* 2 */
 
+}
+.select.select-block:after {
+  clear: both;
+}
+.select.select-block:before,
+.select.select-block:after {
+  display: table;
+  content: "";
+  line-height: 0;
 }
 .select.select-block:after {
   clear: both;
@@ -3831,6 +3851,7 @@ fieldset[disabled] .input-group .input-group-btn:first-child .btn-default.active
   color: rgba(52, 73, 94, 0.75);
   padding: 6px 15px 8px;
   text-decoration: none;
+  *zoom: 1;
   -webkit-transition: background-color 0.25s;
   transition: background-color 0.25s;
 }
@@ -3842,6 +3863,15 @@ fieldset[disabled] .input-group .input-group-btn:first-child .btn-default.active
   display: table;
   /* 2 */
 
+}
+.dropdown-menu li > a:after {
+  clear: both;
+}
+.dropdown-menu li > a:before,
+.dropdown-menu li > a:after {
+  display: table;
+  content: "";
+  line-height: 0;
 }
 .dropdown-menu li > a:after {
   clear: both;
@@ -4301,6 +4331,10 @@ a.list-group-item.active > .badge,
   font-size: 14px;
   line-height: 1.286;
 }
+.bottom-menu .bottom-links,
+.bottom-menu .bottom-icons {
+  *zoom: 1;
+}
 .bottom-menu .bottom-links:before,
 .bottom-menu .bottom-icons:before,
 .bottom-menu .bottom-links:after,
@@ -4311,6 +4345,18 @@ a.list-group-item.active > .badge,
   display: table;
   /* 2 */
 
+}
+.bottom-menu .bottom-links:after,
+.bottom-menu .bottom-icons:after {
+  clear: both;
+}
+.bottom-menu .bottom-links:before,
+.bottom-menu .bottom-icons:before,
+.bottom-menu .bottom-links:after,
+.bottom-menu .bottom-icons:after {
+  display: table;
+  content: "";
+  line-height: 0;
 }
 .bottom-menu .bottom-links:after,
 .bottom-menu .bottom-icons:after {
@@ -4683,6 +4729,7 @@ a.list-group-item.active > .badge,
   float: left;
   margin: 0 20px 20px 0;
   -webkit-backface-visibility: hidden;
+  *zoom: 1;
 }
 .iconbar:before,
 .iconbar:after {
@@ -4692,6 +4739,15 @@ a.list-group-item.active > .badge,
   display: table;
   /* 2 */
 
+}
+.iconbar:after {
+  clear: both;
+}
+.iconbar:before,
+.iconbar:after {
+  display: table;
+  content: "";
+  line-height: 0;
 }
 .iconbar:after {
   clear: both;
@@ -5562,6 +5618,78 @@ a.list-group-item.active > .badge,
 .mal {
   margin-left: 20px;
 }
+/*!
+ * Yamm!
+ * Yet another megamenu for Bootstrap
+ * http://geedmo.github.com/yamm
+ *
+ * https://github.com/geedmo
+ */
+.yamm .nav,
+.yamm .dropup,
+.yamm .dropdown,
+.yamm .collapse {
+  position: static;
+}
+.yamm .navbar-inner,
+.yamm .container {
+  position: relative;
+}
+.yamm .dropdown-menu {
+  left: auto;
+}
+.yamm .dropdown-menu > li {
+  display: block;
+}
+.yamm .nav.pull-right .dropdown-menu {
+  right: 0;
+}
+.yamm .yamm-content {
+  padding: 20px 30px;
+  *zoom: 1;
+}
+.yamm .yamm-content:before,
+.yamm .yamm-content:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+.yamm .yamm-content:after {
+  clear: both;
+}
+.yamm .yamm-content:before,
+.yamm .yamm-content:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.yamm .yamm-content:after {
+  clear: both;
+}
+.yamm.navbar .nav > li > .dropdown-menu:after,
+.yamm.navbar .nav > li > .dropdown-menu:before {
+  display: none;
+}
+.yamm .dropdown.yamm-fullwidth .dropdown-menu {
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+@media (max-width: 969px) {
+  .yamm .dropdown.yamm-fullwidth .dropdown-menu {
+    width: auto;
+  }
+  .yamm .yamm-content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .yamm .dropdown-menu > li > ul {
+    display: block;
+  }
+}
 .navbar-brand {
   width: 117px;
   height: 60px;
@@ -5592,6 +5720,7 @@ a.list-group-item.active > .badge,
   margin: 0 auto;
   padding: 0 20px 50px;
   width: 940px;
+  *zoom: 1;
 }
 .mgp-row:before,
 .mgp-row:after {
@@ -5601,6 +5730,15 @@ a.list-group-item.active > .badge,
   display: table;
   /* 2 */
 
+}
+.mgp-row:after {
+  clear: both;
+}
+.mgp-row:before,
+.mgp-row:after {
+  display: table;
+  content: "";
+  line-height: 0;
 }
 .mgp-row:after {
   clear: both;
@@ -5663,6 +5801,7 @@ a.list-group-item.active > .badge,
 .mgp-content-wide {
   clear: both;
   margin: 0 20px;
+  *zoom: 1;
 }
 .mgp-content-wide:before,
 .mgp-content-wide:after {
@@ -5672,6 +5811,15 @@ a.list-group-item.active > .badge,
   display: table;
   /* 2 */
 
+}
+.mgp-content-wide:after {
+  clear: both;
+}
+.mgp-content-wide:before,
+.mgp-content-wide:after {
+  display: table;
+  content: "";
+  line-height: 0;
 }
 .mgp-content-wide:after {
   clear: both;
