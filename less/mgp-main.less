@@ -7,15 +7,24 @@
 @import "yamm";
 
 
-// Nav
-.navbar-brand {
-  width:117px; 
-  height:60px;
-  background:url(../images/mgp-logo-nav.png) center no-repeat; 
+// Nav tweaks
+.main-nav {
+  .navbar-brand {
+    width:117px; 
+    height:50px;
+    background:url(../images/mgp-logo-nav.png) center no-repeat; 
+    border: none;
+  }
+  .nav {
+    li > a {
+      border-bottom: none;
+    }
+  }
 }
 .navbar-square-border {
   border-radius: 0px;
 }
+.navbar-inverse .nav > li > a
 
 .prettyprint {
   overflow: auto;

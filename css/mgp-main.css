@@ -5690,18 +5690,22 @@ a.list-group-item.active > .badge,
     display: block;
   }
 }
-.navbar-brand {
+.main-nav .navbar-brand {
   width: 117px;
-  height: 60px;
+  height: 50px;
   background: url(../images/mgp-logo-nav.png) center no-repeat;
+  border: none;
+}
+.main-nav .nav li > a {
+  border-bottom: none;
 }
 .navbar-square-border {
   border-radius: 0px;
 }
-.prettyprint {
+.navbar-inverse .nav > li > a .prettyprint {
   overflow: auto;
 }
-.prettyprint.linenums {
+.navbar-inverse .nav > li > a .prettyprint.linenums {
   overflow: visible;
   white-space: pre;
   white-space: pre-wrap;
