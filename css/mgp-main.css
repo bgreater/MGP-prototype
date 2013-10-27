@@ -5702,10 +5702,10 @@ a.list-group-item.active > .badge,
 .navbar-square-border {
   border-radius: 0px;
 }
-.navbar-inverse .nav > li > a .prettyprint {
+.prettyprint {
   overflow: auto;
 }
-.navbar-inverse .nav > li > a .prettyprint.linenums {
+.prettyprint.linenums {
   overflow: visible;
   white-space: pre;
   white-space: pre-wrap;
