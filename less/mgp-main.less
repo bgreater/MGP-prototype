@@ -54,6 +54,15 @@
   }
 }
 
+// Misc
+.pad {
+  margin-bottom: ceil(@font-size-base * 2);
+  margin-top: ceil(@font-size-base * 2);
+  & + .pad {
+    margin-top: 0;
+  }
+}
+
 // For demo purposes only
 .mgp-headline {
   color: @brand-secondary;
