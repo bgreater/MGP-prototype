@@ -5690,6 +5690,9 @@ a.list-group-item.active > .badge,
     display: block;
   }
 }
+.header-banner {
+  min-height: 50px;
+}
 .main-nav .navbar-brand {
   width: 117px;
   height: 50px;
