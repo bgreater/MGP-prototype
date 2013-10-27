@@ -30,18 +30,13 @@
 
 // 
 .cover-img {
-  min-height: 200px; 
-  @media (max-width: 767px) { 
-    & {
-      min-height: 200px; 
-    }
-  }
   &.Beverage.Alcohol .container { 
     background-image: url(../images/section-headers/alcohol-beverage.jpg);
   }
   .container {
     position: relative;
     background: black no-repeat right;
+    min-height: 200px; 
     .background-size(~"auto, 100%");
     h2 {
       margin-top: 1.5em;
@@ -54,6 +49,11 @@
       border-left: 20px solid transparent;
       border-right: 20px solid transparent;
       border-bottom: 20px solid @inverse;
+    }
+    @media (max-width: 767px) { 
+      & {
+        min-height: 200px; 
+      }
     }
   }
 }
