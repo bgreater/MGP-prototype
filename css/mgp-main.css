@@ -5859,16 +5859,20 @@ a.list-group-item.active > .badge,
 }
 .cover-img .container:before {
   position: absolute;
-  bottom: 0;
+  bottom: -40px;
+  left: -20px;
   content: '';
   border-left: 40px solid transparent;
   border-right: 40px solid transparent;
-  border-bottom: 40px solid #ffffff;
+  border-top: 40px solid black;
 }
 @media (max-width: 767px) {
   .cover-img .container {
     min-height: 200px;
   }
+}
+.content {
+  padding: 5em 0;
 }
 .prettyprint {
   overflow: auto;
