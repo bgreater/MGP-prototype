@@ -5845,10 +5845,31 @@ a.list-group-item.active > .badge,
   position: relative;
   background: #000000 no-repeat right;
   min-height: 200px;
-  overflow: hidden;
+  *zoom: 1;
   -webkit-background-size: auto 100%;
   -moz-background-size: auto 100%;
   background-size: auto 100%;
+}
+.cover-img .container:before,
+.cover-img .container:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+.cover-img .container:after {
+  clear: both;
+}
+.cover-img .container:before,
+.cover-img .container:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.cover-img .container:after {
+  clear: both;
 }
 .cover-img .container.Beverage.Alcohol {
   background-image: url(../images/section-headers/alcohol-beverage.jpg);
