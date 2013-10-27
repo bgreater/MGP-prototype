@@ -5838,16 +5838,20 @@ a.list-group-item.active > .badge,
 .navbar-square-border {
   border-radius: 0px;
 }
-.cover-img.Beverage.Alcohol .container {
-  background-image: url(../images/section-headers/alcohol-beverage.jpg);
+.cover-img {
+  background-color: black;
 }
 .cover-img .container {
   position: relative;
   background: #000000 no-repeat right;
   min-height: 200px;
+  overflow: hidden;
   -webkit-background-size: auto 100%;
   -moz-background-size: auto 100%;
   background-size: auto 100%;
+}
+.cover-img .container.Beverage.Alcohol {
+  background-image: url(../images/section-headers/alcohol-beverage.jpg);
 }
 .cover-img .container h2 {
   margin-top: 1.5em;

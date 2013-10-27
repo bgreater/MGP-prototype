@@ -28,16 +28,18 @@
   border-radius: 0px;
 }
 
-// 
+// Product Page
 .cover-img {
-  &.Beverage.Alcohol .container { 
-    background-image: url(../images/section-headers/alcohol-beverage.jpg);
-  }
+  background-color: black;
   .container {
     position: relative;
     background: black no-repeat right;
     min-height: 200px; 
+    overflow: hidden;
     .background-size(~"auto, 100%");
+    &.Beverage.Alcohol {
+      background-image: url(../images/section-headers/alcohol-beverage.jpg);
+    }
     h2 {
       margin-top: 1.5em;
       color: @inverse;
