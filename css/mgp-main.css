@@ -5861,9 +5861,9 @@ a.list-group-item.active > .badge,
   position: absolute;
   bottom: 0;
   content: '';
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-bottom: 20px solid #ffffff;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 40px solid #ffffff;
 }
 @media (max-width: 767px) {
   .cover-img .container {
