@@ -31,24 +31,29 @@
 // 
 .cover-img {
   min-height: 200px; 
-  background: black no-repeat right;
-  .background-size(~"auto, 100%");
-  &.Beverage.Alcohol { 
-    background-image: url(../images/section-headers/alcohol-beverage.jpg);
-  }
   @media (max-width: 767px) { 
     & {
       min-height: 200px; 
     }
   }
+  &.Beverage.Alcohol .container { 
+    background-image: url(../images/section-headers/alcohol-beverage.jpg);
+  }
   .container {
-    display: table;
-    width: 100%;
-    height: 100%;
+    position: relative;
+    background: black no-repeat right;
+    .background-size(~"auto, 100%");
     h2 {
-      display: table-cell;
-      vertical-align: middle;
+      margin-top: 1.5em;
       color: @inverse;
+    }
+    &:before {
+      position: absolute;
+      bottom: 0;
+      content: '';
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 20px solid @inverse;
     }
   }
 }

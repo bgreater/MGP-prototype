@@ -5840,28 +5840,33 @@ a.list-group-item.active > .badge,
 }
 .cover-img {
   min-height: 200px;
-  background: #000000 no-repeat right;
-  -webkit-background-size: auto 100%;
-  -moz-background-size: auto 100%;
-  background-size: auto 100%;
-}
-.cover-img.Beverage.Alcohol {
-  background-image: url(../images/section-headers/alcohol-beverage.jpg);
 }
 @media (max-width: 767px) {
   .cover-img {
     min-height: 200px;
   }
 }
+.cover-img.Beverage.Alcohol .container {
+  background-image: url(../images/section-headers/alcohol-beverage.jpg);
+}
 .cover-img .container {
-  display: table;
-  width: 100%;
-  height: 100%;
+  position: relative;
+  background: #000000 no-repeat right;
+  -webkit-background-size: auto 100%;
+  -moz-background-size: auto 100%;
+  background-size: auto 100%;
 }
 .cover-img .container h2 {
-  display: table-cell;
-  vertical-align: middle;
+  margin-top: 1.5em;
   color: #ffffff;
+}
+.cover-img .container:before {
+  position: absolute;
+  bottom: 0;
+  content: '';
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid #ffffff;
 }
 .prettyprint {
   overflow: auto;
