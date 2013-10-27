@@ -46,12 +46,12 @@
     }
     &:before {
       position: absolute;
-      bottom: -40px;
+      bottom: 0px;
       left: -20px;
       content: '';
       border-left: 40px solid transparent;
       border-right: 40px solid transparent;
-      border-top: 40px solid black;
+      border-bottom: 40px solid @inverse;
     }
     @media (max-width: 767px) { 
       & {
@@ -60,8 +60,8 @@
     }
   }
 }
-.content {
-  padding: 5em 0;
+.content, .sidebar {
+  padding: 4em 0;
 }
 
 .prettyprint {
