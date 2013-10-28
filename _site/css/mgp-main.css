@@ -5757,17 +5757,26 @@ a.list-group-item.active > .badge,
 .content {
   padding: 4em 0;
 }
+.content figure {
+  display: block;
+  float: none;
+  text-align: center;
+}
+.content figure img {
+  max-width: 100%;
+}
+.content figure figcaption {
+  color: #bdc3c7;
+  font-size: 90%;
+}
 @media (min-width: 768px) {
   .content {
     padding-right: 2em;
   }
   .content figure {
     float: left;
-    margin: 0 1em 1em 0;
+    margin: 0 2em 1em 0;
   }
-}
-.content figure img {
-  max-width: 100%;
 }
 .sidebar {
   color: #456020;
