@@ -5,24 +5,169 @@
 // Loading Flat UI main
 @import "flat-ui";
 
-// Nav
-.navbar-brand {
-  width:117px; 
-  height:60px;
-  background:url(../images/mgp-logo-nav.png) center no-repeat; 
+
+// Nav tweaks
+.header-banner { 
+  min-height: 50px;
+}
+.main-nav {
+  .navbar-brand {
+    width:117px; 
+    height:50px;
+    background:url(../images/mgp-logo-nav.png) center no-repeat; 
+    border: none;
+  }
+  .nav {
+    li > a {
+      border-bottom: none;
+    }
+  }
 }
 .navbar-square-border {
   border-radius: 0px;
 }
+.bottom-menu {
+  background-color: @navbar-bottom-color;
+  color: white;
+}
 
-.prettyprint {
-  overflow: auto;
-  
-  &.linenums {
-    overflow: visible;
-    white-space: pre;
-    white-space: pre-wrap;
-    word-wrap: break-word;
+// Product Page
+.cover-img {
+  background-color: black;
+  .container {
+    position: relative;
+    background: black no-repeat right;
+    min-height: 200px; 
+    padding-top: 1px;
+    .background-size(~"auto, 100%");
+    &.Beverage.Alcohol {
+      background-image: url(../images/section-headers/alcohol-beverage.jpg);
+    }
+    h2 {
+      margin-top: 1.5em;
+      color: @inverse;
+    }
+    h6 {
+      color: @mgpLightGreen;
+    }
+    &:before {
+      position: absolute;
+      bottom: -40px;
+      left: -20px;
+      content: '';
+      border-left: 40px solid transparent;
+      border-right: 40px solid transparent;
+      border-top: 40px solid black;
+    }
+    @media (max-width: @screen-sm-max) { 
+      & {
+        min-height: 200px; 
+      }
+    }
+  }
+}
+.content {
+  padding: 4em 0;
+  figure {
+    display: block;
+    float: none;
+    text-align: center;
+    img {
+      max-width: 100%;
+    }
+    figcaption {
+      color: @gray-light;
+      font-size: 90%;
+    }
+  }
+  @media (min-width: @screen-sm-min) { 
+    & {
+      padding-right: 2em;
+    }
+    figure {
+      float: left;
+      margin: 0 2em 1em 0;
+    }
+  }
+}
+
+// Sidebar
+.sidebar {
+  color: @brand-primary;
+  padding: 30px;
+  text-shadow: none;
+  background-color: mix(@brand-warning, @alert-bg, 3%);
+  border: 2px solid mix(@brand-warning, @alert-border, 3%);
+  font-size: floor(@component-font-size-base * 1.067); // ~16px
+  line-height: 1.625; // ~26px
+  border-radius: @border-radius-large;
+  .title {
+    margin: -55px 0 0 0;
+    text-align: center;
+    h5 {
+      display: inline-block; 
+      border-right: 2px solid mix(@brand-warning, @alert-border, 3%);
+      border-left: 2px solid mix(@brand-warning, @alert-border, 3%);
+      background-color: white;
+      padding: 0.25em 0.5em;
+      margin: 0;
+      font-size: 200%;
+    }
+  }
+  @media (min-width: @screen-sm-min) { 
+    & {
+      margin: 4em 0 0; 
+    }
+  }
+  *:last-child {
+    margin-bottom: 0;
+  }
+  .right {
+    float: right;
+  }
+  .video {
+    position: relative;
+    img { height: auto; width: 100%; }
+    .play {
+      position: absolute;
+      top: 50%;
+      left: 50%; 
+      margin: -20px 0 0 -20px; 
+      font-size: 40px;
+      color: white;
+    }
+  }
+}
+
+// responsive video
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  font-family: @font-family-alt;
+}
+
+// Misc
+.pad {
+  margin-bottom: ceil(@font-size-base * 2);
+  margin-top: ceil(@font-size-base * 2);
+  & + .pad {
+    margin-top: 0;
+  }
+  &:first-child {
+    margin-top: 0;
   }
 }
 
@@ -200,7 +345,7 @@
     width: 32px;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: @screen-xs-max) {
     & {
       > span {
         margin-left: 16px;
@@ -230,7 +375,7 @@
 	.visible-lg {
 		display: inline !important;
 		
-		@media (max-width: 767px) {
+		@media (max-width: @screen-sm-max) {
 			& {
 				display: none !important;
 			}
@@ -273,7 +418,7 @@
   .flat {
 	  width: 300px;
   }
-  @media (max-width: 767px) { 
+  @media (max-width: @screen-sm-max) { 
 	  .flat {
 		  width: 100%;
 	  }
@@ -358,7 +503,7 @@
 //
 // Responsive: Landscape phone to desktop/tablet
 // --------------------------------------------------
-@media (max-width: 767px) {
+@media (max-width: @screen-sm-max) {
   .mgp-row {
     margin-bottom: 0;
     margin-left: 0;
@@ -410,7 +555,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: @screen-xs-max) {
 	.mgp-illustrations .mgp-content-wide > div {
 		margin-left: 23px;
 	}
