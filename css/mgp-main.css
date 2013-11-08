@@ -5733,6 +5733,9 @@ a.list-group-item.active > .badge,
 .cover-img .container.Beverage.Alcohol {
   background-image: url(../images/section-headers/alcohol-beverage.jpg);
 }
+.cover-img .container.Bakery.Products {
+  background-image: url(../images/section-headers/food-bakery-product.jpg);
+}
 .cover-img .container h2 {
   margin-top: 1.5em;
   color: #ffffff;
