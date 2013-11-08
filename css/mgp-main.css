@@ -5759,7 +5759,7 @@ a.list-group-item.active > .badge,
     min-height: 200px;
   }
 }
-@media (min-width: 480px) {
+@media (max-width: 480px) {
   .cover-img .container {
     background-position-x: 0%;
   }
