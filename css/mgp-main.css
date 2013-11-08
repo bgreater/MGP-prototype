@@ -1582,8 +1582,6 @@ fieldset[disabled] .btn-link:focus {
   height: 2px;
 }
 .navbar.navbar-inverse .navbar-form {
-  border-left: 2px solid #3b521b;
-  border-bottom: 2px solid #3b521b;
   padding: 8px 5px 8px 23px;
 }
 .navbar.navbar-inverse .navbar-form .input-group-btn .btn {
@@ -5721,6 +5719,22 @@ a.list-group-item.active > .badge,
 .bottom-menu {
   background-color: #34495e;
   color: white;
+}
+@media (max-width: 768px) {
+  /* fixes extra long sub-navs, brings them all li's inline */
+  .navbar .nav > li > ul > li > ul {
+    float: left;
+    width: 90%;
+  }
+  .navbar .nav > li > ul {
+    clear: both;
+  }
+  .navbar .nav > li > ul > li > ul > li {
+    float: left;
+    clear: none;
+    padding: 0;
+    margin: -5px 0;
+  }
 }
 .cover-img {
   background-color: black;
