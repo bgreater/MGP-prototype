@@ -5756,6 +5756,10 @@ a.list-group-item.active > .badge,
 @media (max-width: 991px) {
   .cover-img .container {
     min-height: 200px;
+  }
+}
+@media (min-width: 480px) {
+  .cover-img .container {
     background-position-x: 0%;
   }
 }
