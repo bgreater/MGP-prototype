@@ -1672,7 +1672,7 @@ fieldset[disabled] .btn-link:focus {
   bottom: 80%;
   top: auto;
 }
-@media (max-width: 979px) {
+@media (max-width: 768px) {
   .navbar.navbar-inverse .navbar-brand {
     border: none;
     padding-top: 11px;
