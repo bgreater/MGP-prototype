@@ -693,11 +693,18 @@ fieldset[disabled] .btn {
   opacity: 0.7;
   filter: alpha(opacity=70);
 }
+.btn.left {
+  text-align: left;
+}
+.btn.right {
+  text-align: right;
+}
 .btn > [class^="fui-"] {
   margin: 0 1px;
   position: relative;
   line-height: 1;
   top: 1px;
+  padding: 0 5px;
 }
 .btn-xs.btn > [class^="fui-"] {
   font-size: 11px;
@@ -1575,8 +1582,6 @@ fieldset[disabled] .btn-link:focus {
   height: 2px;
 }
 .navbar.navbar-inverse .navbar-form {
-  border-left: 2px solid #3b521b;
-  border-bottom: 2px solid #3b521b;
   padding: 8px 5px 8px 23px;
 }
 .navbar.navbar-inverse .navbar-form .input-group-btn .btn {
@@ -1665,173 +1670,169 @@ fieldset[disabled] .btn-link:focus {
   bottom: 80%;
   top: auto;
 }
-/*
-@media (max-width: 979px) {
-  .navbar {
-    &.navbar-inverse {
-      .navbar-brand {
-        border: none;
-        padding-top: 11px;
-        padding-bottom: 13px;
-      }
-      .nav {
-      	margin-left: 0;
-      	margin-right: 0;
-      	
-        > li {
-          &.active {
-            > a,
-            > a:hover,
-            > a:focus {
-              background-color: @brand-secondary;
-            }
-          }
-          > a,
-          > a:hover {
-            background: none;
-            border: none;
-          }
-          ul li a {
-            color: @inverse;
-          }
-        }
-      }
-      .navbar-form {
-        border: none;
-        padding-right: 20px;
-        padding-left: 20px !important;
-        max-width: none;
-      }
-      a,
-      .navbar-collapse .nav > li > a,
-      .navbar-collapse li.dropdown .dropdown-menu a {
-        color: @inverse;
-        border-radius: 0;
-
-        &:hover,
-        &:focus {
-          color: @inverse;
-        }
-      }     
-    }
-    .navbar-brand {
-      padding-left: 20px;
-      float: none;
-    }
-    .btn-navbar {
-	    float: right;
-	    display: block;
-    }
-    .navbar-collapse {
-    	padding: 0;
-    }
-    .navbar-form {
-	    max-width: none;
-	    padding: 20px 20px 19px;
-    }
-    .nav {
-    	float: none !important;
-    	display: block;
-    	margin-bottom: 10px;  
-    	margin-right: 0;
-    	margin-left: 0;  	
-    	
-      > li,
-      > li.dropdown {
-        &:hover {
-          > ul,
-          .dropdown-menu {
-            height: auto;
-            margin-left: 30px;
-
-            li:hover {
-              a {
-                background-color: transparent;
-                color: @brand-secondary;
-              }
-              ul {
-                height: auto;
-                margin-left: 20px;
-              }
-            }
-          }
-        }
-        > a,
-        > a:hover {
-          background: none;
-          padding: 7px 20px;
-        }
-        ul {
-          background: none;
-          height: 0;
-          padding: 0;
-          position: static;
-          width: auto;
-
-          &:before,
-          &:after {
-            display: none;
-          }
-          li {
-            background: none;
-
-            a {
-              color: @brand-primary;
-
-              &:hover,
-              &:focus {
-                color: @brand-secondary;
-              }
-            }
-          }
-        }
-      }
-
-      li.dropdown {
-        .dropdown-menu {
-          background: none;
-          margin-top: 0;
-
-          li {
-            a {
-              color: @brand-primary;
-
-              &:hover,
-              &:focus {
-                color: @brand-secondary;
-              }
-            }
-          }
-        }
-      }
-      .dropdown-toggle:focus {
-        background-color: transparent !important;
-      }
-
-      li a .hidden-lg {
-        display: inline !important;
-      }
-      li {
-	      display: block;
-      }
-      a {
-	      display: block !important;
-      }
-    }
-
-    .nav-collapse {
-    	width: 100%;
-      .clearfix();
-      
-      .navbar-search {
-        padding-left: 5px;
-        float: none !important;
-      }
-    }
+@media (max-width: 768px) {
+  .navbar.navbar-inverse .navbar-brand {
+    border: none;
+    padding-top: 11px;
+    padding-bottom: 13px;
   }
-
-
-  // Unread icon
+  .navbar.navbar-inverse .nav {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .navbar.navbar-inverse .nav > li.active > a,
+  .navbar.navbar-inverse .nav > li.active > a:hover,
+  .navbar.navbar-inverse .nav > li.active > a:focus {
+    background-color: #79a736;
+  }
+  .navbar.navbar-inverse .nav > li > a,
+  .navbar.navbar-inverse .nav > li > a:hover {
+    background: none;
+    border: none;
+  }
+  .navbar.navbar-inverse .nav > li ul li a {
+    color: #ffffff;
+  }
+  .navbar.navbar-inverse .navbar-form {
+    border: none;
+    padding-right: 20px;
+    padding-left: 20px !important;
+    max-width: none;
+  }
+  .navbar.navbar-inverse a,
+  .navbar.navbar-inverse .navbar-collapse .nav > li > a,
+  .navbar.navbar-inverse .navbar-collapse li.dropdown .dropdown-menu a {
+    color: #ffffff;
+    border-radius: 0;
+  }
+  .navbar.navbar-inverse a:hover,
+  .navbar.navbar-inverse .navbar-collapse .nav > li > a:hover,
+  .navbar.navbar-inverse .navbar-collapse li.dropdown .dropdown-menu a:hover,
+  .navbar.navbar-inverse a:focus,
+  .navbar.navbar-inverse .navbar-collapse .nav > li > a:focus,
+  .navbar.navbar-inverse .navbar-collapse li.dropdown .dropdown-menu a:focus {
+    color: #ffffff;
+  }
+  .navbar .navbar-brand {
+    padding-left: 20px;
+    float: none;
+  }
+  .navbar .btn-navbar {
+    float: right;
+    display: block;
+  }
+  .navbar .navbar-collapse {
+    padding: 0;
+  }
+  .navbar .navbar-form {
+    max-width: none;
+    padding: 20px 20px 19px;
+  }
+  .navbar .nav {
+    float: none !important;
+    display: block;
+    margin-bottom: 10px;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .navbar .nav > li:hover > ul,
+  .navbar .nav > li.dropdown:hover > ul,
+  .navbar .nav > li:hover .dropdown-menu,
+  .navbar .nav > li.dropdown:hover .dropdown-menu {
+    height: auto;
+    margin-left: 30px;
+  }
+  .navbar .nav > li:hover > ul li:hover a,
+  .navbar .nav > li.dropdown:hover > ul li:hover a,
+  .navbar .nav > li:hover .dropdown-menu li:hover a,
+  .navbar .nav > li.dropdown:hover .dropdown-menu li:hover a {
+    background-color: transparent;
+    color: #79a736;
+  }
+  .navbar .nav > li:hover > ul li:hover ul,
+  .navbar .nav > li.dropdown:hover > ul li:hover ul,
+  .navbar .nav > li:hover .dropdown-menu li:hover ul,
+  .navbar .nav > li.dropdown:hover .dropdown-menu li:hover ul {
+    height: auto;
+    margin-left: 20px;
+  }
+  .navbar .nav > li > a,
+  .navbar .nav > li.dropdown > a,
+  .navbar .nav > li > a:hover,
+  .navbar .nav > li.dropdown > a:hover {
+    background: none;
+    padding: 7px 20px;
+  }
+  .navbar .nav > li ul,
+  .navbar .nav > li.dropdown ul {
+    background: none;
+    height: 0;
+    padding: 0;
+    position: static;
+    width: auto;
+  }
+  .navbar .nav > li ul:before,
+  .navbar .nav > li.dropdown ul:before,
+  .navbar .nav > li ul:after,
+  .navbar .nav > li.dropdown ul:after {
+    display: none;
+  }
+  .navbar .nav > li ul li,
+  .navbar .nav > li.dropdown ul li {
+    background: none;
+  }
+  .navbar .nav > li ul li a,
+  .navbar .nav > li.dropdown ul li a {
+    color: #456020;
+  }
+  .navbar .nav > li ul li a:hover,
+  .navbar .nav > li.dropdown ul li a:hover,
+  .navbar .nav > li ul li a:focus,
+  .navbar .nav > li.dropdown ul li a:focus {
+    color: #79a736;
+  }
+  .navbar .nav li.dropdown .dropdown-menu {
+    background: none;
+    margin-top: 0;
+  }
+  .navbar .nav li.dropdown .dropdown-menu li a {
+    color: #456020;
+  }
+  .navbar .nav li.dropdown .dropdown-menu li a:hover,
+  .navbar .nav li.dropdown .dropdown-menu li a:focus {
+    color: #79a736;
+  }
+  .navbar .nav .dropdown-toggle:focus {
+    background-color: transparent !important;
+  }
+  .navbar .nav li a .hidden-lg {
+    display: inline !important;
+  }
+  .navbar .nav li {
+    display: block;
+  }
+  .navbar .nav a {
+    display: block !important;
+  }
+  .navbar .nav-collapse {
+    width: 100%;
+  }
+  .navbar .nav-collapse:before,
+  .navbar .nav-collapse:after {
+    content: " ";
+    /* 1 */
+  
+    display: table;
+    /* 2 */
+  
+  }
+  .navbar .nav-collapse:after {
+    clear: both;
+  }
+  .navbar .nav-collapse .navbar-search {
+    padding-left: 5px;
+    float: none !important;
+  }
   .navbar-unread,
   .navbar-new {
     position: static;
@@ -1839,7 +1840,7 @@ fieldset[disabled] .btn-link:focus {
     margin: 0 0 0 10px;
   }
 }
-*/.select {
+.select {
   display: inline-block;
   margin-bottom: 10px;
 }
@@ -4389,6 +4390,7 @@ a.list-group-item.active > .badge,
   background: #ecefe9;
   color: #c2cbb5;
   padding: 39px 0 42px;
+  margin-top: 50px;
 }
 .bottom-menu .navbar-brand {
   font-size: 22px;
@@ -5718,6 +5720,22 @@ a.list-group-item.active > .badge,
   background-color: #34495e;
   color: white;
 }
+@media (max-width: 768px) {
+  /* fixes extra long sub-navs, brings them all li's inline --- NEEDS WORK
+    .navbar .nav > li > ul > li > ul {
+      float: left;
+      width: 90%;
+    }
+    .navbar .nav > li > ul {
+      clear: both;
+    }
+    .navbar .nav > li > ul > li > ul > li {
+      float: left;
+      clear: none;
+      padding: 0;
+      margin: -5px 0;
+    }*/
+}
 .cover-img {
   background-color: black;
 }
@@ -5732,6 +5750,9 @@ a.list-group-item.active > .badge,
 }
 .cover-img .container.Beverage.Alcohol {
   background-image: url(../images/section-headers/alcohol-beverage.jpg);
+}
+.cover-img .container.Bakery.Products {
+  background-image: url(../images/section-headers/food-bakery-products.jpg);
 }
 .cover-img .container h2 {
   margin-top: 1.5em;
@@ -5752,6 +5773,11 @@ a.list-group-item.active > .badge,
 @media (max-width: 991px) {
   .cover-img .container {
     min-height: 200px;
+  }
+}
+@media (max-width: 620px) {
+  .cover-img .container {
+    background-position-x: 0%;
   }
 }
 .content {
@@ -5789,17 +5815,12 @@ a.list-group-item.active > .badge,
   border-radius: 6px;
 }
 .sidebar .title {
-  margin: -55px 0 0 0;
-  text-align: center;
+  margin: -30px 0 15px 0;
 }
 .sidebar .title h5 {
-  display: inline-block;
-  border-right: 2px solid #edeee2;
-  border-left: 2px solid #edeee2;
-  background-color: white;
-  padding: 0.25em 0.5em;
-  margin: 0;
-  font-size: 200%;
+  background-color: #edeee2;
+  padding: 0.7em 30px;
+  margin: 0 -30px;
 }
 @media (min-width: 768px) {
   .sidebar {
