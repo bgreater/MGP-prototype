@@ -6055,6 +6055,16 @@ a.list-group-item.active > .badge,
   font-size: 40px;
   color: white;
 }
+.video.right {
+  float: right;
+  margin: 0 0 15px 25px;
+  width: 30%;
+}
+.video.left {
+  float: left;
+  margin: 0 25px 15px 0;
+  width: 30%;
+}
 .video-wrapper {
   position: relative;
   padding-bottom: 49.25%;
