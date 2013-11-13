@@ -753,6 +753,12 @@ ul,
 ol {
   margin-bottom: 13.5px;
 }
+ul li.header,
+ol li.header {
+  list-style: none;
+  font-weight: bold;
+  font-size: 1.025em;
+}
 dl {
   margin-bottom: 27px;
 }
