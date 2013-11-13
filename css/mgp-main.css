@@ -4491,6 +4491,8 @@ a.list-group-item.active > .badge,
   font-size: 14px;
   line-height: 1.625;
   border-radius: 6px;
+  overflow: auto;
+  margin: 10px 0;
 }
 .alert a {
   color: #f1c40f;
