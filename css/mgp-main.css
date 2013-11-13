@@ -6424,7 +6424,7 @@ div.right {
 .show-hide {
   display: block;
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .hide-show {
     display: block;
   }
