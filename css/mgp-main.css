@@ -6418,6 +6418,12 @@ div.right {
   display: block;
   padding: 7px 20px;
 }
+.hide-show {
+  display: none;
+}
+.show-hide {
+  display: block;
+}
 @media (max-width: 991px) {
   .mgp-row {
     margin-bottom: 0;
@@ -6440,6 +6446,12 @@ div.right {
     text-align: left;
     padding-left: 15px;
     padding-right: 15px;
+  }
+  .hide-show {
+    display: block;
+  }
+  .show-hide {
+    display: none;
   }
   .mgp-inline {
     display: block;
