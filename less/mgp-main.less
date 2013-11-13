@@ -599,6 +599,14 @@ img.right, div.right {
   .show-hide {
     display: block;
   }
+@media (max-width: @screen-sm-min) {
+   .hide-show{
+    display: block;
+  }
+  .show-hide {
+    display: none;
+  }
+}
 @media (max-width: @screen-sm-max) {
   .mgp-row {
     margin-bottom: 0;
@@ -621,12 +629,6 @@ img.right, div.right {
     text-align: left;
     padding-left: 15px;
     padding-right: 15px;
-  }
-  .hide-show{
-    display: block;
-  }
-  .show-hide {
-    display: none;
   }
 
   .mgp-inline { display: block; }

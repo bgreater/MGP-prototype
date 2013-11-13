@@ -6424,6 +6424,14 @@ div.right {
 .show-hide {
   display: block;
 }
+@media (max-width: 768px) {
+  .hide-show {
+    display: block;
+  }
+  .show-hide {
+    display: none;
+  }
+}
 @media (max-width: 991px) {
   .mgp-row {
     margin-bottom: 0;
@@ -6446,12 +6454,6 @@ div.right {
     text-align: left;
     padding-left: 15px;
     padding-right: 15px;
-  }
-  .hide-show {
-    display: block;
-  }
-  .show-hide {
-    display: none;
   }
   .mgp-inline {
     display: block;
