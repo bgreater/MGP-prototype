@@ -6057,7 +6057,7 @@ a.list-group-item.active > .badge,
 }
 .video-wrapper {
   position: relative;
-  padding-bottom: 56.25%;
+  padding-bottom: 49.25%;
   /* 16:9 */
 
   padding-top: 25px;
@@ -6102,13 +6102,15 @@ h6 {
 .pad.row.pad--small {
   padding-top: 1em;
 }
-img.left {
+img.left,
+div.left {
   float: left;
-  padding: 0 20px 20px 0;
+  margin: 0 25px 15px 0;
 }
-img.right {
+img.right,
+div.right {
   float: right;
-  padding: 0 0 20px 20px;
+  margin: 0 0 15px 25px;
 }
 .mgp-headline {
   color: #79a736;
