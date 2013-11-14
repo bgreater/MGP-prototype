@@ -5952,6 +5952,13 @@ a.list-group-item.active > .badge,
   -moz-background-size: auto 100%;
   background-size: auto 100%;
 }
+.cover-img .container img {
+  position: absolute;
+  z-index: 00001;
+  height: 100%;
+  width: auto;
+  right: 0;
+}
 .cover-img .container.Beverage.Alcohol {
   background-image: url(../images/section-headers/alcohol-beverage.jpg);
 }
@@ -5961,9 +5968,11 @@ a.list-group-item.active > .badge,
 .cover-img .container h2 {
   margin-top: 1.5em;
   color: #ffffff;
+  z-index: 00002;
 }
 .cover-img .container h6 {
   color: #79a736;
+  z-index: 00002;
 }
 @media (min-width: 992px) {
   .cover-img .container:before {

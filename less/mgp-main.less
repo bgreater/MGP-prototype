@@ -78,6 +78,13 @@
     background: black no-repeat right;
     min-height: 200px; 
     padding-top: 1px;
+    & img {
+        position: absolute;
+        z-index: 00001;
+        height: 100%;
+        width: auto;
+        right: 0;
+    }
     .background-size(~"auto, 100%");
     &.Beverage.Alcohol {
       background-image: url(../images/section-headers/alcohol-beverage.jpg);
@@ -88,9 +95,11 @@
     h2 {
       margin-top: 1.5em;
       color: @inverse;
+      z-index: 00002;
     }
     h6 {
       color: @mgpLightGreen;
+      z-index: 00002;
     }
     @media (min-width: @screen-md-min) { 
       &:before {
