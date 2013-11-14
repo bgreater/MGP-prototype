@@ -5943,10 +5943,10 @@ a.list-group-item.active > .badge,
   position: relative;
 }
 .dropover:hover > .dropover-content {
-  opacity: 1;
+  visibility: visible;
 }
 .dropover .dropover-content {
-  opacity: 0;
+  visibility: hidden;
   width: 400px;
   position: absolute;
   top: 0px;
