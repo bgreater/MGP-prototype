@@ -5949,22 +5949,27 @@ a.list-group-item.active > .badge,
   visibility: hidden;
   width: 400px;
   position: absolute;
-  top: 39px;
+  top: 0px;
   background: #f9f9f4;
-  left: 10px;
+  left: 160px;
   text-align: left;
   padding: 0px;
   border-top: 15px solid white;
   z-index: 10000;
+  -moz-transition: 0.25s linear;
+  -o-transition: 0.25s linear;
+  -ms-transition: 0.25s linear;
+  -webkit-transition: 0.25s linear;
+  transition: 0.25s linear;
 }
 .dropover .dropover-content:before {
   position: absolute;
-  top: -10px;
-  left: 20px;
+  top: 7px;
+  left: -10px;
   content: '';
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid #edeee2;
+  border-bottom: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-right: 10px solid #edeee2;
 }
 .dropover .dropover-content ul {
   list-style: none;
