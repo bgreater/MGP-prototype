@@ -5939,6 +5939,18 @@ a.list-group-item.active > .badge,
 .carousel.landing-page .item .carousel-caption h2 {
   margin-top: 0;
 }
+.dropover {
+  position: relative;
+}
+.dropover button:hover .dropover-content {
+  visibility: visible;
+}
+.dropover .dropover-content {
+  visibility: none;
+  width: 400px;
+  position: absolute;
+  bottom: 0;
+}
 .cover-img {
   background-color: black;
   position: relative;
