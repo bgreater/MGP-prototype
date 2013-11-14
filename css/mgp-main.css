@@ -5948,6 +5948,7 @@ a.list-group-item.active > .badge,
   background: #000000 no-repeat right;
   min-height: 200px;
   padding-top: 1px;
+  overflow: hidden;
   -webkit-background-size: auto 100%;
   -moz-background-size: auto 100%;
   background-size: auto 100%;
@@ -5996,6 +5997,9 @@ a.list-group-item.active > .badge,
 @media (max-width: 620px) {
   .cover-img .container {
     background-position-x: 0%;
+  }
+  .cover-img .container img {
+    right: -50%;
   }
 }
 .watermark {
