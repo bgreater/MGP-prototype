@@ -2000,10 +2000,8 @@ fieldset[disabled] .btn-link:focus {
   .navbar .nav-collapse:after {
     content: " ";
     /* 1 */
-  
     display: table;
     /* 2 */
-  
   }
   .navbar .nav-collapse:after {
     clear: both;
@@ -2039,10 +2037,8 @@ fieldset[disabled] .btn-link:focus {
 .select.select-block:after {
   content: " ";
   /* 1 */
-
   display: table;
   /* 2 */
-
 }
 .select.select-block:after {
   clear: both;
@@ -4130,10 +4126,8 @@ fieldset[disabled] .input-group .input-group-btn:first-child .btn-default.active
 .dropdown-menu li > a:after {
   content: " ";
   /* 1 */
-
   display: table;
   /* 2 */
-
 }
 .dropdown-menu li > a:after {
   clear: both;
@@ -4609,10 +4603,8 @@ a.list-group-item.active > .badge,
 .bottom-menu .bottom-icons:after {
   content: " ";
   /* 1 */
-
   display: table;
   /* 2 */
-
 }
 .bottom-menu .bottom-links:after,
 .bottom-menu .bottom-icons:after {
@@ -4993,10 +4985,8 @@ a.list-group-item.active > .badge,
 .iconbar:after {
   content: " ";
   /* 1 */
-
   display: table;
   /* 2 */
-
 }
 .iconbar:after {
   clear: both;
@@ -5907,19 +5897,19 @@ a.list-group-item.active > .badge,
 }
 @media (max-width: 768px) {
   /* fixes extra long sub-navs, brings them all li's inline --- NEEDS WORK
-    .navbar .nav > li > ul > li > ul {
-      float: left;
-      width: 90%;
-    }
-    .navbar .nav > li > ul {
-      clear: both;
-    }
-    .navbar .nav > li > ul > li > ul > li {
-      float: left;
-      clear: none;
-      padding: 0;
-      margin: -5px 0;
-    }*/
+  .navbar .nav > li > ul > li > ul {
+    float: left;
+    width: 90%;
+  }
+  .navbar .nav > li > ul {
+    clear: both;
+  }
+  .navbar .nav > li > ul > li > ul > li {
+    float: left;
+    clear: none;
+    padding: 0;
+    margin: -5px 0;
+  }*/
 }
 .landing-dark-wrap {
   background-color: black;
@@ -5951,10 +5941,10 @@ a.list-group-item.active > .badge,
   position: absolute;
   top: 0px;
   background: #f9f9f4;
+  border: 2px solid #edeee2;
   left: 160px;
   text-align: left;
   padding: 0px;
-  border-top: 15px solid white;
   z-index: 10000;
   -moz-transition: 0.25s linear;
   -o-transition: 0.25s linear;
@@ -6158,7 +6148,6 @@ a.list-group-item.active > .badge,
   position: relative;
   padding-bottom: 49.25%;
   /* 16:9 */
-
   padding-top: 25px;
   height: 0;
 }
@@ -6229,10 +6218,8 @@ div.right {
 .mgp-row:after {
   content: " ";
   /* 1 */
-
   display: table;
   /* 2 */
-
 }
 .mgp-row:after {
   clear: both;
@@ -6300,10 +6287,8 @@ div.right {
 .mgp-content-wide:after {
   content: " ";
   /* 1 */
-
   display: table;
   /* 2 */
-
 }
 .mgp-content-wide:after {
   clear: both;
