@@ -5942,14 +5942,28 @@ a.list-group-item.active > .badge,
 .dropover {
   position: relative;
 }
-.dropover .btn:hover .dropover-content {
+.dropover .btn:hover > .dropover-content {
   visibility: visible;
 }
 .dropover .dropover-content {
   visibility: hidden;
   width: 400px;
   position: absolute;
-  bottom: 0;
+  top: 46px;
+  background: #79a736;
+  left: 0;
+  text-align: left;
+  padding: 0px;
+}
+.dropover .dropover-content ul,
+.dropover .dropover-content ul li {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+}
+.dropover .dropover-content ul li.header,
+.dropover .dropover-content ul li li.header {
+  background: #456020;
 }
 .cover-img {
   background-color: black;

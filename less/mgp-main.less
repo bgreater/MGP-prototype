@@ -72,14 +72,26 @@
 // Category Page
 .dropover {
   position: relative;
-  .btn:hover .dropover-content {
+  .btn:hover > .dropover-content {
     visibility: visible;
   }
   .dropover-content {
     visibility: hidden;
     width: 400px;
     position: absolute;
-    bottom: 0;
+    top: 46px;
+    background: @mgpLightGreen;
+    left: 0;
+    text-align: left;
+    padding: 0px;
+    ul, ul li {
+      list-style: none;
+      margin: 0;
+      padding: 10px;
+      & li.header{
+        background: @mgpDarkGreen;
+      }
+    }
   }
 }
 
