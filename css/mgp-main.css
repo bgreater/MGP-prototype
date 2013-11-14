@@ -5950,7 +5950,7 @@ a.list-group-item.active > .badge,
   width: 400px;
   position: absolute;
   top: 39px;
-  background: #79a736;
+  background: #f7f9f8;
   left: 10px;
   text-align: left;
   padding: 0px;
@@ -5962,21 +5962,27 @@ a.list-group-item.active > .badge,
   padding: 0;
 }
 .dropover .dropover-content ul li {
-  padding: 10px;
+  padding: 10px 0;
   float: left;
+  margin: 6px 10px;
 }
 .dropover .dropover-content ul li a {
   color: white;
   padding: 10px;
-  background: #456020;
+  background: #79a736;
   border-radius: 5px;
+}
+.dropover .dropover-content ul li a:hover {
+  background: #456020;
 }
 .dropover .dropover-content ul li.header {
   float: none;
+  padding: 10px;
   margin: 0;
   font-size: 0.825em;
   font-weight: normal;
-  background: #456020;
+  color: #456020;
+  background: #edeee2;
 }
 .cover-img {
   background-color: black;

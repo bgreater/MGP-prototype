@@ -80,7 +80,7 @@
     width: 400px;
     position: absolute;
     top: 39px;
-    background: @mgpLightGreen;
+    background: mix(@brand-info, @alert-bg, 1%);
     left: 10px;
     text-align: left;
     padding: 0px;
@@ -90,20 +90,26 @@
       margin: 0;
       padding: 0;
       li {
-        padding: 10px;
+        padding: 10px 0;
         float: left;
+        margin: 6px 10px;
         a {
           color: white;
           padding: 10px;
-          background: @mgpDarkGreen;
+          background: @mgpLightGreen;
           border-radius: 5px;
+          &:hover {
+           background: @mgpDarkGreen;
+          }
         }
         &.header{
           float: none;
+          padding: 10px;
           margin: 0;
           font-size: 0.825em;
           font-weight: normal;
-          background: @mgpDarkGreen;
+          color: @mgpDarkGreen;
+          background: mix(@brand-warning, @alert-border, 3%);
         }
       }
     }
