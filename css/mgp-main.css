@@ -5942,11 +5942,11 @@ a.list-group-item.active > .badge,
 .dropover {
   position: relative;
 }
-.dropover button:hover .dropover-content {
+.dropover .btn:hover .dropover-content {
   visibility: visible;
 }
 .dropover .dropover-content {
-  visibility: none;
+  visibility: hidden;
   width: 400px;
   position: absolute;
   bottom: 0;
