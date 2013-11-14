@@ -79,24 +79,27 @@
     visibility: hidden;
     width: 400px;
     position: absolute;
-    top: 46px;
+    top: 39px;
     background: @mgpLightGreen;
-    left: 0;
+    left: 10px;
     text-align: left;
     padding: 0px;
+    border-top: 10px solid white;
     ul {
       list-style: none;
       margin: 0;
+      padding: 0;
       li {
         padding: 10px;
         float: left;
         a {
-          color: mix(@brand-primary, white, 3%);
-          padding: 5px;
+          color: white;
+          padding: 10px;
           background: @mgpDarkGreen;
-          @include border-radius(5px);
+          border-radius: 5px;
         }
         &.header{
+          float: none;
           margin: 0;
           font-size: 0.825em;
           font-weight: normal;

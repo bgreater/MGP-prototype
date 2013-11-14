@@ -5949,27 +5949,30 @@ a.list-group-item.active > .badge,
   visibility: hidden;
   width: 400px;
   position: absolute;
-  top: 46px;
+  top: 39px;
   background: #79a736;
-  left: 0;
+  left: 10px;
   text-align: left;
   padding: 0px;
+  border-top: 10px solid white;
 }
 .dropover .dropover-content ul {
   list-style: none;
   margin: 0;
+  padding: 0;
 }
 .dropover .dropover-content ul li {
   padding: 10px;
   float: left;
 }
 .dropover .dropover-content ul li a {
-  color: #f9faf8;
-  padding: 5px;
+  color: white;
+  padding: 10px;
   background: #456020;
+  border-radius: 5px;
 }
-@include border-radius(5px);
 .dropover .dropover-content ul li.header {
+  float: none;
   margin: 0;
   font-size: 0.825em;
   font-weight: normal;
