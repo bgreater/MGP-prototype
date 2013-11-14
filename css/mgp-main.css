@@ -5955,14 +5955,21 @@ a.list-group-item.active > .badge,
   text-align: left;
   padding: 0px;
 }
-.dropover .dropover-content ul,
-.dropover .dropover-content ul li {
+.dropover .dropover-content ul {
   list-style: none;
   margin: 0;
-  padding: 10px;
 }
-.dropover .dropover-content ul li.header,
-.dropover .dropover-content ul li li.header {
+.dropover .dropover-content ul li {
+  padding: 10px;
+  float: left;
+}
+.dropover .dropover-content ul li a {
+  color: #f9faf8;
+  padding: 5px;
+  background: #456020;
+}
+.dropover .dropover-content ul li .header {
+  font-size: 0.825em;
   background: #456020;
 }
 .cover-img {
