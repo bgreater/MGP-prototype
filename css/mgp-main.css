@@ -5942,7 +5942,7 @@ a.list-group-item.active > .badge,
 .dropover {
   position: relative;
 }
-.dropover .btn:hover > .dropover-content {
+.dropover:hover > .dropover-content {
   visibility: visible;
 }
 .dropover .dropover-content {
