@@ -5950,7 +5950,7 @@ a.list-group-item.active > .badge,
   width: 400px;
   position: absolute;
   top: 39px;
-  background: #f9f8ed;
+  background: #f9f9f4;
   left: 10px;
   text-align: left;
   padding: 0px;
@@ -5974,7 +5974,7 @@ a.list-group-item.active > .badge,
 .dropover .dropover-content ul li {
   padding: 10px 0;
   float: left;
-  margin: 6px 8px;
+  margin: 3px 7px;
 }
 .dropover .dropover-content ul li a {
   color: white;
