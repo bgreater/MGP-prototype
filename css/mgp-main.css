@@ -5958,12 +5958,12 @@ a.list-group-item.active > .badge,
 }
 .dropover .dropover-content:before {
   position: absolute;
-  bottom: -10px;
-  left: -20px;
+  top: -10px;
+  left: 20px;
   content: '';
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-top: 10px solid #edeee2;
+  border-bottom: 10px solid #edeee2;
 }
 .dropover .dropover-content ul {
   list-style: none;
