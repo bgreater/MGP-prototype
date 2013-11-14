@@ -84,6 +84,7 @@
         height: 100%;
         width: auto;
         right: 0;
+        top: 0;
     }
     .background-size(~"auto, 100%");
     &.Beverage.Alcohol {
@@ -96,10 +97,12 @@
       margin-top: 1.5em;
       color: @inverse;
       z-index: 00002;
+      position: relative;
     }
     h6 {
       color: @mgpLightGreen;
       z-index: 00002;
+      position: relative;
     }
     @media (min-width: @screen-md-min) { 
       &:before {

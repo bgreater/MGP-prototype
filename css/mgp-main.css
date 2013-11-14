@@ -5958,6 +5958,7 @@ a.list-group-item.active > .badge,
   height: 100%;
   width: auto;
   right: 0;
+  top: 0;
 }
 .cover-img .container.Beverage.Alcohol {
   background-image: url(../images/section-headers/alcohol-beverage.jpg);
@@ -5969,10 +5970,12 @@ a.list-group-item.active > .badge,
   margin-top: 1.5em;
   color: #ffffff;
   z-index: 00002;
+  position: relative;
 }
 .cover-img .container h6 {
   color: #79a736;
   z-index: 00002;
+  position: relative;
 }
 @media (min-width: 992px) {
   .cover-img .container:before {
