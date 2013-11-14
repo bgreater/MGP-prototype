@@ -80,11 +80,12 @@
     width: 400px;
     position: absolute;
     top: 39px;
-    background: mix(@brand-warning, @alert-border, 1%);
+    background: mix(@brand-warning, @alert-bg, 5%);
     left: 10px;
     text-align: left;
     padding: 0px;
     border-top: 15px solid white;
+    z-index: 10000;
     &:before {
         position: absolute;
         top: -10px;
@@ -101,7 +102,7 @@
       li {
         padding: 10px 0;
         float: left;
-        margin: 6px 10px;
+        margin: 6px 8px;
         a {
           color: white;
           padding: 10px;
