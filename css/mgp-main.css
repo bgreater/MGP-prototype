@@ -5950,11 +5950,20 @@ a.list-group-item.active > .badge,
   width: 400px;
   position: absolute;
   top: 39px;
-  background: #f7f9f8;
+  background: #ecefe7;
   left: 10px;
   text-align: left;
   padding: 0px;
-  border-top: 10px solid white;
+  border-top: 15px solid white;
+}
+.dropover .dropover-content:before {
+  position: absolute;
+  bottom: -10px;
+  left: -20px;
+  content: '';
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #edeee2;
 }
 .dropover .dropover-content ul {
   list-style: none;

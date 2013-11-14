@@ -80,11 +80,20 @@
     width: 400px;
     position: absolute;
     top: 39px;
-    background: mix(@brand-info, @alert-bg, 1%);
+    background: mix(@brand-warning, @alert-border, 1%);
     left: 10px;
     text-align: left;
     padding: 0px;
-    border-top: 10px solid white;
+    border-top: 15px solid white;
+    &:before {
+        position: absolute;
+        bottom: -10px;
+        left: -20px;
+        content: '';
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid mix(@brand-warning, @alert-border, 3%);
+      }
     ul {
       list-style: none;
       margin: 0;
