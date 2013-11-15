@@ -4095,11 +4095,11 @@ fieldset[disabled] .input-group .input-group-btn:first-child .btn-default.active
   border-radius: 0;
 }
 .dropdown-menu li:first-child > a {
-  border-radius: 6px 6px 0 0;
+  border-radius: 0;
   padding-top: 8px;
 }
 .dropdown-menu li:last-child > a {
-  border-radius: 0 0 6px 6px;
+  border-radius: 0;
   padding-bottom: 10px;
 }
 .dropdown-menu li.active > a,
