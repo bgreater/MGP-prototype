@@ -4062,11 +4062,6 @@ fieldset[disabled] .input-group .input-group-btn:first-child .btn-default.active
   -webkit-transition: 0.25s;
   transition: 0.25s;
 }
-@media (max-width: 480px) {
-  .dropdown-menu {
-    max-width: 200px;
-  }
-}
 .dropdown-menu.typeahead {
   display: none;
   opacity: 1;
