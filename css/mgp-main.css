@@ -4062,6 +4062,11 @@ fieldset[disabled] .input-group .input-group-btn:first-child .btn-default.active
   -webkit-transition: 0.25s;
   transition: 0.25s;
 }
+@media (max-width: 480px) {
+  .dropdown-menu {
+    max-width: 200px;
+  }
+}
 .dropdown-menu.typeahead {
   display: none;
   opacity: 1;
@@ -6005,6 +6010,17 @@ a.list-group-item.active > .badge,
   -webkit-background-size: auto 100%;
   -moz-background-size: auto 100%;
   background-size: auto 100%;
+  /* @media (min-width: @screen-md-min) { 
+      &:before {
+        position: absolute;
+        bottom: -40px;
+        left: -20px;
+        content: '';
+        border-left: 40px solid transparent;
+        border-right: 40px solid transparent;
+        border-top: 40px solid black;
+      }
+    }*/
 }
 .cover-img .container img {
   position: absolute;
@@ -6030,17 +6046,7 @@ a.list-group-item.active > .badge,
   color: #79a736;
   z-index: 00002;
   position: relative;
-}
-@media (min-width: 992px) {
-  .cover-img .container:before {
-    position: absolute;
-    bottom: -40px;
-    left: -20px;
-    content: '';
-    border-left: 40px solid transparent;
-    border-right: 40px solid transparent;
-    border-top: 40px solid black;
-  }
+  font-family: Open Sans, sans-serif;
 }
 @media (max-width: 991px) {
   .cover-img .container {
@@ -6188,7 +6194,7 @@ h6 {
 }
 .pad.row {
   margin: inherit;
-  padding-top: 4em;
+  padding-top: 2em;
 }
 .pad.row.pad--small {
   padding-top: 1em;
