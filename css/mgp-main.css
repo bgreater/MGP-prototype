@@ -5176,7 +5176,7 @@ a.list-group-item.active > .badge,
   vertical-align: middle;
   -webkit-font-smoothing: antialiased;
 }
-.breadcrumb > li.right {
+.breadcrumb .right {
   float: right;
 }
 .breadcrumb .active {
