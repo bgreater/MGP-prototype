@@ -5176,6 +5176,9 @@ a.list-group-item.active > .badge,
   vertical-align: middle;
   -webkit-font-smoothing: antialiased;
 }
+.breadcrumb > li.right {
+  float: right;
+}
 .breadcrumb .active {
   color: #bdc3c7;
   cursor: default;
