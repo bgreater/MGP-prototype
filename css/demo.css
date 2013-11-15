@@ -29,10 +29,8 @@
 .demo-row:after {
   content: " ";
   /* 1 */
-
   display: table;
   /* 2 */
-
 }
 .demo-row:after {
   clear: both;
@@ -100,10 +98,8 @@
 .demo-content-wide:after {
   content: " ";
   /* 1 */
-
   display: table;
   /* 2 */
-
 }
 .demo-content-wide:after {
   clear: both;
