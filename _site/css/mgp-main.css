@@ -4046,7 +4046,7 @@ fieldset[disabled] .input-group .input-group-btn:first-child .btn-default.active
 }
 .dropdown-menu {
   background-color: #f4f5f2;
-  border: none;
+  border: 2px solid #e3e7de;
   display: block;
   margin-top: 8px;
   opacity: 0;
@@ -4095,11 +4095,11 @@ fieldset[disabled] .input-group .input-group-btn:first-child .btn-default.active
   border-radius: 0;
 }
 .dropdown-menu li:first-child > a {
-  border-radius: 6px 6px 0 0;
+  border-radius: 0;
   padding-top: 8px;
 }
 .dropdown-menu li:last-child > a {
-  border-radius: 0 0 6px 6px;
+  border-radius: 0;
   padding-bottom: 10px;
 }
 .dropdown-menu li.active > a,
@@ -4204,7 +4204,7 @@ fieldset[disabled] .input-group .input-group-btn:first-child .btn-default.active
 .dropdown-arrow {
   border-style: solid;
   border-width: 0 9px 9px 9px;
-  border-color: transparent transparent #f4f5f2 transparent;
+  border-color: transparent transparent #e3e7de transparent;
   height: 0;
   margin-top: 0;
   opacity: 0;
@@ -5175,6 +5175,9 @@ a.list-group-item.active > .badge,
   margin: -4px 9px 0 13px;
   vertical-align: middle;
   -webkit-font-smoothing: antialiased;
+}
+.breadcrumb .right {
+  float: right;
 }
 .breadcrumb .active {
   color: #bdc3c7;
