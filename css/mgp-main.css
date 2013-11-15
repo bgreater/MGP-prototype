@@ -6177,7 +6177,7 @@ h6 {
 }
 .pad {
   margin-bottom: 32px;
-  margin-top: 24px;
+  margin-top: 32px;
 }
 .pad.pad--small {
   margin-bottom: 16px;
@@ -6194,7 +6194,7 @@ h6 {
 }
 .pad.row {
   margin: inherit;
-  padding-top: 4em;
+  padding-top: 2em;
 }
 .pad.row.pad--small {
   padding-top: 1em;
