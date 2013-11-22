@@ -5943,7 +5943,7 @@ a.list-group-item.active > .badge,
 }
 @media (min-width: 768px) {
   .standout {
-    background: #f7dc6f;
+    background: #f4f5f2;
     padding: 1.5em 2em 1em;
     margin: -2em 0 0;
     min-height: 380px;
