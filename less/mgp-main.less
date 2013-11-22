@@ -68,6 +68,29 @@
     }
   }
 }
+.standout {
+  @media (min-width: @screen-sm-min) { 
+    background: lighten(@sun-flower, 20%);
+    padding: 1.5em 2em 1em;
+    margin: -2em 0 0;
+    min-height: 380px;
+  }
+}
+.landing-light-gray-wrap {
+  background-color: @gray-light;
+  // margin-top: 2em;
+  & + .bottom-menu { 
+    margin-top: 0
+  }
+  padding-bottom: 2em;
+  .container {
+    padding: 0;
+  }
+}
+.row .feature-3 {
+  padding: 0 5%;
+}
+
 
 // Category Page
 .dropover {
@@ -323,6 +346,20 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 2em;
     &.pad--small {
       padding-top: 1em;
+    }
+  }
+}
+.pad-inner-right {
+  @media (min-width: @screen-sm-min) { 
+    & > * {
+      margin-right: 2em;
+    }
+  }
+}
+.pad-bottom {
+  @media (min-width: @screen-sm-min) { 
+    & {
+      margin-bottom: 2em;
     }
   }
 }
