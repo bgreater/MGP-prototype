@@ -290,12 +290,12 @@
       "initialSize" : 16799,
       "fileType" : 8192
     },
-    "\/components.html" : {
+    "\/food-product.html" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/components.html",
+      "inputAbbreviatedPath" : "\/food-product.html",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -305,15 +305,6 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/_layouts\/page.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/food-product.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/food-product.html",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -333,6 +324,15 @@
       "outputStyle" : 0,
       "fileType" : 1,
       "debugStyle" : 0
+    },
+    "\/components.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/components.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/resources\/fontello\/css\/fontello-ie7-codes.css" : {
       "ignoreWasSetByUser" : 0,
@@ -630,6 +630,17 @@
       "initialSize" : 43787,
       "fileType" : 4096
     },
+    "\/images\/carousel\/image-02.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/carousel\/image-02.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/carousel\/image-02.jpg",
+      "initialSize" : 326278,
+      "fileType" : 4096
+    },
     "\/less\/modules\/ui-datepicker.less" : {
       "ieCompatibility" : 1,
       "inputAbbreviatedPath" : "\/less\/modules\/ui-datepicker.less",
@@ -646,17 +657,6 @@
       "outputStyle" : 0,
       "fileType" : 1,
       "debugStyle" : 0
-    },
-    "\/images\/carousel\/image-02.jpg" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/carousel\/image-02.jpg",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/carousel\/image-02.jpg",
-      "initialSize" : 326278,
-      "fileType" : 4096
     },
     "\/index.html" : {
       "ignoreWasSetByUser" : 0,
@@ -695,54 +695,10 @@
       "initialSize" : 31554,
       "fileType" : 4096
     },
-    "\/food-sub-category.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/food-sub-category.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/bootstrap\/css\/bootstrap-docs.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/bootstrap\/css\/bootstrap-docs.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
     "\/less\/modules\/navs.less" : {
       "ieCompatibility" : 1,
       "inputAbbreviatedPath" : "\/less\/modules\/navs.less",
       "outputAbbreviatedPath" : "\/less\/css\/navs.css",
-      "outputPathIsSetByUser" : 0,
-      "strictUnits" : 0,
-      "relativeURLS" : 0,
-      "ignore" : 1,
-      "strictImports" : 0,
-      "ignoreWasSetByUser" : 0,
-      "shouldRunBless" : 0,
-      "hidden" : 0,
-      "strictMath" : 0,
-      "outputStyle" : 0,
-      "fileType" : 1,
-      "debugStyle" : 0
-    },
-    "\/resources\/fontello\/css\/fontello-embedded.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/resources\/fontello\/css\/fontello-embedded.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
-    "\/less\/modules\/ui-slider.less" : {
-      "ieCompatibility" : 1,
-      "inputAbbreviatedPath" : "\/less\/modules\/ui-slider.less",
-      "outputAbbreviatedPath" : "\/less\/css\/ui-slider.css",
       "outputPathIsSetByUser" : 0,
       "strictUnits" : 0,
       "relativeURLS" : 0,
@@ -773,6 +729,50 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
+    "\/bootstrap\/css\/bootstrap-docs.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/bootstrap\/css\/bootstrap-docs.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
+    "\/resources\/fontello\/css\/fontello-embedded.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/resources\/fontello\/css\/fontello-embedded.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
+    "\/less\/modules\/ui-slider.less" : {
+      "ieCompatibility" : 1,
+      "inputAbbreviatedPath" : "\/less\/modules\/ui-slider.less",
+      "outputAbbreviatedPath" : "\/less\/css\/ui-slider.css",
+      "outputPathIsSetByUser" : 0,
+      "strictUnits" : 0,
+      "relativeURLS" : 0,
+      "ignore" : 1,
+      "strictImports" : 0,
+      "ignoreWasSetByUser" : 0,
+      "shouldRunBless" : 0,
+      "hidden" : 0,
+      "strictMath" : 0,
+      "outputStyle" : 0,
+      "fileType" : 1,
+      "debugStyle" : 0
+    },
+    "\/food-sub-category.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/food-sub-category.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/alcohol-product.html" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -791,10 +791,10 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/less\/modules\/checkbox-and-radio.less" : {
+    "\/less\/modules\/alerts.less" : {
       "ieCompatibility" : 1,
-      "inputAbbreviatedPath" : "\/less\/modules\/checkbox-and-radio.less",
-      "outputAbbreviatedPath" : "\/less\/css\/checkbox-and-radio.css",
+      "inputAbbreviatedPath" : "\/less\/modules\/alerts.less",
+      "outputAbbreviatedPath" : "\/less\/css\/alerts.css",
       "outputPathIsSetByUser" : 0,
       "strictUnits" : 0,
       "relativeURLS" : 0,
@@ -808,10 +808,10 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/less\/modules\/alerts.less" : {
+    "\/less\/modules\/checkbox-and-radio.less" : {
       "ieCompatibility" : 1,
-      "inputAbbreviatedPath" : "\/less\/modules\/alerts.less",
-      "outputAbbreviatedPath" : "\/less\/css\/alerts.css",
+      "inputAbbreviatedPath" : "\/less\/modules\/checkbox-and-radio.less",
+      "outputAbbreviatedPath" : "\/less\/css\/checkbox-and-radio.css",
       "outputPathIsSetByUser" : 0,
       "strictUnits" : 0,
       "relativeURLS" : 0,
@@ -842,6 +842,34 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
+    "\/less\/demo.less" : {
+      "ieCompatibility" : 1,
+      "inputAbbreviatedPath" : "\/less\/demo.less",
+      "outputAbbreviatedPath" : "\/css\/demo.css",
+      "outputPathIsSetByUser" : 0,
+      "strictUnits" : 0,
+      "relativeURLS" : 0,
+      "ignore" : 0,
+      "strictImports" : 0,
+      "ignoreWasSetByUser" : 0,
+      "shouldRunBless" : 0,
+      "hidden" : 0,
+      "strictMath" : 0,
+      "outputStyle" : 0,
+      "fileType" : 1,
+      "debugStyle" : 0
+    },
+    "\/images\/don-coffey.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/don-coffey.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/don-coffey.jpg",
+      "initialSize" : 5036,
+      "fileType" : 4096
+    },
     "\/css\/mgp-main.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -868,38 +896,10 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/images\/don-coffey.jpg" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/don-coffey.jpg",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/don-coffey.jpg",
-      "initialSize" : 5036,
-      "fileType" : 4096
-    },
-    "\/less\/demo.less" : {
+    "\/less\/variables.less" : {
       "ieCompatibility" : 1,
-      "inputAbbreviatedPath" : "\/less\/demo.less",
-      "outputAbbreviatedPath" : "\/css\/demo.css",
-      "outputPathIsSetByUser" : 0,
-      "strictUnits" : 0,
-      "relativeURLS" : 0,
-      "ignore" : 0,
-      "strictImports" : 0,
-      "ignoreWasSetByUser" : 0,
-      "shouldRunBless" : 0,
-      "hidden" : 0,
-      "strictMath" : 0,
-      "outputStyle" : 0,
-      "fileType" : 1,
-      "debugStyle" : 0
-    },
-    "\/less\/modules\/tables.less" : {
-      "ieCompatibility" : 1,
-      "inputAbbreviatedPath" : "\/less\/modules\/tables.less",
-      "outputAbbreviatedPath" : "\/less\/css\/tables.css",
+      "inputAbbreviatedPath" : "\/less\/variables.less",
+      "outputAbbreviatedPath" : "\/css\/variables.css",
       "outputPathIsSetByUser" : 0,
       "strictUnits" : 0,
       "relativeURLS" : 0,
@@ -913,10 +913,10 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/less\/variables.less" : {
+    "\/less\/modules\/tables.less" : {
       "ieCompatibility" : 1,
-      "inputAbbreviatedPath" : "\/less\/variables.less",
-      "outputAbbreviatedPath" : "\/css\/variables.css",
+      "inputAbbreviatedPath" : "\/less\/modules\/tables.less",
+      "outputAbbreviatedPath" : "\/less\/css\/tables.css",
       "outputPathIsSetByUser" : 0,
       "strictUnits" : 0,
       "relativeURLS" : 0,
@@ -950,22 +950,16 @@
       "initialSize" : 38357,
       "fileType" : 4096
     },
-    "\/less\/modules\/button-groups.less" : {
-      "ieCompatibility" : 1,
-      "inputAbbreviatedPath" : "\/less\/modules\/button-groups.less",
-      "outputAbbreviatedPath" : "\/less\/css\/button-groups.css",
-      "outputPathIsSetByUser" : 0,
-      "strictUnits" : 0,
-      "relativeURLS" : 0,
-      "ignore" : 1,
-      "strictImports" : 0,
+    "\/images\/section-headers\/food-bakery-products-lg.jpg" : {
       "ignoreWasSetByUser" : 0,
-      "shouldRunBless" : 0,
+      "ignore" : 0,
       "hidden" : 0,
-      "strictMath" : 0,
-      "outputStyle" : 0,
-      "fileType" : 1,
-      "debugStyle" : 0
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/section-headers\/food-bakery-products-lg.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/section-headers\/food-bakery-products-lg.jpg",
+      "initialSize" : 39957,
+      "fileType" : 4096
     },
     "\/less\/modules\/badges.less" : {
       "ieCompatibility" : 1,
@@ -984,16 +978,22 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/images\/section-headers\/food-bakery-products-lg.jpg" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
+    "\/less\/modules\/button-groups.less" : {
+      "ieCompatibility" : 1,
+      "inputAbbreviatedPath" : "\/less\/modules\/button-groups.less",
+      "outputAbbreviatedPath" : "\/less\/css\/button-groups.css",
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/section-headers\/food-bakery-products-lg.jpg",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/section-headers\/food-bakery-products-lg.jpg",
-      "initialSize" : 39957,
-      "fileType" : 4096
+      "strictUnits" : 0,
+      "relativeURLS" : 0,
+      "ignore" : 1,
+      "strictImports" : 0,
+      "ignoreWasSetByUser" : 0,
+      "shouldRunBless" : 0,
+      "hidden" : 0,
+      "strictMath" : 0,
+      "outputStyle" : 0,
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/food-category.html" : {
       "ignoreWasSetByUser" : 0,
@@ -1015,15 +1015,6 @@
       "initialSize" : 484947,
       "fileType" : 4096
     },
-    "\/_layouts\/default.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_layouts\/default.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/less\/modules\/carousel.less" : {
       "ieCompatibility" : 1,
       "inputAbbreviatedPath" : "\/less\/modules\/carousel.less",
@@ -1040,6 +1031,17 @@
       "outputStyle" : 0,
       "fileType" : 1,
       "debugStyle" : 0
+    },
+    "\/images\/optein_logo_transparent.PNG" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/optein_logo_transparent.PNG",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/optein_logo_transparent.PNG",
+      "initialSize" : 34080,
+      "fileType" : 8192
     },
     "\/less\/modules\/switch.less" : {
       "ieCompatibility" : 1,
@@ -1069,16 +1071,14 @@
       "initialSize" : 37909,
       "fileType" : 4096
     },
-    "\/images\/optein_logo_transparent.PNG" : {
+    "\/_layouts\/default.html" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/optein_logo_transparent.PNG",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/optein_logo_transparent.PNG",
-      "initialSize" : 34080,
-      "fileType" : 8192
+      "inputAbbreviatedPath" : "\/_layouts\/default.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/index-old.html" : {
       "ignoreWasSetByUser" : 0,
