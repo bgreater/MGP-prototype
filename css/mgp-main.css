@@ -5167,7 +5167,7 @@ a.list-group-item.active > .badge,
   text-shadow: none;
 }
 .breadcrumb > li:after {
-  color: #e6e9ea;
+  color: #c7cfbc;
   content: "\e002";
   display: inline-block;
   font-family: 'Flat-UI-Icons';
@@ -5180,7 +5180,7 @@ a.list-group-item.active > .badge,
   float: right;
 }
 .breadcrumb .active {
-  color: #e6e9ea;
+  color: #587036;
   cursor: default;
 }
 .breadcrumb .active:after {
