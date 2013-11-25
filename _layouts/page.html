@@ -2,9 +2,11 @@
 layout: default
 ---
 <div class="cover-img">
-	<div class="container {{ page.title }}">
+	<div class="container {{ page.title }}" style="background-image: url({{ page.coverimg }})">
+		<div class="col-sm-12">
 		<h2>{{ page.title }}</h2>
 		<h6>{{ page.excerpt }}</h6>
+		</div>
 	</div>
 </div>
 <div class="container">

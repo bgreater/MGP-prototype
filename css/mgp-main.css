@@ -5160,7 +5160,8 @@ a.list-group-item.active > .badge,
   line-height: 1;
   padding: 13px 20px;
   border-radius: 6px;
-  margin: 20px 0;
+  margin: 0 0 30px;
+  position: relative;
 }
 .breadcrumb > li {
   position: relative;
@@ -5177,10 +5178,12 @@ a.list-group-item.active > .badge,
   -webkit-font-smoothing: antialiased;
 }
 .breadcrumb .right {
-  float: right;
+  position: absolute;
+  right: 15px;
+  top: 10px;
 }
 .breadcrumb .active {
-  color: #587036;
+  color: #95a5a6;
   cursor: default;
 }
 .breadcrumb .active:after {
@@ -5927,6 +5930,10 @@ a.list-group-item.active > .badge,
   background-color: black;
   position: relative;
 }
+.landing-dark-wrap h6 {
+  color: #79a736;
+  font-family: Open Sans, sans-serif;
+}
 .carousel.landing-page .item {
   text-align: right;
 }
@@ -5943,7 +5950,7 @@ a.list-group-item.active > .badge,
 }
 @media (min-width: 768px) {
   .standout {
-    background: #f4f5f2;
+    background: #f0f7e5;
     padding: 1.5em 2em 1em;
     margin: -2em 0 0;
     min-height: 380px;
@@ -6054,12 +6061,6 @@ a.list-group-item.active > .badge,
   right: 0;
   top: 0;
 }
-.cover-img .container.Beverage.Alcohol {
-  background-image: url(../images/section-headers/alcohol-beverage.jpg);
-}
-.cover-img .container.Bakery.Products {
-  background-image: url(../images/section-headers/food-bakery-products.jpg);
-}
 .cover-img .container h2 {
   margin-top: 1.5em;
   color: #ffffff;
@@ -6067,9 +6068,9 @@ a.list-group-item.active > .badge,
   position: relative;
 }
 .cover-img .container h6 {
-  color: #79a736;
   z-index: 00002;
   position: relative;
+  color: #79a736;
   font-family: Open Sans, sans-serif;
 }
 @media (max-width: 991px) {
@@ -6242,6 +6243,11 @@ img.right,
 div.right {
   float: right;
   margin: 0 0 15px 25px;
+}
+.stButton .st-sharethis-counter,
+.stButton .stArrow,
+.stButton .stHBubble {
+  height: 22px !important;
 }
 .mgp-headline {
   color: #79a736;

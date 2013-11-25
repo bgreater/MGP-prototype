@@ -9,7 +9,8 @@
   line-height: 1;
   padding: 13px 20px;
   border-radius: 6px;
-  margin: 20px 0;
+  margin: 0 0 30px;
+  position: relative;
 
   > li {
     position: relative;
@@ -27,10 +28,12 @@
     }
   }
   & .right {
-    float: right;
+    position: absolute;
+    right: 15px;
+    top: 10px;
   }
   .active {
-    color: mix(@brand-primary, white, 90%);
+    color: @concrete;
     cursor: default;
 
     &:after {
