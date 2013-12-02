@@ -4508,7 +4508,6 @@ a.list-group-item.active > .badge,
   margin: 10px 0;
 }
 .alert a {
-  color: #f1c40f;
   font-weight: bold;
 }
 .alert a:hover {
@@ -4556,22 +4555,13 @@ a.list-group-item.active > .badge,
   background-color: #f3f6ef;
   border-color: #e7ebe0;
 }
-.alert-success a {
-  color: #79a736;
-}
 .alert-info {
   background-color: #f7f9f8;
   border-color: #ebeee9;
 }
-.alert-info a {
-  color: #3498db;
-}
 .alert-error {
   background-color: #f9f6f4;
   border-color: #ecebe4;
-}
-.alert-error a {
-  color: #e74c3c;
 }
 .bottom-menu {
   background: #ecefe9;
@@ -6089,6 +6079,11 @@ a.list-group-item.active > .badge,
 .watermark {
   background: url(../images/mgp-pattern.png) bottom right no-repeat;
 }
+.content .glossary {
+  font-size: 70%;
+  opacity: 0.5;
+  margin-left: -0.2em;
+}
 .content figure {
   display: block;
   float: none;
@@ -6248,6 +6243,9 @@ div.right {
 .stButton .stArrow,
 .stButton .stHBubble {
   height: 22px !important;
+}
+.no-border {
+  border-style: none;
 }
 .mgp-headline {
   color: #79a736;
