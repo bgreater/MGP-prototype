@@ -26,10 +26,10 @@
 .navbar-square-border {
   border-radius: 0px;
 }
-.bottom-menu {
+/*.bottom-menu {
   background-color: @navbar-bottom-color;
   color: white;
-}
+}*/
  @media (max-width: @screen-sm-min) { 
   /* fixes extra long sub-navs, brings them all li's inline --- NEEDS WORK
   .navbar .nav > li > ul > li > ul {
@@ -56,6 +56,21 @@
     font-family: Open Sans, sans-serif;
   }
 }
+.landing-light-gray-wrap {
+  background-color: @gray-light;
+  // margin-top: 2em;
+  & + .bottom-menu { 
+    margin-top: 0
+  }
+  padding-bottom: 2em;
+  .container {
+    padding: 0;
+  }
+}
+.landing-primary-color-wrap {
+  background-color: lighten(@mgpLightGreen, 54%);
+  padding: 30px 0;
+}
 .carousel.landing-page {
   .item {
     text-align: right;
@@ -79,17 +94,6 @@
     padding: 1.5em 2em 1em;
     margin: -2em 0 0;
     min-height: 380px;
-  }
-}
-.landing-light-gray-wrap {
-  background-color: @gray-light;
-  // margin-top: 2em;
-  & + .bottom-menu { 
-    margin-top: 0
-  }
-  padding-bottom: 2em;
-  .container {
-    padding: 0;
   }
 }
 .row .feature-3 {
@@ -383,7 +387,9 @@ img.right, div.right {
 .no-border {
   border-style: none;
 }
-
+.no-margin {
+  margin: 0;
+}
 // For demo purposes only
 .mgp-headline {
   color: @brand-secondary;

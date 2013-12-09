@@ -721,7 +721,16 @@ h6 {
   margin-bottom: 13.5px;
 }
 h6 {
+  margin-bottom: 13.5px;
+  font-size: 21px;
+  line-height: 1.26428571;
   font-weight: normal;
+  font-family: 'Open Sans', sans-serif !important;
+}
+@media (min-width: 768px) {
+  h6 {
+    font-size: 18.672px;
+  }
 }
 h1,
 .h1 {
@@ -847,6 +856,7 @@ pre {
   line-height: 1.4;
   border-radius: 4px;
   padding: 10px 15px;
+  outline: none;
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-transition: 0.25s linear;
   -o-transition: 0.25s linear;
@@ -857,6 +867,7 @@ pre {
 .btn:hover,
 .btn:focus {
   color: #ffffff;
+  outline: none;
 }
 .btn:active,
 .btn.active {
@@ -1158,6 +1169,7 @@ fieldset[disabled] .btn-inverse.active {
 }
 .btn-link {
   color: #79a736;
+  padding: 0;
 }
 .btn-link:hover,
 .btn-link:focus {
@@ -5896,10 +5908,10 @@ a.list-group-item.active > .badge,
 .navbar-square-border {
   border-radius: 0px;
 }
-.bottom-menu {
-  background-color: #34495e;
+/*.bottom-menu {
+  background-color: @navbar-bottom-color;
   color: white;
-}
+}*/
 @media (max-width: 768px) {
   /* fixes extra long sub-navs, brings them all li's inline --- NEEDS WORK
   .navbar .nav > li > ul > li > ul {
@@ -5924,6 +5936,20 @@ a.list-group-item.active > .badge,
   color: #79a736;
   font-family: Open Sans, sans-serif;
 }
+.landing-light-gray-wrap {
+  background-color: #e6e9ea;
+  padding-bottom: 2em;
+}
+.landing-light-gray-wrap + .bottom-menu {
+  margin-top: 0;
+}
+.landing-light-gray-wrap .container {
+  padding: 0;
+}
+.landing-primary-color-wrap {
+  background-color: #f9fcf5;
+  padding: 30px 0;
+}
 .carousel.landing-page .item {
   text-align: right;
 }
@@ -5945,16 +5971,6 @@ a.list-group-item.active > .badge,
     margin: -2em 0 0;
     min-height: 380px;
   }
-}
-.landing-light-gray-wrap {
-  background-color: #e6e9ea;
-  padding-bottom: 2em;
-}
-.landing-light-gray-wrap + .bottom-menu {
-  margin-top: 0;
-}
-.landing-light-gray-wrap .container {
-  padding: 0;
 }
 .row .feature-3 {
   padding: 0 5%;
@@ -6246,6 +6262,9 @@ div.right {
 }
 .no-border {
   border-style: none;
+}
+.no-margin {
+  margin: 0;
 }
 .mgp-headline {
   color: #79a736;

@@ -11,12 +11,14 @@
   line-height: @btn-line-height-base;
   border-radius: @border-radius-base;
   padding: 10px 15px;
+  outline: none;
   -webkit-font-smoothing: subpixel-antialiased;
   .transition(.25s linear);
 
   &:hover,
   &:focus {
-    color: @btn-default-color;    
+    color: @btn-default-color;  
+    outline: none;  
   }
 
   &:active,
@@ -103,6 +105,7 @@
 // Make a button look and behave like a link
 .btn-link {
   color: @link-color;
+  padding: 0;
 
   &:hover,
   &:focus {
