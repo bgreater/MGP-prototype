@@ -53,7 +53,7 @@
   position: relative;
   h6 {
     color: @mgpLightGreen;
-    font-family: Open Sans, sans-serif;
+    font-family: @font-family-alt;
   }
 }
 .landing-light-gray-wrap {
@@ -179,6 +179,7 @@
     .background-size(~"auto, 100%");
     h2 {
       margin-top: 1.5em;
+      font-size: floor(@font-size-base * 2.25);
       color: @inverse;
       z-index: 00002;
       position: relative;
@@ -187,7 +188,7 @@
       z-index: 00002;
       position: relative;
       color: @mgpLightGreen;
-      font-family: Open Sans, sans-serif;
+      font-family: @font-family-alt;
     }
     /* @media (min-width: @screen-md-min) { 
       &:before {
@@ -252,15 +253,15 @@
   color: @brand-primary;
   padding: 30px;
   text-shadow: none;
-  background-color: mix(@brand-warning, @alert-bg, 3%);
-  border: 2px solid mix(@brand-warning, @alert-border, 3%);
+  background-color: mix(@brand-primary, white, 6%);
+  border: 2px solid mix(@brand-primary, white, 15%);
   font-size: floor(@component-font-size-base * 1.067); // ~16px
   line-height: 1.625; // ~26px
   border-radius: @border-radius-large;
   .title {
     margin: -30px 0 15px 0;
     h5 {
-      background-color: #edeee2;
+      background-color: mix(@brand-primary, white, 15%);
       padding: 0.7em 30px;
       margin: 0 -30px;
     }
@@ -333,6 +334,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 // Misc
+hr {
+  margin: 40px 0;
+}
 .pad {
   margin-bottom: ceil(@font-size-base * 2);
   margin-top: ceil(@font-size-base * 2);

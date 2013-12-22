@@ -11,6 +11,7 @@
   line-height: @btn-line-height-base;
   border-radius: @border-radius-base;
   padding: 10px 15px;
+  margin: 5px;
   outline: none;
   -webkit-font-smoothing: subpixel-antialiased;
   .transition(.25s linear);
@@ -96,6 +97,17 @@
   min-width: 140px;
   padding-left: 30px;
   padding-right: 30px;
+}
+.btn-news {
+  font-family: @font-family-alt;
+  padding: 20px 20px 20px 40px;
+  font-size: @btn-font-size-lg;
+  .button-variant(@brand-secondary, mix(@brand-secondary, @alert-bg, 10%), mix(@btn-primary-hover-bg, @alert-bg, 40%), @btn-primary-active-bg);
+  &:after {
+    content: "»";
+    float: right;
+    padding-left: 30px;
+  }
 }
   
  
