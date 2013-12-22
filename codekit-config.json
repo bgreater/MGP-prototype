@@ -2,6 +2,17 @@
   "CodeKitInfo" : "This is a CodeKit project configuration file. It is designed to sync project settings across multiple machines. Modifying the contents of this file can be a poor life decision if you don't know what you're doing. This file is not useful unless accompanied by the project that created it in CodeKit. For more information, see: http:\/\/incident57.com\/codekit",
   "creatorBuild" : "8403",
   "files" : {
+    "\/images\/video-thumb2.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/video-thumb2.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/video-thumb2.jpg",
+      "initialSize" : 28885,
+      "fileType" : 4096
+    },
     "\/less\/flat-ui.less" : {
       "ieCompatibility" : 1,
       "inputAbbreviatedPath" : "\/less\/flat-ui.less",
@@ -18,17 +29,6 @@
       "outputStyle" : 0,
       "fileType" : 1,
       "debugStyle" : 0
-    },
-    "\/images\/video-thumb2.jpg" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/video-thumb2.jpg",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/video-thumb2.jpg",
-      "initialSize" : 28885,
-      "fileType" : 4096
     },
     "\/resources\/fontello\/css\/fontello-ie7.css" : {
       "ignoreWasSetByUser" : 0,
@@ -169,6 +169,15 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
+    "\/alcohol.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/alcohol.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/images\/Stock\/iStock_000005850940Medium.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -180,19 +189,10 @@
       "initialSize" : 945663,
       "fileType" : 4096
     },
-    "\/alcohol.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/alcohol.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/less\/mixins.less" : {
+    "\/less\/modules\/input-icons.less" : {
       "ieCompatibility" : 1,
-      "inputAbbreviatedPath" : "\/less\/mixins.less",
-      "outputAbbreviatedPath" : "\/css\/mixins.css",
+      "inputAbbreviatedPath" : "\/less\/modules\/input-icons.less",
+      "outputAbbreviatedPath" : "\/less\/css\/input-icons.css",
       "outputPathIsSetByUser" : 0,
       "strictUnits" : 0,
       "relativeURLS" : 0,
@@ -223,10 +223,10 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/less\/modules\/input-icons.less" : {
+    "\/less\/mixins.less" : {
       "ieCompatibility" : 1,
-      "inputAbbreviatedPath" : "\/less\/modules\/input-icons.less",
-      "outputAbbreviatedPath" : "\/less\/css\/input-icons.css",
+      "inputAbbreviatedPath" : "\/less\/mixins.less",
+      "outputAbbreviatedPath" : "\/css\/mixins.css",
       "outputPathIsSetByUser" : 0,
       "strictUnits" : 0,
       "relativeURLS" : 0,
@@ -251,14 +251,14 @@
       "initialSize" : 14957,
       "fileType" : 8192
     },
-    "\/less\/mgp-main.less" : {
+    "\/less\/spaces.less" : {
       "ieCompatibility" : 1,
-      "inputAbbreviatedPath" : "\/less\/mgp-main.less",
-      "outputAbbreviatedPath" : "\/css\/mgp-main.css",
+      "inputAbbreviatedPath" : "\/less\/spaces.less",
+      "outputAbbreviatedPath" : "\/css\/spaces.css",
       "outputPathIsSetByUser" : 0,
       "strictUnits" : 0,
       "relativeURLS" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "strictImports" : 0,
       "ignoreWasSetByUser" : 0,
       "shouldRunBless" : 0,
@@ -279,14 +279,14 @@
       "initialSize" : 1162,
       "fileType" : 8192
     },
-    "\/less\/spaces.less" : {
+    "\/less\/mgp-main.less" : {
       "ieCompatibility" : 1,
-      "inputAbbreviatedPath" : "\/less\/spaces.less",
-      "outputAbbreviatedPath" : "\/css\/spaces.css",
+      "inputAbbreviatedPath" : "\/less\/mgp-main.less",
+      "outputAbbreviatedPath" : "\/css\/mgp-main.css",
       "outputPathIsSetByUser" : 0,
       "strictUnits" : 0,
       "relativeURLS" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "strictImports" : 0,
       "ignoreWasSetByUser" : 0,
       "shouldRunBless" : 0,
@@ -295,17 +295,6 @@
       "outputStyle" : 0,
       "fileType" : 1,
       "debugStyle" : 0
-    },
-    "\/images\/sprite_download.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/sprite_download.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/sprite_download.png",
-      "initialSize" : 16799,
-      "fileType" : 8192
     },
     "\/images\/switch\/mask-square.png" : {
       "ignoreWasSetByUser" : 0,
@@ -317,6 +306,15 @@
       "outputAbbreviatedPath" : "\/images\/switch\/mask-square.png",
       "initialSize" : 190,
       "fileType" : 8192
+    },
+    "\/_layouts\/page.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_layouts\/page.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/components.html" : {
       "ignoreWasSetByUser" : 0,
@@ -336,14 +334,16 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/_layouts\/page.html" : {
+    "\/images\/sprite_download.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_layouts\/page.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "inputAbbreviatedPath" : "\/images\/sprite_download.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/sprite_download.png",
+      "initialSize" : 16799,
+      "fileType" : 8192
     },
     "\/food-glossary-term.html" : {
       "ignoreWasSetByUser" : 0,
@@ -668,17 +668,6 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/images\/carousel\/image-02.jpg" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/carousel\/image-02.jpg",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/carousel\/image-02.jpg",
-      "initialSize" : 326278,
-      "fileType" : 4096
-    },
     "\/less\/modules\/ui-datepicker.less" : {
       "ieCompatibility" : 1,
       "inputAbbreviatedPath" : "\/less\/modules\/ui-datepicker.less",
@@ -695,6 +684,17 @@
       "outputStyle" : 0,
       "fileType" : 1,
       "debugStyle" : 0
+    },
+    "\/images\/carousel\/image-02.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/carousel\/image-02.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/carousel\/image-02.jpg",
+      "initialSize" : 326278,
+      "fileType" : 4096
     },
     "\/index.html" : {
       "ignoreWasSetByUser" : 0,
@@ -722,14 +722,16 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/food-sub-category.html" : {
+    "\/images\/section-headers\/food-bakery-products.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/food-sub-category.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "inputAbbreviatedPath" : "\/images\/section-headers\/food-bakery-products.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/section-headers\/food-bakery-products.jpg",
+      "initialSize" : 31554,
+      "fileType" : 4096
     },
     "\/bootstrap\/css\/bootstrap-docs.css" : {
       "ignoreWasSetByUser" : 0,
@@ -739,6 +741,15 @@
       "inputAbbreviatedPath" : "\/bootstrap\/css\/bootstrap-docs.css",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
+    },
+    "\/food-sub-category.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/food-sub-category.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/less\/modules\/navs.less" : {
       "ieCompatibility" : 1,
@@ -756,17 +767,6 @@
       "outputStyle" : 0,
       "fileType" : 1,
       "debugStyle" : 0
-    },
-    "\/images\/section-headers\/video-thumb3.jpg" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/section-headers\/video-thumb3.jpg",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/section-headers\/video-thumb3.jpg",
-      "initialSize" : 31735,
-      "fileType" : 4096
     },
     "\/resources\/fontello\/css\/fontello-embedded.css" : {
       "ignoreWasSetByUser" : 0,
@@ -811,15 +811,15 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/images\/section-headers\/food-bakery-products.jpg" : {
+    "\/images\/section-headers\/video-thumb3.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/section-headers\/food-bakery-products.jpg",
+      "inputAbbreviatedPath" : "\/images\/section-headers\/video-thumb3.jpg",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/section-headers\/food-bakery-products.jpg",
-      "initialSize" : 31554,
+      "outputAbbreviatedPath" : "\/images\/section-headers\/video-thumb3.jpg",
+      "initialSize" : 31735,
       "fileType" : 4096
     },
     "\/alcohol-product.html" : {
@@ -908,6 +908,15 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
+    "\/css\/mgp-main.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/css\/mgp-main.css",
+      "outputAbbreviatedPath" : "\/No Output Path",
+      "fileType" : 16
+    },
     "\/images\/don-coffey.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -918,15 +927,6 @@
       "outputAbbreviatedPath" : "\/images\/don-coffey.jpg",
       "initialSize" : 5036,
       "fileType" : 4096
-    },
-    "\/css\/mgp-main.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/mgp-main.css",
-      "outputAbbreviatedPath" : "\/No Output Path",
-      "fileType" : 16
     },
     "\/less\/modules\/tagsinput.less" : {
       "ieCompatibility" : 1,
@@ -1010,16 +1010,22 @@
       "initialSize" : 38357,
       "fileType" : 4096
     },
-    "\/images\/section-headers\/food-bakery-products-lg.jpg" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
+    "\/less\/modules\/button-groups.less" : {
+      "ieCompatibility" : 1,
+      "inputAbbreviatedPath" : "\/less\/modules\/button-groups.less",
+      "outputAbbreviatedPath" : "\/less\/css\/button-groups.css",
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/section-headers\/food-bakery-products-lg.jpg",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/section-headers\/food-bakery-products-lg.jpg",
-      "initialSize" : 39957,
-      "fileType" : 4096
+      "strictUnits" : 0,
+      "relativeURLS" : 0,
+      "ignore" : 1,
+      "strictImports" : 0,
+      "ignoreWasSetByUser" : 0,
+      "shouldRunBless" : 0,
+      "hidden" : 0,
+      "strictMath" : 0,
+      "outputStyle" : 0,
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/less\/modules\/badges.less" : {
       "ieCompatibility" : 1,
@@ -1038,22 +1044,16 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/less\/modules\/button-groups.less" : {
-      "ieCompatibility" : 1,
-      "inputAbbreviatedPath" : "\/less\/modules\/button-groups.less",
-      "outputAbbreviatedPath" : "\/less\/css\/button-groups.css",
-      "outputPathIsSetByUser" : 0,
-      "strictUnits" : 0,
-      "relativeURLS" : 0,
-      "ignore" : 1,
-      "strictImports" : 0,
+    "\/images\/section-headers\/food-bakery-products-lg.jpg" : {
       "ignoreWasSetByUser" : 0,
-      "shouldRunBless" : 0,
+      "ignore" : 0,
       "hidden" : 0,
-      "strictMath" : 0,
-      "outputStyle" : 0,
-      "fileType" : 1,
-      "debugStyle" : 0
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/section-headers\/food-bakery-products-lg.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/section-headers\/food-bakery-products-lg.jpg",
+      "initialSize" : 39957,
+      "fileType" : 4096
     },
     "\/food-category.html" : {
       "ignoreWasSetByUser" : 0,
@@ -1084,16 +1084,22 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/images\/optein_logo_transparent.PNG" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
+    "\/less\/modules\/carousel.less" : {
+      "ieCompatibility" : 1,
+      "inputAbbreviatedPath" : "\/less\/modules\/carousel.less",
+      "outputAbbreviatedPath" : "\/less\/css\/carousel.css",
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/optein_logo_transparent.PNG",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/optein_logo_transparent.PNG",
-      "initialSize" : 34080,
-      "fileType" : 8192
+      "strictUnits" : 0,
+      "relativeURLS" : 0,
+      "ignore" : 1,
+      "strictImports" : 0,
+      "ignoreWasSetByUser" : 0,
+      "shouldRunBless" : 0,
+      "hidden" : 0,
+      "strictMath" : 0,
+      "outputStyle" : 0,
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/less\/modules\/switch.less" : {
       "ieCompatibility" : 1,
@@ -1123,6 +1129,17 @@
       "initialSize" : 37909,
       "fileType" : 4096
     },
+    "\/images\/optein_logo_transparent.PNG" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/optein_logo_transparent.PNG",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/optein_logo_transparent.PNG",
+      "initialSize" : 34080,
+      "fileType" : 8192
+    },
     "\/index-old.html" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1131,23 +1148,6 @@
       "inputAbbreviatedPath" : "\/index-old.html",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
-    },
-    "\/less\/modules\/carousel.less" : {
-      "ieCompatibility" : 1,
-      "inputAbbreviatedPath" : "\/less\/modules\/carousel.less",
-      "outputAbbreviatedPath" : "\/less\/css\/carousel.css",
-      "outputPathIsSetByUser" : 0,
-      "strictUnits" : 0,
-      "relativeURLS" : 0,
-      "ignore" : 1,
-      "strictImports" : 0,
-      "ignoreWasSetByUser" : 0,
-      "shouldRunBless" : 0,
-      "hidden" : 0,
-      "strictMath" : 0,
-      "outputStyle" : 0,
-      "fileType" : 1,
-      "debugStyle" : 0
     },
     "\/stylesheets\/stylesheet.css" : {
       "ignoreWasSetByUser" : 0,
@@ -1285,6 +1285,28 @@
       "initialSize" : 28292,
       "fileType" : 4096
     },
+    "\/images\/section-headers\/about-mgp-leadership.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/section-headers\/about-mgp-leadership.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/section-headers\/about-mgp-leadership.jpg",
+      "initialSize" : 23821,
+      "fileType" : 4096
+    },
+    "\/images\/section-headers\/food-peppers-lg.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/section-headers\/food-peppers-lg.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/section-headers\/food-peppers-lg.jpg",
+      "initialSize" : 51850,
+      "fileType" : 4096
+    },
     "\/less\/modules\/tooltip.less" : {
       "ieCompatibility" : 1,
       "inputAbbreviatedPath" : "\/less\/modules\/tooltip.less",
@@ -1301,28 +1323,6 @@
       "outputStyle" : 0,
       "fileType" : 1,
       "debugStyle" : 0
-    },
-    "\/images\/section-headers\/food-peppers-lg.jpg" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/section-headers\/food-peppers-lg.jpg",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/section-headers\/food-peppers-lg.jpg",
-      "initialSize" : 51850,
-      "fileType" : 4096
-    },
-    "\/images\/section-headers\/about-mgp-leadership.jpg" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/section-headers\/about-mgp-leadership.jpg",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/section-headers\/about-mgp-leadership.jpg",
-      "initialSize" : 23821,
-      "fileType" : 4096
     },
     "\/images\/mgp-logo-nav.png" : {
       "ignoreWasSetByUser" : 0,
@@ -1346,10 +1346,10 @@
       "initialSize" : 26911,
       "fileType" : 4096
     },
-    "\/less\/lesshat.less" : {
+    "\/less\/modules\/code.less" : {
       "ieCompatibility" : 1,
-      "inputAbbreviatedPath" : "\/less\/lesshat.less",
-      "outputAbbreviatedPath" : "\/css\/lesshat.css",
+      "inputAbbreviatedPath" : "\/less\/modules\/code.less",
+      "outputAbbreviatedPath" : "\/less\/css\/code.css",
       "outputPathIsSetByUser" : 0,
       "strictUnits" : 0,
       "relativeURLS" : 0,
@@ -1363,10 +1363,10 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/less\/modules\/code.less" : {
+    "\/less\/lesshat.less" : {
       "ieCompatibility" : 1,
-      "inputAbbreviatedPath" : "\/less\/modules\/code.less",
-      "outputAbbreviatedPath" : "\/less\/css\/code.css",
+      "inputAbbreviatedPath" : "\/less\/lesshat.less",
+      "outputAbbreviatedPath" : "\/css\/lesshat.css",
       "outputPathIsSetByUser" : 0,
       "strictUnits" : 0,
       "relativeURLS" : 0,
