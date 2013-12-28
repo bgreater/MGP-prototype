@@ -70,6 +70,9 @@
 .btn-primary {
   .button-variant(@btn-default-color, @brand-secondary, @btn-primary-hover-bg, @btn-primary-active-bg);
 }
+.btn-primary-light {
+  .button-variant(@btn-default-color, lighten(@brand-secondary, 30%), @btn-primary-hover-bg, @btn-primary-active-bg);
+}
 .btn-info    {
   .button-variant(@btn-default-color, @brand-info, @btn-info-hover-bg, @btn-info-active-bg);
 }

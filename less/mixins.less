@@ -63,6 +63,15 @@
   &.placeholder       					{ color: @color; } // Fallback
 }
 
+.background-cover(@url) {
+  background-image: url(@url);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{@url}', sizingMethod='scale');
+-ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{@url}', sizingMethod='scale');
+}
+
 .placeholder-height(@height) {
   &:-moz-placeholder {
     line-height: @height;
