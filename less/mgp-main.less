@@ -338,16 +338,22 @@
 }
 .video-thumbnail {
   border-radius: @border-radius-small;
-  margin: 4px 2px;
+  margin: 24px 2px;
+  min-height: 180px;
   .video-description {
     line-height: 1.4;
     font-size: 0.775em;
     font-weight: bold;
     padding-top: 4px;
   }
+  .video {
+    max-height: 140px;
+    overflow: hidden;
+  }
   .video img {
     .transition (.2s);
     opacity: 0.8;
+    margin-top: -11%;
   }
   &:hover .video img {
     opacity: 1;
@@ -360,7 +366,7 @@
   line-height: 1.6;
 }
 
-.container.Videos {
+.container.videos {
   min-height: 140px;
 }
 

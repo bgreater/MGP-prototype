@@ -1937,7 +1937,7 @@ fieldset[disabled] .btn-link:focus {
   height: 2px;
 }
 .navbar.navbar-inverse .navbar-form {
-  padding: 8px 5px 8px 23px;
+  padding: 3px 5px 3px 23px;
 }
 .navbar.navbar-inverse .navbar-form .input-group-btn .btn {
   background-color: #3b521b;
@@ -6412,13 +6412,18 @@ a.list-group-item.active > .badge,
 }
 .video-thumbnail {
   border-radius: 3px;
-  margin: 4px 2px;
+  margin: 24px 2px;
+  min-height: 180px;
 }
 .video-thumbnail .video-description {
   line-height: 1.4;
   font-size: 0.775em;
   font-weight: bold;
   padding-top: 4px;
+}
+.video-thumbnail .video {
+  max-height: 140px;
+  overflow: hidden;
 }
 .video-thumbnail .video img {
   -moz-transition: 0.2s;
@@ -6427,6 +6432,7 @@ a.list-group-item.active > .badge,
   -webkit-transition: 0.2s;
   transition: 0.2s;
   opacity: 0.8;
+  margin-top: -11%;
 }
 .video-thumbnail:hover .video img {
   opacity: 1;
@@ -6436,7 +6442,7 @@ a.list-group-item.active > .badge,
   font-size: 0.875em;
   line-height: 1.6;
 }
-.container.Videos {
+.container.videos {
   min-height: 140px;
 }
 h1,
