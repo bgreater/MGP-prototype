@@ -28,19 +28,19 @@ body {
   border-bottom: 3px solid #5a7a18;
   .box-shadow (0 0 2px rgba(0, 0, 0, 0.3), 0 0 28px rgba(0, 0, 0, 0.2));
   .navbar-brand {
-    width: 156px; 
-    height: 84px;
-    background:url(../images/mgp-logo-nav.jpg) center no-repeat; 
     border: none;
     position: relative;
     border-radius: 0;
     margin: 0 20px -30px 0px;
+    padding: 0 !important;
     left: 15px;
     .box-shadow (0 0 2px rgba(0,0,0,0.3), 0 0 28px rgba(0,0,0,0.08));
-    @media (max-width: @screen-sm-min){
-      height:61px;
-      width: 101px;
-      margin: 0 20px -30px -15px;
+    img {
+      height: 84px;
+      @media (max-width: @screen-sm-min){
+        height:71px;
+        width: auto;
+      }
     }
   }
   .nav {
@@ -58,9 +58,24 @@ body {
         border-bottom: 3px solid white;
         text-shadow: 0px -1px 1px rgba(0,0,0,0.2), 0 0 50px white;
       }
+      @media (max-width: @screen-sm-min){
+        font-size: 1em;
+      }
     }
     > li > ul:before {
       border-color: transparent transparent @brand-secondary transparent;
+    }
+
+    > li ul > li {
+      clear: both;
+      border-top: none;
+      &:hover > ul > li {
+        /* Adjusts the sub menu level 2 to be inline*/
+        float: left;
+        display: inline;
+        clear: none;
+        border: none;
+      }
     }
 
     ul {
@@ -71,7 +86,7 @@ body {
           background-color: lighten(@brand-secondary, 2%);
         }
       }
-      li {
+      > li {
         padding: 0;
         background: darken(@brand-secondary, 5%);
         border-bottom: 1px solid darken(@brand-secondary, 8%);
@@ -96,22 +111,6 @@ body {
   background-color: @navbar-bottom-color;
   color: white;
 }*/
- @media (max-width: @screen-sm-min) { 
-  /* fixes extra long sub-navs, brings them all li's inline --- NEEDS WORK
-  .navbar .nav > li > ul > li > ul {
-    float: left;
-    width: 90%;
-  }
-  .navbar .nav > li > ul {
-    clear: both;
-  }
-  .navbar .nav > li > ul > li > ul > li {
-    float: left;
-    clear: none;
-    padding: 0;
-    margin: -5px 0;
-  }*/
-}
 
 // Landing page
 .landing-dark-wrap {

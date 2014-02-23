@@ -202,10 +202,14 @@
     text-shadow: none;
     display: none;
 
-    &:hover,
-    &:focus {
+    &:hover {
       background: none;
       color: @brand-secondary;
+    }
+    &:focus {
+      &:before {
+        content: "\e00b";
+      }
     }
     &:before {
       content: "\e00c";
