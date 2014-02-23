@@ -2,14 +2,22 @@
   "CodeKitInfo" : "This is a CodeKit project configuration file. It is designed to sync project settings across multiple machines. Modifying the contents of this file can be a poor life decision if you don't know what you're doing. This file is not useful unless accompanied by the project that created it in CodeKit. For more information, see: http:\/\/incident57.com\/codekit",
   "creatorBuild" : "8403",
   "files" : {
-    "\/food-glossary-term.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
+    "\/less\/fonts.less" : {
+      "ieCompatibility" : 1,
+      "inputAbbreviatedPath" : "\/less\/fonts.less",
+      "outputAbbreviatedPath" : "\/css\/fonts.css",
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/food-glossary-term.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "strictUnits" : 0,
+      "relativeURLS" : 0,
+      "ignore" : 1,
+      "strictImports" : 0,
+      "ignoreWasSetByUser" : 0,
+      "shouldRunBless" : 0,
+      "hidden" : 0,
+      "strictMath" : 0,
+      "outputStyle" : 0,
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/less\/modules\/pager.less" : {
       "ieCompatibility" : 1,
@@ -37,10 +45,19 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/less\/fonts.less" : {
+    "\/food-glossary-term.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/food-glossary-term.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/less\/modules\/pagination.less" : {
       "ieCompatibility" : 1,
-      "inputAbbreviatedPath" : "\/less\/fonts.less",
-      "outputAbbreviatedPath" : "\/css\/fonts.css",
+      "inputAbbreviatedPath" : "\/less\/modules\/pagination.less",
+      "outputAbbreviatedPath" : "\/less\/css\/pagination.css",
       "outputPathIsSetByUser" : 0,
       "strictUnits" : 0,
       "relativeURLS" : 0,
@@ -58,23 +75,6 @@
       "ieCompatibility" : 1,
       "inputAbbreviatedPath" : "\/less\/modules\/popover.less",
       "outputAbbreviatedPath" : "\/less\/css\/popover.css",
-      "outputPathIsSetByUser" : 0,
-      "strictUnits" : 0,
-      "relativeURLS" : 0,
-      "ignore" : 1,
-      "strictImports" : 0,
-      "ignoreWasSetByUser" : 0,
-      "shouldRunBless" : 0,
-      "hidden" : 0,
-      "strictMath" : 0,
-      "outputStyle" : 0,
-      "fileType" : 1,
-      "debugStyle" : 0
-    },
-    "\/less\/modules\/pagination.less" : {
-      "ieCompatibility" : 1,
-      "inputAbbreviatedPath" : "\/less\/modules\/pagination.less",
-      "outputAbbreviatedPath" : "\/less\/css\/pagination.css",
       "outputPathIsSetByUser" : 0,
       "strictUnits" : 0,
       "relativeURLS" : 0,
@@ -154,6 +154,17 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
+    "\/images\/alcohol\/warehouse.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/alcohol\/warehouse.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/alcohol\/warehouse.jpg",
+      "initialSize" : 44504,
+      "fileType" : 4096
+    },
     "\/js\/flexslider\/demo\/fonts\/webfonts\/geo-regular\/svg\/svg_test.html" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -162,17 +173,6 @@
       "inputAbbreviatedPath" : "\/js\/flexslider\/demo\/fonts\/webfonts\/geo-regular\/svg\/svg_test.html",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
-    },
-    "\/images\/section-headers\/food-peppers-lg.jpg" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/section-headers\/food-peppers-lg.jpg",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/section-headers\/food-peppers-lg.jpg",
-      "initialSize" : 51850,
-      "fileType" : 4096
     },
     "\/images\/mgp-logo-nav.png" : {
       "ignoreWasSetByUser" : 0,
@@ -185,6 +185,15 @@
       "initialSize" : 3233,
       "fileType" : 8192
     },
+    "\/news-and-press-detail.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/news-and-press-detail.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/images\/video-thumb.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -196,6 +205,17 @@
       "initialSize" : 56543,
       "fileType" : 4096
     },
+    "\/images\/section-headers\/food-peppers-lg.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/section-headers\/food-peppers-lg.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/section-headers\/food-peppers-lg.jpg",
+      "initialSize" : 51850,
+      "fileType" : 4096
+    },
     "\/news-and-press.html" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -205,36 +225,10 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/news-and-press-detail.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/news-and-press-detail.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/less\/modules\/progress-bars.less" : {
       "ieCompatibility" : 1,
       "inputAbbreviatedPath" : "\/less\/modules\/progress-bars.less",
       "outputAbbreviatedPath" : "\/less\/css\/progress-bars.css",
-      "outputPathIsSetByUser" : 0,
-      "strictUnits" : 0,
-      "relativeURLS" : 0,
-      "ignore" : 1,
-      "strictImports" : 0,
-      "ignoreWasSetByUser" : 0,
-      "shouldRunBless" : 0,
-      "hidden" : 0,
-      "strictMath" : 0,
-      "outputStyle" : 0,
-      "fileType" : 1,
-      "debugStyle" : 0
-    },
-    "\/less\/modules\/breadcrumbs.less" : {
-      "ieCompatibility" : 1,
-      "inputAbbreviatedPath" : "\/less\/modules\/breadcrumbs.less",
-      "outputAbbreviatedPath" : "\/less\/css\/breadcrumbs.css",
       "outputPathIsSetByUser" : 0,
       "strictUnits" : 0,
       "relativeURLS" : 0,
@@ -258,6 +252,23 @@
       "outputAbbreviatedPath" : "\/images\/carousel\/image-02.jpg",
       "initialSize" : 326278,
       "fileType" : 4096
+    },
+    "\/less\/modules\/breadcrumbs.less" : {
+      "ieCompatibility" : 1,
+      "inputAbbreviatedPath" : "\/less\/modules\/breadcrumbs.less",
+      "outputAbbreviatedPath" : "\/less\/css\/breadcrumbs.css",
+      "outputPathIsSetByUser" : 0,
+      "strictUnits" : 0,
+      "relativeURLS" : 0,
+      "ignore" : 1,
+      "strictImports" : 0,
+      "ignoreWasSetByUser" : 0,
+      "shouldRunBless" : 0,
+      "hidden" : 0,
+      "strictMath" : 0,
+      "outputStyle" : 0,
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/images\/inline-sample.jpg" : {
       "ignoreWasSetByUser" : 0,
@@ -341,14 +352,22 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/js\/flexslider\/demo\/fonts\/webfonts\/geo-medium\/svg\/svg_test.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
+    "\/less\/lesshat.less" : {
+      "ieCompatibility" : 1,
+      "inputAbbreviatedPath" : "\/less\/lesshat.less",
+      "outputAbbreviatedPath" : "\/css\/lesshat.css",
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/flexslider\/demo\/fonts\/webfonts\/geo-medium\/svg\/svg_test.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "strictUnits" : 0,
+      "relativeURLS" : 0,
+      "ignore" : 1,
+      "strictImports" : 0,
+      "ignoreWasSetByUser" : 0,
+      "shouldRunBless" : 0,
+      "hidden" : 0,
+      "strictMath" : 0,
+      "outputStyle" : 0,
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/_layouts\/home-page.html" : {
       "ignoreWasSetByUser" : 0,
@@ -379,32 +398,6 @@
       "initialSize" : 284215,
       "fileType" : 4096
     },
-    "\/_layouts\/default.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/_layouts\/default.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/less\/lesshat.less" : {
-      "ieCompatibility" : 1,
-      "inputAbbreviatedPath" : "\/less\/lesshat.less",
-      "outputAbbreviatedPath" : "\/css\/lesshat.css",
-      "outputPathIsSetByUser" : 0,
-      "strictUnits" : 0,
-      "relativeURLS" : 0,
-      "ignore" : 1,
-      "strictImports" : 0,
-      "ignoreWasSetByUser" : 0,
-      "shouldRunBless" : 0,
-      "hidden" : 0,
-      "strictMath" : 0,
-      "outputStyle" : 0,
-      "fileType" : 1,
-      "debugStyle" : 0
-    },
     "\/images\/section-headers\/alcohol-co-products-lg.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -415,6 +408,24 @@
       "outputAbbreviatedPath" : "\/images\/section-headers\/alcohol-co-products-lg.jpg",
       "initialSize" : 39788,
       "fileType" : 4096
+    },
+    "\/_layouts\/default.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/_layouts\/default.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/js\/flexslider\/demo\/fonts\/webfonts\/geo-medium\/svg\/svg_test.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/flexslider\/demo\/fonts\/webfonts\/geo-medium\/svg\/svg_test.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/images\/exaple-image.jpg" : {
       "ignoreWasSetByUser" : 0,
@@ -458,6 +469,15 @@
       "initialSize" : 7516,
       "fileType" : 8192
     },
+    "\/stylesheets\/stylesheet.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/stylesheets\/stylesheet.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
     "\/less\/modules\/type.less" : {
       "ieCompatibility" : 1,
       "inputAbbreviatedPath" : "\/less\/modules\/type.less",
@@ -474,15 +494,6 @@
       "outputStyle" : 0,
       "fileType" : 1,
       "debugStyle" : 0
-    },
-    "\/stylesheets\/stylesheet.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/stylesheets\/stylesheet.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
     },
     "\/food-sub-category.html" : {
       "ignoreWasSetByUser" : 0,
@@ -645,7 +656,7 @@
       "strictMath" : 0,
       "outputStyle" : 0,
       "fileType" : 1,
-      "debugStyle" : 0
+      "debugStyle" : 2
     },
     "\/js\/flexslider\/demo\/fonts\/webfonts\/geo-semibold\/svg\/index.html" : {
       "ignoreWasSetByUser" : 0,
@@ -765,15 +776,6 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/careers-bio.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/careers-bio.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/js\/flexslider\/demo\/images\/kitchen_adventurer_donut.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -784,6 +786,15 @@
       "outputAbbreviatedPath" : "\/js\/flexslider\/demo\/images\/kitchen_adventurer_donut.jpg",
       "initialSize" : 148037,
       "fileType" : 4096
+    },
+    "\/careers-bio.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/careers-bio.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/css\/flat-ui.css" : {
       "ignoreWasSetByUser" : 0,
@@ -849,21 +860,23 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
+    "\/images\/switch\/mask-square.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/switch\/mask-square.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/switch\/mask-square.png",
+      "initialSize" : 190,
+      "fileType" : 8192
+    },
     "\/sample-request-part1.html" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/sample-request-part1.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/js\/flexslider\/demo\/video.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/flexslider\/demo\/video.html",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -878,16 +891,14 @@
       "initialSize" : 1162,
       "fileType" : 8192
     },
-    "\/images\/switch\/mask-square.png" : {
+    "\/js\/flexslider\/demo\/video.html" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/switch\/mask-square.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/switch\/mask-square.png",
-      "initialSize" : 190,
-      "fileType" : 8192
+      "inputAbbreviatedPath" : "\/js\/flexslider\/demo\/video.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/_layouts\/landing-page.html" : {
       "ignoreWasSetByUser" : 0,
@@ -1045,15 +1056,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/css\/demo.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/demo.css",
-      "outputAbbreviatedPath" : "\/No Output Path",
-      "fileType" : 16
-    },
     "\/js\/flexslider\/demo\/video-wistia.html" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1062,6 +1064,15 @@
       "inputAbbreviatedPath" : "\/js\/flexslider\/demo\/video-wistia.html",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
+    },
+    "\/css\/demo.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/css\/demo.css",
+      "outputAbbreviatedPath" : "\/No Output Path",
+      "fileType" : 16
     },
     "\/images\/don-coffey.jpg" : {
       "ignoreWasSetByUser" : 0,
@@ -1134,6 +1145,17 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
+    "\/images\/mgp-logo-nav.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/mgp-logo-nav.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/mgp-logo-nav.jpg",
+      "initialSize" : 3448,
+      "fileType" : 4096
+    },
     "\/less\/demo.less" : {
       "ieCompatibility" : 1,
       "inputAbbreviatedPath" : "\/less\/demo.less",
@@ -1182,15 +1204,6 @@
       "initialSize" : 1548486,
       "fileType" : 4096
     },
-    "\/js\/flexslider\/flexslider.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/flexslider\/flexslider.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
     "\/images\/carousel\/image-03.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1202,10 +1215,21 @@
       "initialSize" : 484947,
       "fileType" : 4096
     },
-    "\/less\/modules\/checkbox-and-radio.less" : {
+    "\/resources\/img\/icons.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/resources\/img\/icons.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/resources\/img\/icons.png",
+      "initialSize" : 29410,
+      "fileType" : 8192
+    },
+    "\/less\/modules\/dropdown.less" : {
       "ieCompatibility" : 1,
-      "inputAbbreviatedPath" : "\/less\/modules\/checkbox-and-radio.less",
-      "outputAbbreviatedPath" : "\/less\/css\/checkbox-and-radio.css",
+      "inputAbbreviatedPath" : "\/less\/modules\/dropdown.less",
+      "outputAbbreviatedPath" : "\/less\/css\/dropdown.css",
       "outputPathIsSetByUser" : 0,
       "strictUnits" : 0,
       "relativeURLS" : 0,
@@ -1219,16 +1243,14 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/resources\/img\/icons.png" : {
+    "\/resources\/fontello\/css\/fontello-ie7-codes.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/resources\/img\/icons.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/resources\/img\/icons.png",
-      "initialSize" : 29410,
-      "fileType" : 8192
+      "inputAbbreviatedPath" : "\/resources\/fontello\/css\/fontello-ie7-codes.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/flat-index.html" : {
       "ignoreWasSetByUser" : 0,
@@ -1296,23 +1318,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/less\/modules\/select.less" : {
-      "ieCompatibility" : 1,
-      "inputAbbreviatedPath" : "\/less\/modules\/select.less",
-      "outputAbbreviatedPath" : "\/less\/css\/select.css",
-      "outputPathIsSetByUser" : 0,
-      "strictUnits" : 0,
-      "relativeURLS" : 0,
-      "ignore" : 1,
-      "strictImports" : 0,
-      "ignoreWasSetByUser" : 0,
-      "shouldRunBless" : 0,
-      "hidden" : 0,
-      "strictMath" : 0,
-      "outputStyle" : 0,
-      "fileType" : 1,
-      "debugStyle" : 0
-    },
     "\/less\/modules\/ui-datepicker.less" : {
       "ieCompatibility" : 1,
       "inputAbbreviatedPath" : "\/less\/modules\/ui-datepicker.less",
@@ -1329,6 +1334,15 @@
       "outputStyle" : 0,
       "fileType" : 1,
       "debugStyle" : 0
+    },
+    "\/js\/flexslider\/flexslider.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/flexslider\/flexslider.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/less\/modules\/tagsinput.less" : {
       "ieCompatibility" : 1,
@@ -1356,14 +1370,22 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/resources\/fontello\/css\/fontello-ie7-codes.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
+    "\/less\/modules\/select.less" : {
+      "ieCompatibility" : 1,
+      "inputAbbreviatedPath" : "\/less\/modules\/select.less",
+      "outputAbbreviatedPath" : "\/less\/css\/select.css",
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/resources\/fontello\/css\/fontello-ie7-codes.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
+      "strictUnits" : 0,
+      "relativeURLS" : 0,
+      "ignore" : 1,
+      "strictImports" : 0,
+      "ignoreWasSetByUser" : 0,
+      "shouldRunBless" : 0,
+      "hidden" : 0,
+      "strictMath" : 0,
+      "outputStyle" : 0,
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/less\/modules\/navs.less" : {
       "ieCompatibility" : 1,
@@ -1408,10 +1430,10 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/less\/modules\/dropdown.less" : {
+    "\/less\/modules\/alerts.less" : {
       "ieCompatibility" : 1,
-      "inputAbbreviatedPath" : "\/less\/modules\/dropdown.less",
-      "outputAbbreviatedPath" : "\/less\/css\/dropdown.css",
+      "inputAbbreviatedPath" : "\/less\/modules\/alerts.less",
+      "outputAbbreviatedPath" : "\/less\/css\/alerts.css",
       "outputPathIsSetByUser" : 0,
       "strictUnits" : 0,
       "relativeURLS" : 0,
@@ -1434,10 +1456,21 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/less\/modules\/alerts.less" : {
+    "\/images\/alcohol\/alcohol-videos.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/alcohol\/alcohol-videos.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/alcohol\/alcohol-videos.jpg",
+      "initialSize" : 28659,
+      "fileType" : 4096
+    },
+    "\/less\/modules\/checkbox-and-radio.less" : {
       "ieCompatibility" : 1,
-      "inputAbbreviatedPath" : "\/less\/modules\/alerts.less",
-      "outputAbbreviatedPath" : "\/less\/css\/alerts.css",
+      "inputAbbreviatedPath" : "\/less\/modules\/checkbox-and-radio.less",
+      "outputAbbreviatedPath" : "\/less\/css\/checkbox-and-radio.css",
       "outputPathIsSetByUser" : 0,
       "strictUnits" : 0,
       "relativeURLS" : 0,
@@ -1451,15 +1484,6 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/js\/flexslider\/demo\/carousel-min-max.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/flexslider\/demo\/carousel-min-max.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/images\/home\/food-ingredients.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1470,6 +1494,15 @@
       "outputAbbreviatedPath" : "\/images\/home\/food-ingredients.jpg",
       "initialSize" : 178555,
       "fileType" : 4096
+    },
+    "\/js\/flexslider\/demo\/carousel-min-max.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/flexslider\/demo\/carousel-min-max.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/less\/modules\/ui-slider.less" : {
       "ieCompatibility" : 1,
@@ -1697,6 +1730,17 @@
       "initialSize" : 3575,
       "fileType" : 8192
     },
+    "\/images\/section-headers\/sample-request.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/images\/section-headers\/sample-request.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/images\/section-headers\/sample-request.jpg",
+      "initialSize" : 46261,
+      "fileType" : 4096
+    },
     "\/food-product.html" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1715,17 +1759,6 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/images\/section-headers\/about-mgp-leadership.jpg",
       "initialSize" : 23821,
-      "fileType" : 4096
-    },
-    "\/images\/section-headers\/sample-request.jpg" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/images\/section-headers\/sample-request.jpg",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/images\/section-headers\/sample-request.jpg",
-      "initialSize" : 46261,
       "fileType" : 4096
     },
     "\/js\/flexslider\/demo\/css\/demo.css" : {

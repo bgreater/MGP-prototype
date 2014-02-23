@@ -4,6 +4,7 @@
 
 .navbar {
   font-size: floor(@component-font-size-base * 1.067); // ~16px
+  font-family: @font-family-alt;
   border-radius: @border-radius-large;
   border: none;
 
@@ -177,7 +178,7 @@
 
       // Sub menu link
       a {
-        border-radius: 2px;
+        border-radius: 0px;
         color: @inverse;
         display: block;
         font-size: ceil(@component-font-size-base * 0.933);
@@ -232,6 +233,9 @@
 // --------------------------------------------------
 .navbar-inverse {
 	background: @brand-primary;
+  border: none;
+
+
   font-size: ceil(@component-font-size-base * 1.133); // ~17px
   
   .navbar-brand {
@@ -242,7 +246,7 @@
   }
   .btn-navbar {
     color: @inverse;
-    margin: 7px 10px;
+    margin: 13px 10px;
   }
   .btn-icon {
     margin: 8px 5px 8px 15px;
@@ -267,9 +271,8 @@
           &:hover,
           &:focus {
             background-color: @brand-secondary;
-            border-bottom-color: mix(@brand-secondary, black, 85%);
-            border-left: none;
-            color: @inverse;
+            border-bottom-color: mix(@brand-primary, white, 35%);
+            color: mix(@brand-primary, white, 35%);
             padding-left: @navbar-link-space;
           }
         }
@@ -284,11 +287,10 @@
       // Link styling
       > a {
         font-size: floor(@component-font-size-base * 1.067); // ~16px
-        border-bottom: 2px solid mix(@brand-primary, black, 85%);
-        border-left: 2px solid mix(@brand-primary, black, 85%) !important;
         color: @inverse;
         padding: 16px @navbar-link-space 15px;
         line-height: 20px;
+        
       }
     }
   }
@@ -358,8 +360,6 @@
       &.open {
         > .dropdown-toggle {
           background-color: @brand-secondary;
-          border-bottom-color: mix(@brand-secondary, black, 85%);
-          color: @inverse;
 
           .caret {
             border-bottom-color: @inverse !important;
@@ -584,6 +584,7 @@
       .navbar-collapse li.dropdown .dropdown-menu a {
         color: @inverse;
         border-radius: 0;
+        padding: 10px;
 
         &:hover,
         &:focus {
@@ -624,7 +625,7 @@
             li:hover {
               a {
                 background-color: transparent;
-                color: @brand-secondary;
+              
               }
               ul {
                 height: auto;
