@@ -7323,7 +7323,25 @@ body {
   border-top: none !important;
   box-shadow: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003110}}
+@media (max-width: 768px) {
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003110}}
+  .main-nav > li:hover > ul,
+  .main-nav .navbar .nav > li.dropdown:hover > ul,
+  .main-nav .navbar .nav > li:hover .dropdown-menu,
+  .main-nav .navbar .nav > li.dropdown:hover .dropdown-menu {
+    height: auto;
+    margin-left: 15px;
+  }
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003114}}
+  .main-nav > li:hover > ul li:hover ul,
+  .main-nav .navbar .nav > li.dropdown:hover > ul li:hover ul,
+  .main-nav .navbar .nav > li:hover .dropdown-menu li:hover ul,
+  .main-nav .navbar .nav > li.dropdown:hover .dropdown-menu li:hover ul {
+    height: auto;
+    margin-left: 7px;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003121}}
 .navbar-square-border {
   border-radius: 0px;
 }
@@ -7331,73 +7349,73 @@ body {
   background-color: @navbar-bottom-color;
   color: white;
 }*/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003119}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003130}}
 .landing-dark-wrap {
   background-color: black;
   position: relative;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003122}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003133}}
 .landing-dark-wrap h6 {
   color: #79a736;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003127}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003138}}
 .landing-light-gray-wrap {
   background-color: #e6e9ea;
   padding-bottom: 2em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003130}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003141}}
 .landing-light-gray-wrap + .bottom-menu {
   margin-top: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003134}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003145}}
 .landing-light-gray-wrap .container {
   padding: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003138}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003149}}
 .landing-primary-color-wrap {
   background-color: #f7faf1;
   border-top: 1px solid #e4f0d2;
   border-bottom: 1px solid #e4f0d2;
   padding: 30px 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003143}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003154}}
 .landing-primary-color-wrap.vibrant {
   background-color: #aad172;
   border-top: 1px solid #8fc243;
   border-bottom: 1px solid #8fc243;
   color: #f9fcf5;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003150}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003161}}
 .landing-light-color-wrap {
   background-color: #f1f5eb;
   border-top: 3px solid #e0e9d3;
   padding: 30px 0;
   margin-top: 50px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003155}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003166}}
 .landing-light-color-wrap h4 {
   color: #79a736;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003161}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003172}}
 .carousel.landing-page .item {
   text-align: right;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003163}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003174}}
 .carousel.landing-page .item img {
   float: right;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003166}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003177}}
 .carousel.landing-page .item .carousel-caption {
   background-color: transparent;
   margin: 0 6em;
   padding: 0 0 5em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003170}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003181}}
 .carousel.landing-page .item .carousel-caption h2 {
   margin-top: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003176}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003187}}
 .standout {
   background: #f4f5f2;
   background: #f0f7e5;
@@ -7417,13 +7435,13 @@ body {
   padding: 1.5em 2em 1em;
   margin: -1.3em 0 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003190}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003201}}
 .standout h4 {
   color: #79a736;
   font-size: 28px;
   margin-top: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003195}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003206}}
 .standout a.text-link-lg {
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
@@ -7442,39 +7460,39 @@ body {
   width: 49%;
   display: inline-block;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003208}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003219}}
 .standout a.text-link-lg:first-child {
   border-right: 1px solid rgba(0, 0, 0, 0.15);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003211}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003222}}
 .standout a.text-link-lg:hover {
   color: #415a1d;
   text-shadow: 0 0px 20px white, 0 0px 50px white;
 }
 @media (max-width: 480px) {
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003216}}
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003227}}
   .standout {
     padding: 15px;
     margin: 0;
   }
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003219}}
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003230}}
   .standout a {
     font-size: 15px;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003224}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003235}}
 .row .feature-3 {
   padding: 0 1%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003230}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003241}}
 .dropover {
   position: relative;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003232}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003243}}
 .dropover:hover > .dropover-content {
   visibility: visible;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003235}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003246}}
 .dropover .dropover-content {
   visibility: hidden;
   width: 400px;
@@ -7492,7 +7510,7 @@ body {
   -webkit-transition: 0.25s linear;
   transition: 0.25s linear;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003247}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003258}}
 .dropover .dropover-content:before {
   position: absolute;
   top: 7px;
@@ -7502,30 +7520,30 @@ body {
   border-top: 10px solid transparent;
   border-right: 10px solid #edeee2;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003256}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003267}}
 .dropover .dropover-content ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003260}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003271}}
 .dropover .dropover-content ul li {
   padding: 10px 0;
   float: left;
   margin: 3px 7px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003264}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003275}}
 .dropover .dropover-content ul li a {
   color: white;
   padding: 10px;
   background: #79a736;
   border-radius: 5px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003269}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003280}}
 .dropover .dropover-content ul li a:hover {
   background: #456020;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003273}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003284}}
 .dropover .dropover-content ul li.header {
   float: none;
   padding: 10px;
@@ -7535,13 +7553,13 @@ body {
   color: #456020;
   background: #edeee2;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003288}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003299}}
 .cover-img {
   background-color: black;
   position: relative;
   border-bottom: 3px solid #dcdfd6;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003292}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003303}}
 .cover-img .container {
   position: relative;
   background: #000000 no-repeat right;
@@ -7562,7 +7580,7 @@ body {
       }
     }*/
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003297}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003308}}
 .cover-img .container img {
   position: absolute;
   z-index: 00001;
@@ -7571,7 +7589,7 @@ body {
   right: 0;
   top: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003306}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003317}}
 .cover-img .container h2 {
   font-size: 51px;
   color: #ffffff;
@@ -7580,7 +7598,7 @@ body {
   bottom: 40%;
   text-shadow: 0 0 130px #ffffff, 1px 1px 4px rgba(0, 0, 0, 0.2);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003314}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003325}}
 .cover-img .container h6 {
   z-index: 00002;
   position: absolute;
@@ -7589,66 +7607,66 @@ body {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 @media (max-width: 480px) {
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003333}}
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003344}}
   .cover-img .container {
     min-height: 250px;
   }
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003336}}
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003347}}
   .cover-img .container h2 {
     font-size: 35px;
   }
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003339}}
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003350}}
   .cover-img .container h6 {
     font-size: 17px;
   }
 }
 @media (max-width: 620px) {
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003344}}
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003355}}
   .cover-img .container {
     background-position-x: 0%;
   }
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003347}}
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003358}}
   .cover-img .container img {
     right: -50%;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003353}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003364}}
 .watermark {
   background: url(../images/mgp-pattern.png) bottom right no-repeat;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003357}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003368}}
 .content .glossary {
   font-size: 70%;
   opacity: 0.5;
   margin-left: -0.2em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003362}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003373}}
 .content figure {
   display: block;
   float: none;
   text-align: center;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003366}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003377}}
 .content figure img {
   max-width: 100%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003369}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003380}}
 .content figure figcaption {
   color: #e6e9ea;
   font-size: 90%;
 }
 @media (min-width: 768px) {
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003375}}
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003386}}
   .content {
     padding-right: 2em;
   }
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003378}}
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003389}}
   .content figure {
     float: left;
     margin: 0 2em 1em 0;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003386}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003397}}
 .sidebar {
   color: #456020;
   padding: 30px;
@@ -7659,54 +7677,54 @@ body {
   line-height: 1.625;
   border-radius: 6px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003395}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003406}}
 .sidebar .title {
   margin: -30px 0 15px 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003397}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003408}}
 .sidebar .title h5 {
   background-color: #e3e7de;
   padding: 0.7em 30px;
   margin: 0 -30px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003403}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003414}}
 .sidebar *:last-child {
   margin-bottom: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003406}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003417}}
 .sidebar .right {
   float: right;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003413}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003424}}
 .video-listing .video {
   float: left;
   width: 23%;
   margin-right: 2%;
 }
 @media (max-width: 991px) {
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003417}}
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003428}}
   .video-listing .video {
     width: 30%;
     margin-right: 3%;
   }
 }
 @media (max-width: 767px) {
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003421}}
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003432}}
   .video-listing .video {
     width: 47%;
     margin-right: 3%;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003427}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003438}}
 .video {
   position: relative;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003429}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003440}}
 .video img {
   height: auto;
   width: 100%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003430}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003441}}
 .video .play {
   position: absolute;
   top: 50%;
@@ -7716,20 +7734,20 @@ body {
   color: white;
 }
 @media (min-width: 768px) {
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003439}}
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003450}}
   .video.right {
     float: right;
     margin: 0 0 15px 25px;
     width: 60%;
   }
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003444}}
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003455}}
   .video.left {
     float: left;
     margin: 0 25px 15px 0;
     width: 60%;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003451}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003462}}
 .video-wrapper {
   position: relative;
   padding-bottom: 49.25%;
@@ -7737,7 +7755,7 @@ body {
   padding-top: 25px;
   height: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003456}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003467}}
 .video-wrapper iframe {
   position: absolute;
   top: 0;
@@ -7745,25 +7763,25 @@ body {
   width: 100%;
   height: 100%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003464}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003475}}
 .video-thumbnail {
   border-radius: 3px;
   margin: 24px 2px;
   min-height: 180px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003468}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003479}}
 .video-thumbnail .video-description {
   line-height: 1.4;
   font-size: 0.775em;
   font-weight: bold;
   padding-top: 4px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003474}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003485}}
 .video-thumbnail .video {
   max-height: 140px;
   overflow: hidden;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003478}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003489}}
 .video-thumbnail .video img {
   -moz-transition: 0.2s;
   -o-transition: 0.2s;
@@ -7773,21 +7791,21 @@ body {
   opacity: 0.8;
   margin-top: -11%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003483}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003494}}
 .video-thumbnail:hover .video img {
   opacity: 1;
   cursor: pointer;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003489}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003500}}
 .video-description {
   font-size: 0.875em;
   line-height: 1.6;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003494}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003505}}
 .container.videos {
   min-height: 140px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003499}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003510}}
 h1,
 h2,
 h3,
@@ -7796,94 +7814,94 @@ h5,
 h6 {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003504}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003515}}
 hr {
   border: 0;
   border-top: 1px solid #eeeeee;
   border-top: 1px solid rgba(0, 0, 0, 0.13);
   clear: both;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003510}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003521}}
 .no-pad {
   padding: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003513}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003524}}
 .pad {
   margin-bottom: 32px;
   margin-top: 32px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003516}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003527}}
 .pad.pad--small {
   margin-bottom: 16px;
   margin-top: 16px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003520}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003531}}
 .pad.pad--horizontal {
   margin: 0 16px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003523}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003534}}
 .pad + .pad {
   margin-top: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003526}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003537}}
 .pad:first-child {
   margin-top: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003529}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003540}}
 .pad.row {
   margin: inherit;
   padding-top: 2em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003532}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003543}}
 .pad.row.pad--small {
   padding-top: 1em;
 }
 @media (min-width: 768px) {
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003539}}
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003550}}
   .pad-inner-right > * {
     margin-right: 2em;
   }
 }
 @media (min-width: 768px) {
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003546}}
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003557}}
   .pad-bottom {
     margin-bottom: 2em;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003551}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003562}}
 img.left,
 div.left,
 .float-left {
   float: left;
   margin: 0 25px 15px 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003555}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003566}}
 img.right,
 div.right,
 .float-right {
   float: right;
   margin: 0 0 15px 25px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003559}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003570}}
 img.fluid {
   width: 100%;
   height: auto;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003564}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003575}}
 .stButton .st-sharethis-counter,
 .stButton .stArrow,
 .stButton .stHBubble {
   height: 22px !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003568}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003579}}
 .no-border {
   border-style: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003571}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003582}}
 .no-margin {
   margin: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003575}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003586}}
 .mgp-headline {
   color: #79a736;
   font: 700 118px/1.1 "Helvetica Neue", Helvetica, Arial, sans-serif !important;
@@ -7893,19 +7911,19 @@ img.fluid {
   word-wrap: break-word;
   margin-top: 2px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003586}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003597}}
 .sample-request {
   font-size: 0.875em;
   line-height: 1.4;
   background: #f0f7e5;
   padding: 30px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003591}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003602}}
 .sample-request .title {
   margin-top: -7px;
   background: #ffffff;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003599}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003610}}
 #home-main-slides {
   height: 300px;
   width: 100%;
@@ -7916,12 +7934,12 @@ img.fluid {
   overflow: hidden;
 }
 @media (max-width: 992px) {
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003608}}
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003619}}
   #home-main-slides {
     margin-top: 0;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003611}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003622}}
 #home-main-slides .caption {
   width: 100%;
   top: 80px;
@@ -7930,12 +7948,12 @@ img.fluid {
   margin: 0 auto;
 }
 @media (max-width: 480px) {
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003617}}
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003628}}
   #home-main-slides .caption {
     top: 65px;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003620}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003631}}
 #home-main-slides .caption h2 {
   width: 50%;
   font-size: 2em;
@@ -7945,25 +7963,25 @@ img.fluid {
   color: white;
 }
 @media (max-width: 991px) {
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003627}}
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003638}}
   #home-main-slides .caption h2 {
     font-size: 2em;
   }
 }
 @media (max-width: 767px) {
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003630}}
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003641}}
   #home-main-slides .caption h2 {
     font-size: 1.25em;
     width: 100%;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003635}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003646}}
 #home-main-slides .caption p.lead {
   color: white;
   text-shadow: 0 1px 3px #222;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003641}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003652}}
 #home-main-slides .flexslider {
   background: none;
   -webkit-border-radius: none;
@@ -7980,32 +7998,32 @@ img.fluid {
   border: none;
   height: 300px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003647}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003658}}
 #home-main-slides .flexslider .flex-control-nav {
   bottom: 15px;
   z-index: 241;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003651}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003662}}
 #home-main-slides .flexslider .flex-control-nav {
   z-index: 241;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003654}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003665}}
 #home-main-slides .flexslider .flex-direction-nav a {
   height: 40px;
   padding-top: 3px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003657}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003668}}
 #home-main-slides .flexslider .flex-direction-nav a:before {
   font-size: 30px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003662}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003673}}
 #home-main-slides .slide {
   height: 300px;
   top: 0;
   position: absolute;
   width: 100%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003667}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003678}}
 #home-main-slides .slide.alcohol {
   background-image: url('../images/home/alcohol.jpg');
   background-repeat: no-repeat;
@@ -8015,7 +8033,7 @@ img.fluid {
   -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{@url}', sizingMethod='scale');
   background-position: left bottom;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003671}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003682}}
 #home-main-slides .slide.food-ingredients {
   background-image: url('../images/home/food-ingredients.jpg');
   background-repeat: no-repeat;
@@ -8025,7 +8043,7 @@ img.fluid {
   -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{@url}', sizingMethod='scale');
   background-position: left center;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003675}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003686}}
 #home-main-slides .slide.partnered-with-customers {
   background-image: url('../images/home/partnered-with-customers.jpg');
   background-repeat: no-repeat;
@@ -8035,22 +8053,22 @@ img.fluid {
   -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{@url}', sizingMethod='scale');
   background-position: left center;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003681}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003692}}
 .latest-news {
   padding: 30px 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003683}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003694}}
 .latest-news ul {
   padding-left: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003685}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003696}}
 .latest-news ul li {
   list-style: none;
   line-height: 1.3;
   margin: 10px 0;
   margin-left: 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003690}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003701}}
 .latest-news ul li:before {
   content: "›";
   margin-left: -10px;
@@ -8058,25 +8076,25 @@ img.fluid {
   padding-right: 5px;
   color: #79a736;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003697}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003708}}
 .latest-news ul li a {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003703}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003714}}
 .executive-bios {
   padding-left: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003705}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003716}}
 .executive-bios li {
   list-style: none;
   line-height: 1.3;
   margin: 5px 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003709}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003720}}
 .executive-bios li.active a {
   background: #FFF;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003712}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003723}}
 .executive-bios li a {
   padding: 10px;
   -webkit-border-radius: 4px;
@@ -8089,17 +8107,17 @@ img.fluid {
   font-size: 1.25em;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003718}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003729}}
 .executive-bios li a span {
   color: #95a5a6;
   font-size: 0.875em;
   display: block;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003723}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003734}}
 .executive-bios li a:hover {
   background: #FFF;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003732}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003743}}
 .mgp-row {
   margin: 0 auto;
   padding: 0 20px 50px;
@@ -8117,7 +8135,7 @@ img.fluid {
 .mgp-row:after {
   clear: both;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003738}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003749}}
 .mgp-row .mgp-heading-note,
 .mgp-row .mgp-text-note {
   display: block;
@@ -8130,16 +8148,16 @@ img.fluid {
   color: #bfc4b9;
   font-weight: 400;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003750}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003761}}
 .mgp-row .mgp-text-note {
   bottom: auto;
   top: 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003754}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003765}}
 .mgp-row.menu-row {
   padding: 50px 20px 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003758}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003769}}
 .mgp-row.typography-row .mgp-content {
   float: none;
   margin-left: 20px;
@@ -8147,43 +8165,43 @@ img.fluid {
   width: auto;
   clear: both;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003765}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003776}}
 .mgp-row.typography-row .mgp-type-example {
   padding-left: 265px;
   margin-bottom: 40px;
   position: relative;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003773}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003784}}
 .mgp-col {
   float: left;
   margin: 0 20px;
   width: 270px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003779}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003790}}
 .mgp-content {
   float: left;
   margin-left: 20px;
   width: 580px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003784}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003795}}
 .mgp-content.mgp-content-article {
   font-size: 21px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003786}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003797}}
 .mgp-content.mgp-content-article p {
   margin-bottom: 20px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003788}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003799}}
 .mgp-content.mgp-content-article ul {
   list-style-type: none;
   margin-left: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003793}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003804}}
 .mgp-content.mgp-content-article li {
   line-height: 31px;
   padding: 0 0 5px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003800}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003811}}
 .mgp-content-wide {
   clear: both;
   margin: 0 20px;
@@ -8200,14 +8218,14 @@ img.fluid {
 .mgp-content-wide:after {
   clear: both;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003806}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003817}}
 .mgp-title {
   float: left;
   margin: -0.5em 20px 0;
   width: 240px;
   font: 700 24.5px/40px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003812}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003823}}
 .mgp-title h1,
 .mgp-title h2,
 .mgp-title h3,
@@ -8215,90 +8233,90 @@ img.fluid {
   margin-top: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003816}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003827}}
 .mgp-title h1,
 .mgp-title h2,
 .mgp-title h3 {
   line-height: 40px !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003819}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003830}}
 .mgp-title h3 {
   font-size: 24.5px !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003822}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003833}}
 .mgp-title small {
   color: #bfc4b9;
   font-size: 13px;
   font-weight: 400;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003829}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003840}}
 .mgp-buttons .btn,
 .mgp-inputs .control-group {
   margin-bottom: 20px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003835}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003846}}
 .mgp-navigation .mgp-title {
   margin-top: 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003840}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003851}}
 .mgp-pager {
   margin-top: -10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003844}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003855}}
 .mgp-tooltips {
   height: 100px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003848}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003859}}
 .mgp-tooltips .tooltip {
   left: -8px !important;
   position: relative !important;
   top: -8px !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003853}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003864}}
 .mgp-tooltips .tooltip-inner {
   max-width: 100%;
   width: auto;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003860}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003871}}
 .mgp-popovers .popover {
   display: block;
   margin: 0 13px 0 -3px;
   position: relative;
   width: auto;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003869}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003880}}
 .mgp-social-buttons .btn {
   clear: left;
   float: left;
   margin-bottom: 17px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003876}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003887}}
 .mgp-headings {
   margin-bottom: 12px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003880}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003891}}
 .mgp-tiles {
   margin-bottom: 46px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003884}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003895}}
 .mgp-icons {
   font-size: 32px;
   margin-left: -15px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003888}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003899}}
 .mgp-icons > span {
   display: inline-block;
   margin: 0 0 32px 35px;
   width: 32px;
 }
 @media (max-width: 767px) {
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003896}}
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003907}}
   .mgp-icons > span {
     margin-left: 16px;
     margin-right: 16px;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003904}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003915}}
 .mgp-icons-tooltip {
   bottom: 0;
   color: #c7cfbc;
@@ -8308,34 +8326,34 @@ img.fluid {
   position: absolute;
   width: 80px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003914}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003925}}
 .mgp-inline {
   display: inline-block;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003918}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003929}}
 .mgp-labels {
   font-size: 16px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003921}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003932}}
 .mgp-labels .visible-lg {
   display: inline !important;
 }
 @media (max-width: 991px) {
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003925}}
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003936}}
   .mgp-labels .visible-lg {
     display: none !important;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003935}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003946}}
 .mgp-illustrations {
   margin-top: 40px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003938}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003949}}
 .mgp-illustrations .mgp-content-wide {
   margin: 0 0 0 -66px;
   padding-top: 20px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003942}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003953}}
 .mgp-illustrations .mgp-content-wide > div {
   float: left;
   width: 100px;
@@ -8345,35 +8363,35 @@ img.fluid {
   text-align: center;
   vertical-align: middle;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003952}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003963}}
 .mgp-illustrations img {
   display: inline-block;
   max-height: 100px;
   max-width: 100px;
   vertical-align: middle;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003961}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003972}}
 .mgp-dialog {
   padding: 13px 20px 15px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003964}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003975}}
 .mgp-dialog .flat {
   width: 300px;
 }
 @media (max-width: 991px) {
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003968}}
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003979}}
   .mgp-dialog .flat {
     width: 100%;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003975}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003986}}
 .static-modal-backdrop {
   background-color: #304316;
   padding: 62px 14px;
   margin-bottom: 50px;
   width: 100%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003981}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003992}}
 .static-modal-backdrop .modal {
   bottom: auto;
   display: block;
@@ -8385,11 +8403,11 @@ img.fluid {
   overflow: hidden;
   padding-bottom: 20px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003992}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031003}}
 .static-modal-backdrop .modal-dialog {
   padding: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\00003998}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031009}}
 .components-static-modal .modal {
   bottom: auto;
   display: block;
@@ -8400,16 +8418,16 @@ img.fluid {
   z-index: 1;
   overflow: visible;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031008}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031019}}
 .components-static-modal .modal-dialog,
 .components-static-modal .modal-content {
   width: auto;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031012}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031023}}
 .components-static-modal .modal-dialog {
   padding: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031018}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031029}}
 .mgp-sidebar {
   font-size: 12px;
   line-height: 1.214;
@@ -8427,35 +8445,35 @@ img.fluid {
   -webkit-backface-visibility: hidden;
   -webkit-font-smoothing: subpixel-antialiased;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031037}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031048}}
 .mgp-sidebar li:first-child a {
   padding-top: 20px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031043}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031054}}
 .mgp-sidebar a {
   display: block;
   padding: 7px 20px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031052}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031063}}
 .hide-show {
   display: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031055}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031066}}
 .show-hide {
   display: block;
 }
 @media (max-width: 768px) {
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031059}}
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031070}}
   .hide-show {
     display: block;
   }
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031062}}
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031073}}
   .show-hide {
     display: none;
   }
 }
 @media (max-width: 991px) {
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031067}}
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031078}}
   .mgp-row {
     margin-bottom: 0;
     margin-left: 0;
@@ -8463,7 +8481,7 @@ img.fluid {
     padding-right: 0;
     width: auto;
   }
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031074}}
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031085}}
   .mgp-col,
   .mgp-content,
   .mgp-content-wide,
@@ -8473,48 +8491,48 @@ img.fluid {
     padding: 0 !important;
     width: auto;
   }
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031083}}
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031094}}
   .mgp-headline {
     font-size: 75px !important;
     text-align: left;
     padding-left: 15px;
     padding-right: 15px;
   }
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031090}}
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031101}}
   .mgp-inline {
     display: block;
   }
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031093}}
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031104}}
   .mgp-navigation .btn-toolbar {
     margin: 0;
   }
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031097}}
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031108}}
   .mgp-navigation .pager {
     display: block;
     margin-left: 0 !important;
     margin-bottom: 20px;
   }
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031104}}
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031115}}
   .typography-row .mgp-type-example {
     padding-left: 0 !important;
   }
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031107}}
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031118}}
   .typography-row .mgp-heading-note,
   .typography-row .mgp-text-note {
     position: static !important;
     margin: 0 0 10px;
   }
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031113}}
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031124}}
   .mgp-illustrations .mgp-content-wide > div {
     margin-left: 67px;
   }
 }
 @media (max-width: 767px) {
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031119}}
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031130}}
   .mgp-illustrations .mgp-content-wide > div {
     margin-left: 23px;
   }
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031123}}
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/evanolsen\/Documents\/Clients\/Ben Voran\/MGP Ingredients\/MGP-prototype\/less\/mgp-main\.less}line{font-family:\000031134}}
   .mgp-navigation .mll.pvl {
     padding: 0;
     margin-left: 0 !important;
