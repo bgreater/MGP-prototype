@@ -67,15 +67,17 @@ body {
       border-color: transparent transparent @brand-secondary transparent;
     }
 
-    > li ul > li {
-      clear: both;
-      border-top: none;
-      &:hover > ul > li {
-        /* Adjusts the sub menu level 2 to be inline*/
-        float: left;
-        display: inline;
-        clear: none;
-        border: none;
+    @media (max-width: @screen-sm-min){
+      > li ul > li {
+        clear: both;
+        border-top: none;
+        &:hover > ul > li {
+          /* Adjusts the sub menu level 2 to be inline*/
+          float: left;
+          display: inline;
+          clear: none;
+          border: none;
+        }
       }
     }
 
