@@ -10,6 +10,17 @@ body {
 }
 
 
+.container {
+  width: 100%;
+  @media (min-width: @screen-md-min){
+    width: 962px;
+  }
+  @media (min-width: @screen-lg-min){
+    width: 1170px;
+  }
+}
+
+
 // Nav tweaks
 .header-banner { 
   min-height: 50px;
@@ -26,6 +37,7 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#618517', endColorstr='#48640f',GradientType=0 );
   border: none;
   border-bottom: 3px solid #5a7a18;
+  margin-bottom: 0;
   .box-shadow (0 0 2px rgba(0, 0, 0, 0.3), 0 0 28px rgba(0, 0, 0, 0.2));
   .navbar-brand {
     border: none;

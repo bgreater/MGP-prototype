@@ -4145,7 +4145,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   clear: both;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .navbar-header {
     float: left;
   }
@@ -4184,7 +4184,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   overflow-y: auto;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .navbar-collapse {
     width: auto;
     border-top: 0;
@@ -4339,7 +4339,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .navbar-nav {
     float: left;
     margin: 0;
