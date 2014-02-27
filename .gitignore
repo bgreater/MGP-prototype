@@ -8,3 +8,11 @@ Makefile
 codekit-config.json
 
 codekit-config.json
+
+*.json
+
+*.json
+
+_site/codekit-config.json
+
+_site/codekit-config.json
