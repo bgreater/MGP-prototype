@@ -1376,6 +1376,10 @@ fieldset[disabled] .btn-link:focus {
 .btn-block {
   white-space: normal;
 }
+.btn-full-width {
+  display: block;
+  width: 100%;
+}
 [class*="btn-social-"] {
   padding: 10px 15px;
   font-size: 12px;
@@ -6149,6 +6153,10 @@ body {
     width: auto;
   }
 }
+.main-nav .nav {
+  margin: 0;
+  margin-top: 15px;
+}
 .main-nav .nav > li > a {
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
@@ -6171,6 +6179,9 @@ body {
 @media (max-width: 768px) {
   .main-nav .nav > li > a {
     font-size: 1em;
+    border-left: 40px solid rgba(255, 255, 255, 0.3) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+    margin-bottom: 0;
   }
 }
 .main-nav .nav > li > ul:before {
@@ -6329,18 +6340,17 @@ body {
   font-weight: bold;
   text-shadow: 0 1px 0 white;
   text-decoration: none;
-  padding: 20px 1%;
+  padding: 20px 30px;
   margin-top: 1em;
-  text-align: center;
-  width: 49%;
-  display: inline-block;
-}
-.standout a.text-link-lg:first-child {
-  border-right: 1px solid rgba(0, 0, 0, 0.15);
 }
 .standout a.text-link-lg:hover {
   color: #415a1d;
   text-shadow: 0 0px 20px white, 0 0px 50px white;
+}
+.standout a.text-link-lg + .text-link-lg {
+  text-align: center;
+  display: inline-block;
+  border-left: 1px solid rgba(0, 0, 0, 0.15);
 }
 @media (max-width: 480px) {
   .standout {
@@ -6453,6 +6463,7 @@ body {
   z-index: 00003;
   position: absolute;
   bottom: 40%;
+  text-shadow: 0 0 130px white, 1px 1px 4px #222;
   text-shadow: 0 0 130px #ffffff, 1px 1px 4px rgba(0, 0, 0, 0.2);
 }
 .cover-img .container h6 {
@@ -6640,6 +6651,9 @@ hr {
   border-top: 1px solid #eeeeee;
   border-top: 1px solid rgba(0, 0, 0, 0.13);
   clear: both;
+}
+.center-text {
+  text-align: center;
 }
 .no-pad {
   padding: 0;
