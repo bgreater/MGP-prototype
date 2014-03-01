@@ -59,9 +59,11 @@ body {
   .navbar-nav {
     margin: 0;
     margin-left: 160px;
-    .nav > li > ul li ul {
-      left: 100%;
-      display: none;
+    @media (min-width: @screen-xs-min){
+      .nav > li > ul li ul {
+        left: 100%;
+        display: none;
+      }
     }
     > li {
       @media (max-width: @screen-sm-min){

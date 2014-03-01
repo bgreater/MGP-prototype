@@ -5984,9 +5984,11 @@ body {
   margin: 0;
   margin-left: 160px;
 }
-.main-nav .navbar-nav .nav > li > ul li ul {
-  left: 100%;
-  display: none;
+@media (min-width: 480px) {
+  .main-nav .navbar-nav .nav > li > ul li ul {
+    left: 100%;
+    display: none;
+  }
 }
 @media (max-width: 768px) {
   .main-nav .navbar-nav > li span {
