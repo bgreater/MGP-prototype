@@ -5984,7 +5984,7 @@ body {
   margin: 0;
   margin-left: 160px;
 }
-@media (min-width: 480px) {
+@media (max-width: 480px) {
   .main-nav .navbar-nav .nav > li > ul li ul {
     left: 100%;
     display: none;
