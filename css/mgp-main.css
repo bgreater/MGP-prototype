@@ -5995,7 +5995,7 @@ body {
 @media (max-width: 768px) and only screen and (-webkit-min-device-pixel-ratio: 2), (max-width: 768px) and only screen and (min--moz-device-pixel-ratio: 2), (max-width: 768px) and only screen and (-o-min-device-pixel-ratio: 2/1), (max-width: 768px) and only screen and (min-device-pixel-ratio: 2), (max-width: 768px) and only screen and (min-resolution: 192dpi), (max-width: 768px) and only screen and (min-resolution: 2dppx) {
   .main-nav .navbar-brand {
     background-image: url("../images/mgp-logo-nav@2x.png");
-    background-size: 78px 40px;
+    background-size: 74px 38px;
   }
 }
 .main-nav .navbar-nav {
