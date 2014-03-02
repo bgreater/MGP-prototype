@@ -1,207 +1,166 @@
-
-
-<div class="clear"></div>
-
-
-
-</div>
-
-
-
-<div class="bottom"><span></span></div>
-
-
-
-</div><!-- end: boxOuterWrapper -->
-
-#if($curSection.path == "/")##
-
-<div class="boxFooter homepage">
-
-#else
-
-<div class="boxFooter">
-
-#end
-
-	<div class="top"><span><!-- --></span></div>
-
-    <div class="center-content">
-
-		<div class="container_12">
-
-
-
-	<div class="grid_12 alpha omega">
-
-
-
-    	<div class="boxCopyright">
-
-
-
-			<div class="top"><span></span></div><!-- end: top -->
-
-
-
-			<div class="center-content">
-
-
-
-				#if(!$hideAllNavigation)
-
-
-
-        			 #foreach($item in $mainWebsiteConfig.footerLinks)
-
-
-
-        					#if($velocityCount != 1)
-
-
-
-        						|
-
-
-
-        					#end
-
-
-
-        					<a href="$item.url">$item.title</a>
-
-
-
-					 #end
-
-
-
-				#end
-
-
-
-    			 #if($mainWebsiteConfig.copyright && $mainWebsiteConfig.copyright != "")
-
-
-
-    				<span class="copyright">$mainWebsiteConfig.copyright</span>
-
-
-
-    			 #end
-
-
-
-			</div>
-
-
-
-			<div class="bottom"><span></span></div><!-- end: bottom -->
-
-
-
-        </div><!-- end: boxFlashBanner -->
-
-
-
-    </div><!-- end: boxFooterLinks -->
-
-
-
-</div><!-- end: rowFooter -->
-
-
-
-
-
-
-
-#if($topLevel.tracking && $topLevel.tracking != "")
-
-
-
-	$topLevel.tracking
-
-
-
-#end
-
-
-
-## Show Lead form Modal only for detail pages
-
-
-
-#if($string.indexOf($req.url,".html") > -1)##
-
-
-
-    $cms.template("Lead Form Modal")
-
-
-
-#end
-
-## Add request form link under left nav
-
-#if($string.indexOf($req.url,"/innovation/") > -1)##
-
-<script type="text/javascript">
-/* <![CDATA[ */
-(function($){
-    $("#columnLeft .boxLeftSubNavigation").after("<div id='inovRequest' class='boxDefault boxContent'><a href='/requestform/'>Request a Sample</a></div>");
-})(jQuery);
-/* ]]> */
-</script>
-
-#end
-
-#if ($cms.websiteSection.url == 'http://www.mgpingredients.com')
-<script type="text/javascript">
-/* <![CDATA[ */
-!function ($) {
-  $('h2').filter(function(){
-  	return $(this).text().indexOf('Latest News') != -1
-  })
-  .append('<a id="rss-ico" href="/news-and-press/index.rss"><img src="http://media.mgpingredients.com/designimages/rss_icon.png" border="0"></a>');
-}(window.jQuery)
-/* ]]> */
-</script>
-#end
-
-## #if ($cms.websiteSection.url == 'http://www.mgpingredients.com' && $req.ip != '12.200.212.2')
-#if ($req.ip != '12.200.212.2')
-<script type="text/javascript" src="http://j.clickdensity.com/cr.js"></script>
-<script type="text/javascript">
-//<![CDATA[
-  var clickdensity_keyElement = 'homelink';
-//]]>
-</script>
-#end
-
-</body>
-
-
-
+  <div class="bottom-menu">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <ul class="bottom-links">
+            <li><a href="#fakelink">Sitemap</a></li>
+            <li><a href="#fakelink">Privacy Statement</a></li>
+            <li><a href="#fakelink">Customer Service</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <ul class="bottom-icons">
+            <span class="fui-linkedin"></span> &nbsp;&nbsp;
+            <span class="fui-youtube"></span> &nbsp;&nbsp;&nbsp;
+            © 2013 MGP Ingredients, Inc.
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div> <!-- /bottom-menu-inverse -->
+  ##
+  #if($topLevel.tracking && $topLevel.tracking != "")##
+  	$topLevel.tracking
+  #end##
+  ##
+  ## Show Lead form Modal only for detail pages
+  #if($string.indexOf($req.url,".html") > -1)##
+      $cms.template("Lead Form Modal")
+  #end##
+  ##
+  <!-- Load JS here for greater good =============================-->    
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/includes/jquery-1.10.2.min.js"%3E%3C/script%3E'));</script>
+  <script src="/includes/jquery-ui-1.10.3.custom.min.js"></script>
+  <script src="/includes/jquery.ui.touch-punch.min.js"></script>
+  <script src="/includes/bootstrap.min.js"></script>
+  <script src="/includes/bootstrap-select.js"></script>
+  <script src="/includes/bootstrap-switch.js"></script>
+  <script src="/includes/flexslider/jquery.flexslider-min.js"></script>
+  <script type="text/javascript" charset="utf-8">
+    $(window).load(function() {
+      $('.flexslider').flexslider();
+    });
+  </script>
+  <script src="/includes/flatui-checkbox.js"></script>
+  <script src="/includes/flatui-radio.js"></script>
+  <script src="/includes/jquery.tagsinput.js"></script>
+  <script src="/includes/jquery.placeholder.js"></script>
+  <script src="/includes/prettify.js"></script>
+  <script src="/includes/application.js"></script>
+  <script src="/includes/main.js"></script>
+  <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+  <script type="text/javascript">stLight.options({publisher: "c2d0dd1f-e3b8-43a2-9ee8-a76fd80a3431"}); </script>
+  ##
+  ## CMS Tracking
+  $imware.useStandards()
+  $imware.tracker
+  ##
+  ## Google Analytics
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28443532-1']);
+  _gaq.push(['_setDomainName', 'mgpingredients.com']);
+
+  #set($setOrganization = $userRequest.getCookie('Organization'))##
+  // $setOrganization
+
+  #if (!$setOrganization)##
+
+    #if($userLocation.isAvailable())##
+      #set($organization = "$userLocation.organization - $userLocation.region")
+    #else##
+      #set($organization = "N/A")## 
+    #end##
+
+    // Set Cookie $userResponse.setCookie('Organization', $organization, 15541000)##
+
+    _gaq.push(['_setCustomVar', 1, 'Organization', '$organization', 1]);
+
+    #end##
+
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+    (function($){
+
+      $(document).ready(function() {
+        
+        // _trackDownloads
+        $('a').filter(function() {
+          return this.href.match(/.*\.(zip|mp3|mpeg|pdf|docx*|pptx*|xlsx*|jpeg|png|gif|tiff*)/);
+        }).click(function(e) {
+          _gaq.push(['_trackEvent', 'download', 'click', this.href.split('/').pop()]);
+        });
+
+        // _trackMailTo
+        $('a[href^="mailto"]').click(function(e) {
+          _gaq.push(['_trackSocial', 'email', 'send', this.href.replace(/^mailto:/i, '')]);
+        });
+
+        // _trackFancyBoxVideo
+        $('a[href^="http://www.youtube.com"]').filter('.fancybox, .iframe').click(function(e) {
+          _gaq.push(['_trackEvent', 'video', 'click', this.title]);
+        });
+          
+        // _trackOutbound
+        var loc = location.host.split('.'); 
+        while (loc.length > 2) { loc.shift(); }
+        loc = loc.join('.');
+        $('a[href^="http"]').filter(function() {
+          if (this.href.indexOf(loc) == -1) {
+            return this.href
+          }
+        }).not('.iframe, .fancybox').click(function(e) {
+          _gaq.push(['_trackEvent', 'outbound', 'click', this.href]);
+        });
+        
+      });
+    
+    })(jQuery);
+
+  </script> 
+  ##
+  ## Add request form link under left nav
+  ##
+  #if($string.indexOf($req.url,"/innovation/") > -1)##
+    <script type="text/javascript">
+    /* <![CDATA[ */
+    (function($){
+        $("#columnLeft .boxLeftSubNavigation").after("<div id='inovRequest' class='boxDefault boxContent'><a href='/requestform/'>Request a Sample</a></div>");
+    })(jQuery);
+    /* ]]> */
+    </script>
+  #end##
+  ##
+  #if ($cms.websiteSection.url == 'http://www.mgpingredients.com')
+  <script type="text/javascript">
+  /* <![CDATA[ */
+  !function ($) {
+    $('h2').filter(function(){
+    	return $(this).text().indexOf('Latest News') != -1
+    })
+    .append('<a id="rss-ico" href="/news-and-press/index.rss"><img src="http://media.mgpingredients.com/designimages/rss_icon.png" border="0"></a>');
+  }(window.jQuery)
+  /* ]]> */
+  </script>
+  #end
+  ##
+  ## #if ($cms.websiteSection.url == 'http://www.mgpingredients.com' && $req.ip != '12.200.212.2')
+  #if ($req.ip != '12.200.212.2')
+  <script type="text/javascript" src="http://j.clickdensity.com/cr.js"></script>
+  <script type="text/javascript">
+  //<![CDATA[
+    var clickdensity_keyElement = 'homelink';
+  //]]>
+  </script>
+  #end
+  ##
+  </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

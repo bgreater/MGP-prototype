@@ -7,8 +7,10 @@ coverimg: ../images/section-headers/alcohol-beverage-lg.jpg
 
 <div class="cover-img">
 	<div class="container {{ page.title }}" style="background-image: url({{ page.coverimg }})">
-		<h2>{{ page.title }}</h2>
-		<h6>{{ page.excerpt }}</h6>
+		<div class="title-wrap">
+			<h2>{{ page.title }}</h2>
+			<h6>{{ page.excerpt }}</h6>
+		</div>
 	</div>
 </div>
 <div class="container">
@@ -35,9 +37,13 @@ coverimg: ../images/section-headers/alcohol-beverage-lg.jpg
 				<div class="col-md-12">
 					<h4>Innovation Center</h4>
 					<img src="../images/alcohol/warehouse.jpg" class="fluid">
-					<div class="center-text">
-						<a href="#" class="text-link-lg">Take Virtual Tour</a>
-						<a href="#" class="text-link-lg">Schedule a visit</a>
+					<div class="center-text row pal">
+						<div class="col-xs-12 col-sm-6 pvs">
+							<a href="#" class="text-link-lg">Take Virtual Tour</a>
+						</div>
+						<div class="col-xs-12 col-sm-6 pvs">
+							<a href="#" class="text-link-lg">Schedule a visit</a>
+						</div>
 					</div>
 				</div>
 			</div>
