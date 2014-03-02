@@ -1,0 +1,112 @@
+#* Set the $pageContentType for the Setup template to grab the first Home Page Config in the current placment list *#
+
+##set($pageContentType = "General Page")
+
+$cms.template("Header")
+
+
+
+##Check to see how many rows are setup and build the arrays of the item browsers
+
+#set($rowsHashMap = $util.newHashMap)
+
+#foreach($i in [1..4])	
+
+    #set ($rowType = "" )##
+
+    #set ($rowMods = "")##
+
+    #set ($rowType = $curSection.element("row${velocityCount}Type"))##	
+	
+    #set ($rowMods = $curSection.element("row${velocityCount}Mods"))##
+
+    #if ($string.equals($rowType,"") && $rowMods.size() > 0)## If Modules added and Row Type not selected then default to EVEN ##
+
+        #set ($rowType = "even")##
+
+	#end##
+
+    #if($rowType && !$string.equals($rowType,""))
+
+    	#set($foo = $rowsHashMap.put("$i",$string.toLowerCase($rowType)))
+
+    #end
+
+#end
+
+<div class="container_12 boxContentWrapper">
+
+	<div class="top"><span></span></div>	
+
+	<div class="center-content">
+
+	
+
+		## TOP MODULE TO SPAN ACROSS THE ENTIRE TOP OF THE PAGE
+
+		#if($fullTopMod && $fullTopMod.size() > 0)
+
+			<div class="grid_12 alpha omega">
+
+				#foreach($mod in $fullTopMod)
+
+					#set($gmModule = $mod)
+
+					$cms.template("Get Module")   			
+
+				#end
+
+			</div>
+
+		#end
+
+
+
+		<!-- SAMPLE OUTLINE PAGE -->
+
+
+
+		## Make it alpha or Omega depending on if there is a left column or right column or both
+
+		$cms.template("Get Main Content Alpha Or Omega")
+
+
+
+		#if(!$curSection.hideBreadcrumbs)
+
+			$cms.template("Display Breadcrumbs")
+
+		#end
+
+	
+
+		$cms.template("Display Left Modules")
+
+
+
+		<div id="columnCenter" class="grid_${contentWidth}$!mainContentAlphaOrOmega">
+
+			<!-- MIDLE MODULES -->
+
+			## Loop through all of the middle Rows
+
+			$cms.template("Display Middle Row Modules")
+
+		</div>
+
+
+
+		$cms.template("Display Right Modules")
+
+	</div>
+
+	<div class="bottom"><span></span></div>	
+
+<div class="clear"></div>
+
+</div>
+
+$cms.template("Footer")
+
+
+

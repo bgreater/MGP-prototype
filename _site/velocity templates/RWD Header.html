@@ -1,0 +1,245 @@
+$cms.template("Head and Meta")
+
+## Using the Current Section ID or the design class for the body so that the CSS can be altered per website section
+
+#if($curSection.designClass && $curSection.designClass != "")
+
+	#set($bodyDesignClass = $curSection.designClass)
+
+#else
+
+	#set($bodyDesignClass = "wss${curSection.id}")
+
+#end
+
+<body id="$!bodyDesignClass">
+$imware.useStandards()
+$imware.tracker
+
+
+
+$cms.template("WMA Toolbar")
+
+
+
+#if($curSection.path == "/")##
+
+<div class="outerWrapper homepage">
+
+#else##
+
+<div class="outerWrapper">
+
+#end##
+
+  	<div class="top">
+
+    	<span></span>
+
+ 	</div>
+
+
+
+	<div class="center-content">
+
+
+
+        <div class="container_12">
+
+    		<div class="grid_12 alpha omega">
+
+    			<div class="boxLogo">
+
+    				<div class="top"></div>
+
+    				<div class="center-content">
+
+                        #set($logoGridWidth = $math.newInt($topLevel.logoFieldWidth))
+
+                        <div class="grid_${logoGridWidth} alpha">
+
+            				
+
+            				<div id="homelink">
+
+            					<a href="/"></a>
+
+            				</div>
+
+                            <!-- end: boxLogo -->
+
+                        </div>
+
+                        <!-- end: gridLogo -->
+
+                        ##
+
+                        <div class="grid_${math.subtract(12,$logoGridWidth)} omega">
+
+    						<div class="boxTopUtilityNav">
+
+    							<div class="top"><span></span></div>
+
+    							<div class="center-content">
+
+                                    <div class="boxUtilityNav">
+
+    									<div class="top"><span></span></div>
+
+    									
+    									<div id="top-nav" class="center-content">
+
+											$cms.helpText("This is the Top Utitlity Navigation. To change the links go to the Clickability CMS and go to the following:<br><br> Publish Tab<br>Search for content item $mainWebsiteCofig.id<br>Go to the Complex field Top Utility Navaigation and update the field with the new values.")
+
+											#if(!$hideAllNavigation)
+
+                                                #foreach($item in $mainWebsiteConfig.utilityNav)
+
+                                					#if($velocityCount != 1)
+
+                                						|
+
+                                					#end
+
+                                					<a href="$item.url">$item.title</a>
+
+    											#end
+
+											#end
+
+    									
+    									</div>
+
+    									<div class="bottom"><span></span></div>
+
+                                    </div>
+
+                                    <!-- end: boxUtilityNav -->
+
+                                    <div class="boxSearchControls">
+
+    									<div class="top"><span></span></div>
+
+    									<div class="center-content">
+
+											#if(!$hideAllNavigation || $topLevel.hideSearch)
+
+                                                <form action="/search" method="post">
+
+                                					<input id="keywords" name="keywords" type="text" />
+
+                                					#if($mainWebsiteConfig.searchButtonText && $mainWebsiteConfig.searchButtonText != "")
+
+                                						<input id="search" type="submit" value="$mainWebsiteConfig.searchButtonText" />
+
+                                					#else
+
+                                						<input id="search" type="submit" value="Search" />
+
+                                					#end
+
+                                                </form>
+
+											#end
+
+    									</div>
+
+    									<div class="bottom"><span></span></div>
+
+                                    </div>
+
+
+
+                                </div>
+
+    							<div class="bottom"><span></span></div>
+
+    						</div>
+
+                            <!-- end: boxSearch -->
+
+                        </div>
+
+						<div class="clear"></div>
+
+                        <!-- end: gridUtilityNav -->
+
+                        <div class="grid_12 alpha omega">
+
+                            $cms.template("Top Navigation")
+
+                            <!-- end: boxPrimaryNav -->
+
+                        </div>
+
+            <!-- end: gridPrimaryNav -->
+
+    				</div>
+
+    				<div class="bottom"></div>
+
+    				<div class="clear"></div><!-- JHRMOD08: added clearing div -->
+
+    				<!-- end: boxLogo -->
+
+    			</div><!-- end: grid_12 -->
+
+    		</div>
+
+    	</div><!-- Start of the Top Full Module section -->
+
+		<div class="clear"></div>
+
+
+
+		## Display the header image if it exists for the Website section and the user has said to show it
+
+		#set($mainTopHeaderImage = false)##
+
+		#if($curSection.headerImage && $curSection.headerImage.url != "")##
+
+			#set($mainTopHeaderImage = $curSection.headerImage)##
+
+		#end##
+        #set($testImgUrl = $cms.content.headerImage.get(0).title)##
+		#if($content && $content.headerImage && $cms.media($content.headerImage.get(0).id).url != "")##
+
+			#set($mainTopHeaderImage = $content.headerImage.get(0))##
+
+		#end##
+
+		#if($content.hideHeaderImage)##
+
+			#set($mainTopHeaderImage = false)##
+
+		#end##
+
+		#if($mainTopHeaderImage)##
+
+    		<div class="container_12 boxHeaderImage">
+
+    			<div class="top"><span></span></div>
+
+    			<div id="flex" class="center-content">
+
+    				$!util.tag($mainTopHeaderImage)
+
+    			</div>
+
+    			<div class="clear"></div>
+
+    			<div class="bottom"><span></span></div>
+
+    		</div>
+
+		#end##
+
+
+
+
+
+
+
+
+
+

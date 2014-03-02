@@ -1,0 +1,1219 @@
+####################################################################################################################################################################################
+
+##INPUT: 
+
+##$pageContentType (this is a variable set before the setup template is called that specifies what type of content to get if there isn't a current content item)
+
+##
+
+##OUTPUT:
+
+##$curSection (The current WSS object)
+
+##$curSectionName (The current WSS name.)
+
+##$pathArray (An array of Path names used for Breadcrumbs)
+
+##$topLevel (The domain level WSS object.)
+
+##$isTopLevel (Boolean Value to say if you are on the top level or not)
+
+##$mainWebsiteConfig (This is the Main Site configuration for the entire site)
+
+##$leftModules (These are the left Modules for the page you are on. It will use inheritance to go up the tree unless you tell it not to in the current WSS object)
+
+##$rightModules (These are the right Modules for the page you are on. It will use inheritance to go up the tree unless you tell it not to in the current WSS object)
+
+##$fullTopMod (This is the Top module that will run across the entire top)
+
+##$gridLogoWidth (This is the width of the area in the left of the header that the Logo usually goes in)
+
+##$gridUtilityNavWidth (This is the width of the area in the right of the header that utility navigation an the search box goes in)
+
+##$mainLeftWidth (This is the width of the Left Column. If it is 0 then it will not be shown)
+
+##$mainRightWidth (This is the width of the Right Column. If it is 0 then it will not be shown)
+
+##$contentWidth (This is the main width of the content area)
+
+##$mainContentImageMaxWidth (This is the max the image can be in the main content area)
+
+##$curDate (This is the current date object)
+
+##$content (The current content item. If it doesn't exist then it will grab the top placement)
+
+##$topGeneralPageContent (This is the top General Page used primarly for when a General Page is the Index Page)
+
+##$hideAllNavigation (This is used mainly for the Landing Pages pages to hide all of the navigation on that page)
+
+##$mainTitle (String of the domain)
+
+##$contentTitle (The title of the Current content item)
+
+##$browserTitle (The Title that goes in the browser)
+
+##$metaKeywords (These are the keywords for the SEO header)
+
+##$metaDescription (This is the Description for the SEO header)
+
+##$templateDebug (This is a tag that can be used to have variables shown if the user on dev placed the Query String "templateDebug" = y)
+
+##$jsArrayTemplates (This is an array of all the JS pages that should be shown on the current page)
+
+##$masterArray (Set up master array to keep items from duplicating across page)
+
+##$rowGroupHash (Add a Letter Hashmap for the Column Groups in the Circle 8 JS for equal column height)
+
+##$excludeContentTypeArray (A list of content types you should not include in landing pages or search results
+
+##$setupRan (Boolean to let you know that the setup ran that all variables should be set)
+
+##$moduleCssHashMap (A hashmap used when trying to find out what the CSS Class is for a module based ont he type of Module it is)
+
+#######
+
+## WMA VARIABLES
+
+## $wmaLeadScore (The users lead score)
+
+## $wmaProfileLevelLevel (The users Profile Level)
+
+## $wmaContentLeadScoreChange (If the user is on a content item this is the amount the user lead score will change)
+
+## $wmaJustForYouItems (Arraylist of all of the items in the Sales person targeted array in the users portfolio)
+
+## $wmaUserSavedItems (Arraylist of the items the user has saved)
+
+## $wmaPortViewedCookie (Cookie stored in the users browser to determine if they have viewed an item in their portfolio or not)
+
+## $wmaViewedPortfolioContent (Array of items viewed by the user to help determine what is new)
+
+## $wmaNumberNewPortItems (Thsi is the number if New items, or items that have not been viewed by the user but are in their portfolio)
+
+## $nextProfileLevel (This is the next profile level the user can reach)
+
+## $wmaProfileFieldsToShow (This is an array of Profile fields that the user can be shown at any given time based on profile level or what content they accessed)
+
+## $contentInterestItems (If this is a content details page this is an array of items that are of the same interest of the content being viewed)
+
+## $visitorInterestItems (This will be an array of all of the items that are of the same interests that the visitor likes
+
+####################################################################################################################################################################################
+
+##
+
+#if(!$setupRan)##
+
+	####################################################################################
+
+    ## Set up EnvHost
+
+    ####################################################################################
+
+    
+
+        #set($envHost = $cms.envHost)
+
+    
+
+        ##NOT DONE YET: REMOVE BEFORE LAUNCH
+
+        ##set($envHost = "stage.")
+
+    ##
+
+    ####################################################################################
+
+    ## Sets the Current Section and Current Section Name
+
+    ####################################################################################
+
+	##  
+
+        #set($curSection = $cms.websiteSection)##
+
+		##
+
+        #if($curSection.displayName && $curSection.displayName.trim() != "")##
+
+            #set($curSectionName = $curSection.displayName)##
+
+        #else##
+
+            #set($curSectionName = $curSection.name)##
+
+		#end##
+
+	##	
+
+	##	
+
+    ####################################################################################
+
+    ## Create the Path Array for breadcrumbs, etc.
+
+    ####################################################################################
+
+	##
+
+        #set($pathArray = $util.newArrayList)##
+
+        #set($foo = $pathArray.add("/"))##
+
+		##
+
+        #set($tempPath = "")##
+
+        #foreach($path in $curSection.path.split("/"))##
+
+            #if($velocityCount > 1)##
+
+                #set($tempPath = "$tempPath/$path")##
+
+                #set($foo = $pathArray.add($tempPath))##
+
+                #if($velocityCount == 2)##
+
+                    #set($firstLevelSection = $cms.websiteSection($tempPath))##
+
+                #end##
+
+            #end##
+
+        #end##
+
+        ##
+
+    ####################################################################################
+
+    ## Sets the Top Level Section
+
+    ####################################################################################
+
+	##
+
+        #set($topLevel = $cms.websiteSection($pathArray.get(0)))##
+
+        #if($topLevel.path == $curSection.path)##
+
+            #set($isTopLevel = true)##
+
+		#end##
+
+		##
+
+	####################################################################################
+
+    ## Sets the Main Website Configuration File
+
+    ####################################################################################
+
+	##
+
+		#foreach($item in $cms.filteredLinks("Global Content Elements","/",1,1))##
+
+			#set($mainWebsiteConfig = $item)##
+
+		#end##
+
+	##
+
+    ####################################################################################
+
+    ## Sets content for detail pages
+
+    ####################################################################################
+
+		#set($content = $cms.content)##
+
+        #if(!$content && $pageContentType && $pageContentType != "")##
+
+            #set($content = $cms.content)##
+
+            #if(!$content || $content.typeName != $pageContentType)##
+
+                #foreach($item in $cms.filteredLinks($pageContentType, 1, 1))##
+
+                    #set($content = $item)##
+
+                #end##
+
+            #end##
+
+		#end##
+
+	##
+
+
+
+	####################################################################################
+
+    ## Sets content for the top General Page if the main page is a General Page
+
+    ####################################################################################
+
+		## Check to see if the page is a detail page or a index page. 
+
+		## If its a detail page the URL will have .html at the end
+
+		#if($string.indexOf($req.url,".html") == -1)
+
+			## This is an index page so lets check if the section config calls for a General Page Index
+
+			#if($string.equals($string.toLowerCase($curSection.row1Type),"even") && $curSection.row1Mods.size() == 1)
+
+				## We have an Even row with only one module in it. Lets check if that module is a 
+
+				## Module-PreConfigured and of the type General Page Index
+
+				#set($gibInputIB = $curSection.row1Mods)##
+
+				#set($gibReturnUntargetedItems = true)##
+
+				$cms.template("Get IB Items")##
+
+				#set($gpRow1Mods = $gibOutputArray)##
+
+				#foreach($mod in $gpRow1Mods)
+
+					#if($mod.typeName == "Module-PreConfigured" && $string.equals($mod.type,"General Page Index"))
+
+						#foreach($item in $cms.filteredLinks("General Page",1,1))
+
+							#set($content = $item)
+
+						#end
+
+					#end
+
+				#end
+
+			#end		
+
+		#end
+
+
+
+	##
+
+	##
+
+	####################################################################################
+
+    ## Checks to see if the page should hide all of the navigation
+
+    ####################################################################################
+
+		#set($hideAllNavigation = false)
+
+		#if($content && $content.typeName == "Landing Page" && $content.hideAllNavigation)
+
+			#set($hideAllNavigation = true)
+
+		#end
+
+	##
+
+
+
+
+
+	####################################################################################
+
+	## WMA Setup and variable definitions
+
+	####################################################################################
+
+	#if($wma)
+
+		#set($wmaLeadScore = $wma.leadScore)
+
+		#if($wma.profileLevel.level)
+
+			#set($wmaProfileLevelLevel = $wma.profileLevel.level)
+
+		#else
+
+			#set($wmaProfileLevel = 0)
+
+		#end
+
+		
+
+		#####################################################################
+
+		## Set the Lead Score Contribution Based on the Action of the content
+
+		#####################################################################
+
+		#set($wmaContentLeadScoreChange = 0)
+
+		#if($content)
+
+			#if($wma.getContentAttributes($content.id).leadScoreContribution > 0)
+
+				#set($wmaContentLeadScoreChange = $wma.getContentAttributes($content.id).leadScoreContribution)
+
+				$wma.adjustLeadScore($wmaContentLeadScoreChange, "Viewed Content: $content.title")
+
+			#end
+
+		#end
+
+		
+
+		#####################################################################
+
+		## Adjust the user interest level based on content
+
+		#####################################################################
+
+		#if($content)
+
+			#if($wma.getContentAttributes($content.id).interestDefinitions.size() > 0)
+
+				#foreach($interest in $wma.getContentAttributes($content.id).interestDefinitions)
+
+					$wma.adjustInterestScore($interest.tag,1)
+
+				#end
+
+			#end
+
+		#end
+
+		
+
+		#####################################################################
+
+		## Logic for the Portfolio Highlight Module
+
+		#####################################################################
+
+
+
+		## Build arrays of the saved and targeted items
+
+		#set($wmaJustForYouItems = $util.newArrayList)
+
+		#set($wmaUserSavedItems = $util.newArrayList)
+		#set($wmaUserSavedDestHash = $util.newHashMap)
+
+		#foreach($item in $wma.getContentInPortfolio(true))
+
+			#set($foo = $wmaJustForYouItems.add($item.contentId))
+
+		#end
+
+		#foreach($item in $wma.getContentInPortfolio(false))
+
+			#set($foo = $wmaUserSavedItems.add($item.contentId))
+			#set($foo = $wmaUserSavedDestHash.put("$item.contentId",$item.destId))
+		#end
+
+		
+
+		## Create the cookie for viewed items if it doesn't exist
+
+		#if(!$userRequest.getCookie("wmaPortViewed"))
+
+			#set($foo = $userResponse.setCookie("wmaPortViewed","",31557600))
+
+		#end
+
+		
+
+		## Create an array of all of the Already Viewed Items
+
+		#set($wmaPortViewedCookie = $userRequest.getCookie("wmaPortViewed"))
+
+		#set($wmaViewedPortfolioContent = $util.newArrayList)
+
+		#if($string.indexOf($wmaPortViewedCookie,",") > -1)
+
+			#foreach($id in $string.split($wmaPortViewedCookie,","))
+
+				#set($foo = $wmaViewedPortfolioContent.add($id))
+
+			#end
+
+		#elseif($string.length($wmaPortViewedCookie) > 0)
+
+			#set($foo = $wmaViewedPortfolioContent.add($wmaPortViewedCookie))
+
+		#end
+
+
+
+		## Add Content to the Viewed Items if its in the Just for you Portfolio
+
+		#if($content && $wmaJustForYouItems.contains($content.id))
+
+		
+
+			#set($foo = $wmaViewedPortfolioContent.add("$content.id"))
+
+		
+
+			## Make the String to place in the cookie
+
+			#set($wmaViewedPortfolioContentString = "")
+
+			#foreach($id in $wmaViewedPortfolioContent)
+
+				#set($wmaViewedPortfolioContentString = "${wmaViewedPortfolioContentString},$id")
+
+			#end
+
+
+
+			#if($string.length($wmaViewedPortfolioContentString) > 1)
+
+			 #set($wmaViewedPortfolioContentString = $string.substring($wmaViewedPortfolioContentString,1))
+
+			#end
+
+
+
+			#set($foo = $userResponse.removeCookie("wmaPortViewed"))
+
+
+
+			#set($foo = $userResponse.setCookie("wmaPortViewed",$wmaViewedPortfolioContentString,31557600))
+
+		#end
+
+		
+
+		## Get the number of New items
+
+		#set($wmaNumberNewPortItems = $math.subtract($wmaJustForYouItems.size(),$wmaViewedPortfolioContent.size()))
+
+		#if($wmaNumberNewPortItems < 0)
+
+			#set($wmaNumberNewPortItems = 0)
+
+		#end
+
+		
+
+		#####################################################################
+
+		## Logic for the determining the next profile level and fields to show
+
+		#####################################################################		
+
+		## Display the text based on the users next profile level
+
+		#set($nextProfileLevel = $math.newInt($math.add($wmaProfileLevelLevel,1)))
+
+		
+
+		## Find out the profile fields to show
+
+		#set($wmaProfileFieldsToShow = $util.newArrayList)
+
+		##if thei is the request form show all the profile fields if its not then do the regualr profile items
+		#if($cms.path == "/requestform")
+			#set($wmaProfileFieldsToShow = $wma.profileFields)
+		
+		#else
+			## User next profile level
+	
+			#set($wmaProfileFieldsToShow = $wma.getUnsetFieldsForProfileLevel("level${nextProfileLevel}"))
+	
+			## User trys to access a contnet item that has a level higher 
+	
+			## then they are and not the next level
+	
+			#if($cms.path == $mainWebsiteConfig.gatedPath && $wma.hasGatedContent())
+	
+				#set($foo = $wmaProfileFieldsToShow.clear())
+	
+				#set($contentProfileLevel = $wma.getContentAttributes($wma.gatedContent.id).profileLevel)
+	
+				#set($wmaProfileFieldsToShow = $wma.getUnsetFieldsForProfileLevel($contentProfileLevel.tag))
+	
+			#end
+		#end
+
+		
+
+		#######################################################################################
+
+		## Logic for finding related content based on interests of the visitor and content
+
+		#######################################################################################
+
+		#set($allInterestsHash = $util.newHashMap)
+
+		#set($contentInterestItems = $util.newArrayList)
+
+		#set($visitorInterestItems = $util.newArrayList)
+
+		
+
+		## If this is a content details page get the content of the same interest
+
+		#if($content && $wma.getContentAttributes($content.id).interestDefinitions.size() > 0)
+
+			#set($contentInterestTags = $util.newArrayList)
+
+			#foreach($interest in $wma.getContentAttributes($content.id).interestDefinitions)
+
+				#set($foo = $contentInterestTags.add($interest.tag))
+
+			#end
+
+			#set($contentInterestItems = $wma.getSuggestedContent($contentInterestTags,false,10))
+
+		#end
+
+		
+
+		## Get the visitor interest items
+
+		#set($visitorInterestItems = $wma.getSuggestedContent())
+
+		
+
+		## Populate the Hashmap for future use
+
+		#set($foo = $allInterestsHash.put("Content",$contentInterestItems))
+
+		#set($foo = $allInterestsHash.put("Visitor",$visitorInterestItems))
+
+
+
+	#end
+
+
+
+     ####################################################################################
+
+    ## Get Related Content if it exists
+
+    ####################################################################################
+
+		##	
+
+		#set($gibInputIB = $content.linkedContent("relatedItems"))##
+
+        #set($gibReturnUntargetedItems = false)##
+
+        $cms.template("Get IB Items")##
+
+        #set($relatedContentItems = $gibOutputArray)##
+
+		##
+
+		##
+
+	####################################################################################
+
+    ## Set the Left and the Right Column Modules
+
+    ####################################################################################
+
+	##
+
+		#if($content && $content.leftModules.size() > 0)##
+
+			#set($leftModules = $content.leftModules)##
+
+		#elseif($curSection && $curSection.leftModules.size() > 0)##
+
+			#set($leftModules = $curSection.leftModules)##
+
+		#elseif($cms.parent && $cms.parent.path != "/" && $cms.parent.leftModules.size() > 0)##
+
+			#set($leftModules = $cms.parent.leftModules)##
+
+		#elseif($cms.parent($cms.parent.path) && $cms.parent($cms.parent.path).path != "/" && $cms.parent($cms.parent.path).leftModules.size() > 0)##
+
+			#set($leftModules = $cms.parent($cms.parent.path).leftModules)##
+
+		#else##
+
+			#set($leftModules = $topLevel.masterLeftModules)##
+
+			#foreach($path in $pathArray)##
+
+				#set($tmpWSS = $cms.websiteSection($path))##
+
+				#if($tmpWSS && $tmpWSS.leftModules.size() > 0)##
+
+    				#set($leftModules = $tmpWSS.leftModules)##
+
+				#end##
+
+				#set($tmpWSS = false)##
+
+			#end##		
+
+		#end##
+
+		
+
+		##
+
+		#set($gibInputIB = $leftModules)##
+
+		#set($gibReturnUntargetedItems = true)##
+
+		$cms.template("Get IB Items")##
+
+		#set($leftModules = $gibOutputArray)##
+
+		
+
+		##
+
+		## Get the Right side modules
+
+		#if($content && $content.rightModules.size() > 0)##
+
+			#set($rightModules = $content.rightModules)##
+
+		#elseif($curSection && $curSection.rightModules.size() > 0)##
+
+			#set($rightModules = $curSection.rightModules)##
+
+		#elseif($cms.parent && $cms.parent.path != "/" && $cms.parent.rightModules.size() > 0)##
+
+			#set($rightModules = $cms.parent.rightModules)##
+
+		#elseif($cms.parent($cms.parent.path) && $cms.parent($cms.parent.path).path != "/" && $cms.parent($cms.parent.path).rightModules.size() > 0)##
+
+			#set($rightModules = $cms.parent($cms.parent.path).rightModules)##
+
+		#else##
+
+			#set($rightModules = $topLevel.masterRightModules)##
+
+			#foreach($path in $pathArray)##
+
+				#set($tmpWSS = $cms.websiteSection($path))##
+
+				#if($tmpWSS && $tmpWSS.rightModules.size() > 0)##
+
+    				#set($rightModules = $tmpWSS.rightModules)##
+
+				#end##
+
+				#set($tmpWSS = false)##
+
+			#end##
+
+		#end##
+
+		
+
+		#set($gibInputIB = $rightModules)##
+
+		#set($gibReturnUntargetedItems = true)##
+
+		$cms.template("Get IB Items")##
+
+		#set($rightModules = $gibOutputArray)##
+
+	##
+
+	####################################################################################
+
+    ## GEt the Top Modules
+
+    #################################################################################### 	
+
+		#if($curSection.fullTopMod && $curSection.fullTopMod.size() > 0)##
+
+			#set($gibInputIB = $curSection.fullTopMod)##
+
+    		#set($gibReturnUntargetedItems = true)##
+
+			#set($gibMaxItems = 1)##
+
+    		$cms.template("Get IB Items")##
+
+    		#set($fullTopMod = $gibOutputArray)##
+
+		#end##
+
+	####################################################################################
+
+    ## Sets the widths for all of the columns. If they are hidden then they equal 0
+
+    ####################################################################################                
+
+		#set($gridLogoWidth = $math.newInt($topLevel.logoFieldWidth))##
+
+		#set($gridUtilityNavWidth = ${math.subtract(12,$logoGridWidth)})##
+
+		##
+
+		##set all of the left nav, right sidebar and middle rows width master
+
+		## Only display the Left nav if there are modules to display
+
+		##
+
+		#if($leftModules.size() > 0)##
+
+			#set($mainLeftWidth = $math.newInt($topLevel.leftColumnFieldWidth))##
+
+		#else##
+
+			#set($mainLeftWidth = 0)##
+
+		#end##
+
+		##
+
+		## Only display the right nav if there are modules to display		
+
+		#if($rightModules.size() > 0)##
+
+			#set($mainRightWidth = $math.newInt($topLevel.rightColumnFieldWidth))##
+
+		#else##
+
+			#set($mainRightWidth = 0)##
+
+		#end##
+
+		##
+
+		##
+
+		## check to see if the user is o a content page or not to determin what show / hide 
+
+		## to use in the WSS for the left and right modules. Setting the width to 0 makes the item not show
+
+		## If the content is in preview though and a Website Configuration
+
+    		#if($cms.content)##
+
+    			#if($curSection.hideLeftColContent || $cms.content.hideLeftSideBar)##
+
+    				#set($mainLeftWidth = 0)##
+
+    			#end##
+
+    			#if($curSection.hideRightColContent || $cms.content.hideRightSideBar)##
+
+    				#set($mainRightWidth = 0)##
+
+    			#end##
+
+    		#else##
+
+    			#if($curSection.hideLeftColIndex)##
+
+    				#set($mainLeftWidth = 0)##
+
+    			#end##
+
+    			#if($curSection.hideRightColIndex)##
+
+    				#set($mainRightWidth = 0)##
+
+    			#end##
+
+    		#end##
+
+		##
+
+        #set($contentWidth = $math.subtract(12,$math.add($mainRightWidth,$mainLeftWidth)))##
+
+		#set($mainContentImageMaxWidth = $math.multiply($contentWidth,80) - $math.multiply($contentWidth,8))
+
+		##
+
+		#if($req.param("debug"))##
+
+    		$mainLeftWidth = mainLeftWidth <br>##
+
+            $mainRightWidth = mainRightWidth<br>##
+
+            $contentWidth = contentWidth<br>##
+
+		#end##
+
+	##
+
+	##
+
+    ####################################################################################
+
+    ## Sets the Current Date
+
+    ####################################################################################
+
+		##
+
+        #set($curDate = $util.now)##
+
+        ## Refresh Template (nightly)
+
+		##
+
+		##
+
+    ####################################################################################
+
+    ## Browser Title
+
+    ####################################################################################
+
+		##
+
+        ## set main title
+
+		#if($topLevel.displayName && $topLevel.displayName != "")##
+
+			#set($mainTitle = $topLevel.displayName)##
+
+		#else##
+
+			#set($mainTitle = $topLevel.name)##
+
+		#end##
+
+		##
+
+		##    
+
+        ## $content will already be set, if on detail page
+
+        ## Next set the meta title for content
+
+        ##
+
+        #set($contentTitle = $content.title)##
+
+        ##
+
+        ## Finally set pageTitle
+
+        ##
+
+        #if($contentTitle && $contentTitle != "")##
+
+            #if($content.titleTag && $content.titleTag != "")
+            	#set($browserTitle = "$content.titleTag")##
+            #else
+            	#set($browserTitle = "$mainTitle >> $curSectionName - $contentTitle")##
+            #end
+            
+
+        #elseif($curSection.id == $topLevel.id)##
+
+            #set($browserTitle = "$mainTitle")##
+
+        #else##
+	
+            #if($curSection.titleTag && $curSection.titleTag != "")
+            	#set($browserTitle = "$curSection.titleTag")##
+            #else
+            	#set($browserTitle = "$mainTitle >> $curSectionName")##
+            #end
+
+        #end##
+
+		##
+
+    ####################################################################################
+
+    ## This creates the keywords and descriptions
+
+    ####################################################################################    
+
+		##
+
+        ##This decides the order of objects to check the fields to build the meta strings
+
+
+
+        #set($metaArray = [$content, $curSection, $cms.parent($curSection)])##
+
+        ##
+
+        #foreach($item in $metaArray)##
+
+            #if(!$metaKeywords && $item.metadata && $item.metadata != "")##
+
+                #set($metaKeywords = $item.metadata)##
+
+            #end##
+
+			##
+
+            #if(!$metaDescription && $item.description && $item.description != "")##
+
+                #set($metaDescription = $item.description)##
+
+            #elseif(!$metaDescription && $item.summary && $item.summary != "")##
+
+                #set($metaDescription = $item.summary)##
+
+            #end##
+
+        #end##
+
+		##
+
+        #if($metaKeywords)##
+
+            #set($metaKeywords = $util.text($string.replaceAll($metaKeywords.toString(),"\"","")))##
+
+        #end##
+
+		##
+
+        #if($metaDescription)##
+
+            #set($metaDescription = $util.text($string.replaceAll($metaDescription.toString(),"\"","")))##
+
+        #end##
+
+		##
+
+		##
+
+    ####################################################################################
+
+    ## This sets up all javascript templates
+
+    ####################################################################################
+
+		##
+
+        #if(!$jsArrayTemplates)##
+
+            #set($jsArrayTemplates = $util.newArrayList)##
+
+		#end##
+
+		#set($foo = $jsArrayTemplates.add("sidekick.js"))##		
+
+		#set($foo = $jsArrayTemplates.add("clickability.js"))##
+
+		#set($foo = $jsArrayTemplates.add("customer.js"))##
+
+		#set($foo = $jsArrayTemplates.add("lightbox.js"))##
+		
+		#set($foo = $jsArrayTemplates.add("jquery.simpletip-min-1.3.1.js"))##
+
+
+
+		##
+
+    ####################################################################################
+
+    ## Set up master array to keep items from duplicating across page
+
+    ####################################################################################
+
+		##
+
+        #set($masterArray = $util.newArrayList)##
+
+		##
+
+    ####################################################################################
+
+    ## Add a Letter Hashmap for the Column Groups. 
+
+	## If you need to have more then 4 rows place another letter here
+
+    ####################################################################################
+
+		##
+
+        #set($rowGroupHash = $util.newHashMap)##
+
+		#set($foo = $rowGroupHash.put("1","A"))##
+
+		#set($foo = $rowGroupHash.put("2","B"))##
+
+		#set($foo = $rowGroupHash.put("3","C"))##
+
+		#set($foo = $rowGroupHash.put("4","D"))##
+
+		##
+
+		##
+
+    ####################################################################################
+
+    ## Content Types to Exclude in the search
+
+    ####################################################################################
+
+		##
+
+        #set($excludeContentTypeArray = $util.newArrayList)##
+
+		#set($foo = $excludeContentTypeArray.add("Module-HTML Box"))##
+
+		#set($foo = $excludeContentTypeArray.add("Module-Image Rotator"))##
+		
+		#set($foo = $excludeContentTypeArray.add("Module-Image Slider"))## 
+		
+		#set($foo = $excludeContentTypeArray.add("Module-Video-Listing"))##
+		
+		#set($foo = $excludeContentTypeArray.add("Module-Newsletter-Listing"))## 
+
+		#set($foo = $excludeContentTypeArray.add("Module-Lead Form"))##
+
+		#set($foo = $excludeContentTypeArray.add("Module-Links Box"))##
+
+		#set($foo = $excludeContentTypeArray.add("Module-RSS Feed"))##
+
+		#set($foo = $excludeContentTypeArray.add("Module-PreConfigured"))##
+
+		#set($foo = $excludeContentTypeArray.add("Module-Tabbed Content"))##
+
+		#set($foo = $excludeContentTypeArray.add("Module-WMA By Lead Score"))##
+
+		#set($foo = $excludeContentTypeArray.add("Module-WMA Engaged"))##
+
+		#set($foo = $excludeContentTypeArray.add("Module-WMA Portfolio Highlight"))##
+
+		#set($foo = $excludeContentTypeArray.add("Module-WMA Progressive Profile"))##
+
+		#set($foo = $excludeContentTypeArray.add("Module-Global Content Elements"))##
+
+		##
+
+		##	
+
+   
+
+    ####################################################################################
+
+    ## Set the Module HashMap for getting the correct CSS Class
+
+    ####################################################################################
+
+		##	
+
+		#set($moduleCssHashMap = $util.newHashMap)##
+
+		#set($foo = $moduleCssHashMap.put("Module-PC-Content Archive","boxDefault boxLinksList"))##
+
+    	#set($foo = $moduleCssHashMap.put("Module-PC-Quote Box","boxDefault boxQuote"))##
+
+    	#set($foo = $moduleCssHashMap.put("Module-PC-Related Items","boxDefault boxLinksList"))##
+
+    	#set($foo = $moduleCssHashMap.put("Module-PC-Left-Sub-Navigation","boxDefault boxLeftSubNavigation"))##
+
+		#set($foo = $moduleCssHashMap.put("Module-PC-Right-Sub-Navigation","boxDefault boxRightSubNavigation"))##
+
+    	#set($foo = $moduleCssHashMap.put("Module-PC-Tag Cloud","boxDefault boxTagCloud"))##
+
+    	#set($foo = $moduleCssHashMap.put("Module-PC-General Page Index","boxDefault boxMainContent generalpage"))##
+
+    	#set($foo = $moduleCssHashMap.put("Module-PC-Search Results Index","boxDefault boxMainFullListIndex"))##
+
+    	#set($foo = $moduleCssHashMap.put("Module-PC-Sitemap Index","boxDefault boxSitemapIndex"))##
+		
+		#set($foo = $moduleCssHashMap.put("Module-PC-Studies Presentations","boxDefault boxContent"))##
+		
+		#set($foo = $moduleCssHashMap.put("Module-PC-Glossary","boxDefault boxContent"))##
+
+    	#set($foo = $moduleCssHashMap.put("Module-PC-Blog Index","boxDefault boxMainFullListIndex"))##
+
+		#set($foo = $moduleCssHashMap.put("Module-PC-Contact Us Form Index","boxDefault boxContactForm"))##
+
+		#set($foo = $moduleCssHashMap.put("Module-PC-WMA Visitor Saved Content","boxDefault boxLinksList"))##
+
+		#set($foo = $moduleCssHashMap.put("Module-PC-WMA Recommendations from Interests","boxDefault boxLinksList"))##
+
+		#set($foo = $moduleCssHashMap.put("Module-PC-WMA Sales Targeted Content","boxDefault boxLinksList"))##
+
+		#set($foo = $moduleCssHashMap.put("Module-PC-Most Popular","boxDefault boxLinksList"))##
+
+		#set($foo = $moduleCssHashMap.put("Module-HTML Box","boxDefault boxContent"))##
+
+		#set($foo = $moduleCssHashMap.put("Module-Image Rotator","boxDefault boxImageRotator"))##
+		
+		#set($foo = $moduleCssHashMap.put("Module-Image Slider","boxDefault boxImageSlider"))##
+		
+		#set($foo = $moduleCssHashMap.put("Module-Video-Listing","boxDefault boxVideoListing"))##
+		
+		#set($foo = $moduleCssHashMap.put("Module-Newsletter-Listing","boxDefault boxNewsletterListing"))##
+
+		#set($foo = $moduleCssHashMap.put("Module-Lead Form","boxDefault boxContactForm"))##
+
+		#set($foo = $moduleCssHashMap.put("Module-Homepage-Links Box","boxDefault boxFullListIndex homepage"))##
+
+		#set($foo = $moduleCssHashMap.put("Module-Links Box","boxDefault boxFullListIndex"))##
+
+		#set($foo = $moduleCssHashMap.put("Module-Gallery","boxDefault boxMiniPhotoSlideshow"))##
+
+		#set($foo = $moduleCssHashMap.put("Module-Center-Links Box","boxDefault boxMainFullListIndex"))##
+
+		#set($foo = $moduleCssHashMap.put("Module-RSS Feed","boxDefault boxLinksList"))##
+
+		#set($foo = $moduleCssHashMap.put("Module-Tabbed Content","boxDefault boxTabbedContent"))##
+
+		#set($foo = $moduleCssHashMap.put("Module-WMA Portfolio Highlight","boxDefault boxWMAPortfolioHighlight"))##
+
+		#set($foo = $moduleCssHashMap.put("Module-WMA Progressive Profile","boxDefault boxWMAProgProfile"))##
+
+		#set($foo = $moduleCssHashMap.put("Content-Bio","boxDefault boxMainContent bio"))##
+		
+		#set($foo = $moduleCssHashMap.put("Content-Video","boxDefault boxMainContent video"))##
+		
+		#set($foo = $moduleCssHashMap.put("Content-Newsletter-Archive","boxDefault boxMainContent newsletter"))##	
+
+		#set($foo = $moduleCssHashMap.put("Content-External Link","boxDefault boxMainContent externallink"))##	
+
+		#set($foo = $moduleCssHashMap.put("Content-Document","boxDefault boxMainContent document"))##
+
+		#set($foo = $moduleCssHashMap.put("Content-Blog Post","boxDefault boxMainContent blogpost"))##	
+
+		#set($foo = $moduleCssHashMap.put("Content-Landing Page","boxDefault boxMainContent landingpage"))##	
+
+		#set($foo = $moduleCssHashMap.put("Content-Customer","boxDefault boxMainContent customer"))##	
+
+		#set($foo = $moduleCssHashMap.put("Content-Event","boxDefault boxMainContent event"))##	
+
+		#set($foo = $moduleCssHashMap.put("Content-FAQ","boxDefault boxMainContent faq"))##	
+
+		#set($foo = $moduleCssHashMap.put("Content-Gallery","boxDefault boxMainContent gallery"))##
+
+		#set($foo = $moduleCssHashMap.put("Content-General Page","boxDefault boxMainContent generalpage"))##	
+		
+		#set($foo = $moduleCssHashMap.put("Content-Terms","boxDefault boxMainContent generalpage"))##	
+		
+		#set($foo = $moduleCssHashMap.put("Content-Download","boxDefault boxMainContent generalpage"))##	
+
+		#set($foo = $moduleCssHashMap.put("Content-Job Listing","boxDefault boxMainContent joblisting"))##	
+
+		#set($foo = $moduleCssHashMap.put("Content-Press Release","boxDefault boxMainContent pressrelease"))##	
+
+		#set($foo = $moduleCssHashMap.put("Content-Product","boxDefault boxMainContent product"))##	
+
+		#set($foo = $moduleCssHashMap.put("Content-Quote","boxDefault boxMainContent quote"))##
+
+		#set($foo = $moduleCssHashMap.put("Content-Website Configuration","boxDefault boxMainContent"))##
+
+		##
+
+		##
+
+    ####################################################################################
+
+    #set($setupRan = true)##
+
+#end##
+
+
+
+
+
+
+
+

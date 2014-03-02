@@ -205,7 +205,7 @@ body {
   background-color: #f1f5eb;
   border-top: 3px solid darken(#f1f5eb, 7%);
   padding: 30px 0;
-  margin-top: 50px;
+  //margin-top: 50px;
   h4 {
     color: @mgpLightGreen;
   }
@@ -230,14 +230,7 @@ body {
 .standout {
   background: mix(@inverse, @brand-primary, 94%);
   background: lighten(@mgpLightGreen, 50%);
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YwZjRlOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMWU2ZDYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-  background: -moz-linear-gradient(top,  rgba(240,244,233,1) 0%, rgba(225,230,214,1) 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(240,244,233,1)), color-stop(100%,rgba(225,230,214,1)));
-  background: -webkit-linear-gradient(top,  rgba(240,244,233,1) 0%,rgba(225,230,214,1) 100%);
-  background: -o-linear-gradient(top,  rgba(240,244,233,1) 0%,rgba(225,230,214,1) 100%);
-  background: -ms-linear-gradient(top,  rgba(240,244,233,1) 0%,rgba(225,230,214,1) 100%);
-  background: linear-gradient(to bottom,  rgba(240,244,233,1) 0%,rgba(225,230,214,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f4e9', endColorstr='#e1e6d6',GradientType=0 );
+  #gradient > .vertical(#f0f4e9; #e1e6d6);
   .box-shadow(0 0 30px rgba(0,0,0,0.06));
   padding: 1.5em 2em 1em;
   margin: -1.3em 0 0;
@@ -278,9 +271,6 @@ body {
       font-size: ceil(@font-size-base * 0.925);
     }
   }
-}
-.row .feature-3 {
-  padding: 0 1%;
 }
 
 
@@ -579,6 +569,7 @@ hr {
 .no-pad {
   padding: 0;
 }
+// Pad classes
 .pad {
   margin-bottom: ceil(@font-size-base * 2);
   margin-top: ceil(@font-size-base * 2);
@@ -596,8 +587,8 @@ hr {
     margin-top: 0;
   }
   &.row { 
-    margin: inherit;
-    padding-top: 2em;
+    //margin: inherit;
+    padding-top: ceil(@font-size-base * 2);
     &.pad--small {
       padding-top: 1em;
     }
@@ -606,7 +597,15 @@ hr {
 .pad-inner-right {
   @media (min-width: @screen-sm-min) { 
     & > * {
-      margin-right: 2em;
+      margin-right: 10px;
+    }
+  }
+}
+.pad-inner-even {
+  @media (min-width: @screen-sm-min) {
+    & > * {
+      margin-left: 10px;
+      margin-right: 10px;
     }
   }
 }
@@ -617,6 +616,7 @@ hr {
     }
   }
 }
+//
 img.left, div.left, .float-left {
   float: left;
   margin: 0 25px 15px 0;

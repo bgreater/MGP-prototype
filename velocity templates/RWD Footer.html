@@ -1,0 +1,207 @@
+
+
+<div class="clear"></div>
+
+
+
+</div>
+
+
+
+<div class="bottom"><span></span></div>
+
+
+
+</div><!-- end: boxOuterWrapper -->
+
+#if($curSection.path == "/")##
+
+<div class="boxFooter homepage">
+
+#else
+
+<div class="boxFooter">
+
+#end
+
+	<div class="top"><span><!-- --></span></div>
+
+    <div class="center-content">
+
+		<div class="container_12">
+
+
+
+	<div class="grid_12 alpha omega">
+
+
+
+    	<div class="boxCopyright">
+
+
+
+			<div class="top"><span></span></div><!-- end: top -->
+
+
+
+			<div class="center-content">
+
+
+
+				#if(!$hideAllNavigation)
+
+
+
+        			 #foreach($item in $mainWebsiteConfig.footerLinks)
+
+
+
+        					#if($velocityCount != 1)
+
+
+
+        						|
+
+
+
+        					#end
+
+
+
+        					<a href="$item.url">$item.title</a>
+
+
+
+					 #end
+
+
+
+				#end
+
+
+
+    			 #if($mainWebsiteConfig.copyright && $mainWebsiteConfig.copyright != "")
+
+
+
+    				<span class="copyright">$mainWebsiteConfig.copyright</span>
+
+
+
+    			 #end
+
+
+
+			</div>
+
+
+
+			<div class="bottom"><span></span></div><!-- end: bottom -->
+
+
+
+        </div><!-- end: boxFlashBanner -->
+
+
+
+    </div><!-- end: boxFooterLinks -->
+
+
+
+</div><!-- end: rowFooter -->
+
+
+
+
+
+
+
+#if($topLevel.tracking && $topLevel.tracking != "")
+
+
+
+	$topLevel.tracking
+
+
+
+#end
+
+
+
+## Show Lead form Modal only for detail pages
+
+
+
+#if($string.indexOf($req.url,".html") > -1)##
+
+
+
+    $cms.template("Lead Form Modal")
+
+
+
+#end
+
+## Add request form link under left nav
+
+#if($string.indexOf($req.url,"/innovation/") > -1)##
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function($){
+    $("#columnLeft .boxLeftSubNavigation").after("<div id='inovRequest' class='boxDefault boxContent'><a href='/requestform/'>Request a Sample</a></div>");
+})(jQuery);
+/* ]]> */
+</script>
+
+#end
+
+#if ($cms.websiteSection.url == 'http://www.mgpingredients.com')
+<script type="text/javascript">
+/* <![CDATA[ */
+!function ($) {
+  $('h2').filter(function(){
+  	return $(this).text().indexOf('Latest News') != -1
+  })
+  .append('<a id="rss-ico" href="/news-and-press/index.rss"><img src="http://media.mgpingredients.com/designimages/rss_icon.png" border="0"></a>');
+}(window.jQuery)
+/* ]]> */
+</script>
+#end
+
+## #if ($cms.websiteSection.url == 'http://www.mgpingredients.com' && $req.ip != '12.200.212.2')
+#if ($req.ip != '12.200.212.2')
+<script type="text/javascript" src="http://j.clickdensity.com/cr.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+  var clickdensity_keyElement = 'homelink';
+//]]>
+</script>
+#end
+
+</body>
+
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
