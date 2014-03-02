@@ -1,265 +1,84 @@
+##
 $cms.template("Setup")
+##
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+    <title>$browserTitle</title>
 
-	<head>
+    <meta name="keywords" content="$!metaKeywords" />
 
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="$!metaDescription" />
+    
+    <link rel="alternate" type="application/rss+xml" title="MGP News RSS" href="/news-and-press/index.rss" />
+    
+    <link rel="shortcut icon" href="http://media.mgpingredients.com/designimages/favicon.ico">
 
-		<title>$browserTitle</title>
+    ## MASTER STYLE SHEETS
+    <!-- Loading Bootstrap -->
+    <link href="/includes/bootstrap.css" rel="stylesheet">
 
-		<!--<link rel="SHORTCUT ICON" href="$!topLevel.favicon.url"/>-->
+    <!-- Loading Flat UI -->
+     <link rel="stylesheet" href="/includes/flexslider.css" type="text/css" media="screen" />
+    <link href="/includes/mgp-main.css" rel="stylesheet">
 
-		<meta name="keywords" content="$!metaKeywords" />
+    <!-- HTML5 shiv, for IE6-8 support of HTML5 elements. Respond.js for IE9 media query support. -->
+    <!--[if lt IE 9]>
+        <script src="{{ page.path }}js/html5shiv.js"></script>
+        <script src="{{ page.path }}js/respond.min.js"></script>
+    <![endif]-->
 
-		<meta name="description" content="$!metaDescription" />
-		
-		<link rel="alternate" type="application/rss+xml" title="MGP News RSS" href="/news-and-press/index.rss" />
-		
-		<link href="http://media.mgpingredients.com/designimages/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    #if($wma)
 
+      <link rel="stylesheet" type="text/css" href="http://${envHost}$cms.domain/templates/wma-toolbar.css"/>
 
-		## MASTER JAVASCRIPT
+    #end
 
-		<script language="javascript" type="text/javascript" src="http://${envHost}$cms.domain/includes/prototype.js"></script>
+    ## MARKETO LOGIC FOR REDIRECTS
 
-		<script language="javascript" type="text/javascript" src="http://${envHost}$cms.domain/includes/scriptaculous.js"></script>
+    #if($content && $content.marketoLandingURL && $content.marketoLandingURL != "")
 
-		<script language="javascript" type="text/javascript" src="http://${envHost}$cms.domain/includes/jquery1.4.2.min.js"></script>
-		
-		<script language="javascript" type="text/javascript" src="http://${envHost}$cms.domain/includes/jquery.validate.js"></script>	
+      #* Marketo Integration
 
-		<script type="text/javascript"> 
+      First check to see if the current content item is a Marketo gated content.
 
-			jQuery.noConflict();
-			
-		</script> 		
+      Second check to make sure that the URL does not have a request parameter mrurl=Y
 
-		#foreach($jsFile in $jsArrayTemplates)
+      If it does have this request parameter then that means the user got returned from Marketo
 
-		<script type="text/javascript" src="http://${envHost}$cms.domain/includes/${jsFile}?asdf"></script>
+      If the mrurl is not present then the user need to be redirect to the URL as specified.
 
-		#end
+      *#
 
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+      #if($req.param("mrurl") == "Y")
 
-		
+        ## The user is returning fromt the MArketo Landing Page and should not be shown it again
 
-		<!--[if lte IE 7]>
+        <script type="text/javascript"> 
 
-		<style type="text/css" media="all">
+          createCookie('MarketoGate','true',365);
 
-		/*@import url("http://${envHost}${cms.domain}/templates/menu_ie.css?asdf");*/
+        </script>
 
-		</style>
+      #else
 
-		<![endif]-->
+        <script type="text/javascript">
 
+        if(!readCookie('MarketoGate')){
 
+          window.location = '${content.marketoLandingURL}?rurl=${req.url}';
 
-		## MASTER STYLE SHEETS
+        }
 
-		<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+        </script>
 
-		<link rel="stylesheet" type="text/css" href="http://${envHost}$cms.domain/templates/sidekick.css"/>
+      #end
 
-		<link rel="stylesheet" type="text/css" href="http://${envHost}$cms.domain/templates/clickability.css"/>
+    #end
 
-		<link rel="stylesheet" type="text/css" href="http://${envHost}$cms.domain/templates/grid-12.css"/>
-
-		<link rel="stylesheet" type="text/css" href="http://${envHost}$cms.domain/templates/${topLevel.mainCSS}"/>
-
-		<link rel="stylesheet" type="text/css" href="http://${envHost}$cms.domain/templates/lightbox.css"/>
-
-		#if($wma)
-
-			<link rel="stylesheet" type="text/css" href="http://${envHost}$cms.domain/templates/wma-toolbar.css"/>
-
-		#end
-
-		
-
-		<!--[if LTE IE 7]>
-
-		
-
-			<script type="text/javascript" src="http://${envHost}$cms.domain/includes/customer-ie7.js"></script>
-
-			
-
-		<![endif]-->
-
-		
-
-		<!--[if IE 6]>
-
-		
-
-			<script type="text/javascript" src="http://${envHost}$cms.domain/includes/customer-ie6.js"></script>
-
-			
-
-		<![endif]-->		
-
-
-
-		  
-
-		
-
-		## MARKETO LOGIC FOR REDIRECTS
-
-		#if($content && $content.marketoLandingURL && $content.marketoLandingURL != "")
-
-			#* Marketo Integration
-
-			First check to see if the current content item is a Marketo gated content.
-
-			Second check to make sure that the URL does not have a request parameter mrurl=Y
-
-			If it does have this request parameter then that means the user got returned from Marketo
-
-			If the mrurl is not present then the user need to be redirect to the URL as specified.
-
-			*#
-
-			
-
-			#if($req.param("mrurl") == "Y")
-
-				## The user is returning fromt the MArketo Landing Page and should not be shown it again
-
-				<script type="text/javascript">	
-
-					createCookie('MarketoGate','true',365);
-
-				</script>
-
-			#else
-
-				<script type="text/javascript">
-
-				if(!readCookie('MarketoGate')){
-
-					window.location = '${content.marketoLandingURL}?rurl=${req.url}';
-
-				}
-
-				</script>
-
-			#end
-
-		#end
-
-
-
-		##########################################
-
-		##This is for the lightbox
-
-		
-
-		#set($gibInputIB = $content.gatedForm)
-
-		#set($gibMaxItems = 1)
-
-		#set($gibReturnUntargetedItems = true)
-
-		$cms.template("Get IB Items")
-
-		#if($gibOutputArray.size() > 0)
-
-			<link type="text/css" rel="stylesheet" href="$cms.include("jquery.nyromodal.css").url"/>
-
-			<link type="text/css" rel="stylesheet" href="$cms.include("jquery.validate.css").url"/>			
-
-			<script language="javascript" type="text/javascript" src="$cms.include("jquery.nyromodal-1.6.2.pack.js").url"></script>
-
-			<script language="javascript" type="text/javascript" src="$cms.include("jquery.validate-1.5.2.js").url"></script>
-
-		#end
-
-		
-
-		## Share this JS and CSS
-		<script type="text/javascript">var switchTo5x=false;</script>
-		<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-		<script type="text/javascript">stLight.options({publisher: "c2d0dd1f-e3b8-43a2-9ee8-a76fd80a3431"}); </script>
-
-
-	        ## Google Analytics
-	        <script type="text/javascript">
-		  		  
-	          var _gaq = _gaq || [];
-	          _gaq.push(['_setAccount', 'UA-28443532-1']);
-	          _gaq.push(['_setDomainName', 'mgpingredients.com']);
-	          
-	          #set($setOrganization = $userRequest.getCookie('Organization'))##
-	          // $setOrganization
-	          
-	          #if (!$setOrganization)##
-	          
-	            #if($userLocation.isAvailable())##
-	              #set($organization = "$userLocation.organization - $userLocation.region")
-	            #else## 
-	              #set($organization = "N/A")## 
-	            #end##
-				  
-		    // Set Cookie $userResponse.setCookie('Organization', $organization, 15541000)##
-		    
-		    _gaq.push(['_setCustomVar', 1, 'Organization', '$organization', 1]);
-		  
-			#end##
-		 
-	          _gaq.push(['_trackPageview']);
-	        
-	          (function() {
-	            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	          })();
-			  
-		(function($){
-
-                $(document).ready(function() {
-                	
-				    // _trackDownloads
-                    $('a').filter(function() {
-						return this.href.match(/.*\.(zip|mp3|mpeg|pdf|docx*|pptx*|xlsx*|jpeg|png|gif|tiff*)/);
-					}).click(function(e) {
-                    	_gaq.push(['_trackEvent', 'download', 'click', this.href.split('/').pop()]);
-                    });
-    			  
-                    // _trackMailTo
-                    $('a[href^="mailto"]').click(function(e) {
-                    	_gaq.push(['_trackSocial', 'email', 'send', this.href.replace(/^mailto:/i, '')]);
-                    });
-                    
-                    // _trackFancyBoxVideo
-                    $('a[href^="http://www.youtube.com"]').filter('.fancybox, .iframe').click(function(e) {
-                    	_gaq.push(['_trackEvent', 'video', 'click', this.title]);
-                    });
-                    
-                    // _trackOutbound
-					var loc = location.host.split('.'); 
-					while (loc.length > 2) { loc.shift(); }
-					loc = loc.join('.');
-                    $('a[href^="http"]').filter(function() {
-						if (this.href.indexOf(loc) == -1) {
-							return this.href
-						}
-					}).not('.iframe, .fancybox').click(function(e) {
-						_gaq.push(['_trackEvent', 'outbound', 'click', this.href]);
-                    });
-                	
-                });
-                
-              })(jQuery);
-		
-	        </script>	
-
-
-	</head>
-
+  </head>
+  
