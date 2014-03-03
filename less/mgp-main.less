@@ -2,10 +2,8 @@
  * MGP Main Style
  */
  
-@import "../bootstrap/css/bootstrap.css";
 // Loading Flat UI main
 @import "flat-ui";
-
 
 body {
   color: #363931;
@@ -14,7 +12,6 @@ body {
 
 .container {
   width: 100%;
-  position: relative;
   @media (min-width: @screen-md-min){
     width: 962px;
   }
@@ -29,7 +26,6 @@ body {
   min-height: 50px;
 }
 .main-nav {
-  position: relative;
   background: #618517;
   #gradient > .vertical(@mgpLightGreen; darken(@mgpLightGreen, 12%));
   border: none;
@@ -50,7 +46,7 @@ body {
     left: 15px;
     z-index: 100;
     .box-shadow(0 0 2px rgba(0,0,0,0.3), 0 0 28px rgba(0,0,0,0.08));
-    background: url('http://media.mgpingredients.com/designimages/mgp-logo-nav.jpg') no-repeat;
+    background: url('../images/mgp-logo-nav.jpg') no-repeat;
     background-size: cover;
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/mgp-logo-nav.jpg', sizingMethod='scale');
     -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/mgp-logo-nav.jpg', sizingMethod='scale');
@@ -62,70 +58,8 @@ body {
       background-size: inherit;
       .img-retina('../images/mgp-logo-nav.png'; '../images/mgp-logo-nav@2x.png'; 74px; 38px);
     }
-  }// navbar-brand
-  .main-nav-search {
-    position: absolute;
-    right: 0px;
-    top: 4px;
-    .box-shadow(none);
-    padding: 3px 0 3px 0 !important;
-    #input-wrap {
-      .opacity(0);
-      #navbarsearch-input {
-        padding: 15px 10px;
-        height: 0;
-        .transition(.2s);
-        background: none !important;
-        border: none !important;
-        .border-radius(50px) !important;
-        width: 0;
-        top: 3px;
-        position: relative;
-        float: right;
 
-        &:focus {
-          background: white !important;
-          color: #232323 !important;
-        }
-      }
-    }
-    #navbarsearch-button {
-      background: none;
-      color: lighten(@mgpLightGreen, 30%) !important;
-      .border-radius(0);
-      padding: 18px 10px;
-      margin: 5px 8px 0 0;
-      z-index: 300;
-      span {
-        top: -6px;
-      }
-
-      &:hover {
-        text-shadow: 0 0 40px white;
-        color: white !important;
-      }
-    }
-    @media (max-width: 985px) {
-      right: 0;
-      #input-wrap {
-        background: @mgpLightGreen;
-        z-index: 200;
-        position: absolute;
-        top: 43px;
-        right: 10px;
-        .box-shadow(0 0 3px rgba(0,0,0,0.15));
-        #navbarsearch-input {
-          z-index: 200;
-          top: 0;
-          margin: 5px !important;
-          font-size: 16px;
-        }
-      }
-    }// media query 768—985px
-    @media (max-width: @screen-sm-min){
-      right: 45px;
-    }
-  }// main-nav-search
+  }
   .navbar-nav {
     margin: 0;
     @media (max-width: @screen-sm-min){
@@ -255,7 +189,6 @@ body {
   .navbar-collapse {
     border-top: none !important;
     box-shadow: none;
-    max-height: inherit;
   }
 }// end of main-nav
 
@@ -453,7 +386,7 @@ body {
     .title-wrap {
       position: absolute;
       bottom: 90px;
-      width: 96%;
+      width: 100%;
       h2 {
         font-size: floor(@font-size-base * 3.2);
         color: @inverse;
@@ -472,7 +405,6 @@ body {
       }
     }
     @media (max-width: @screen-xs-min) { 
-      width: 100%;
       & {
         min-height: 250px; 
         padding: 0;
