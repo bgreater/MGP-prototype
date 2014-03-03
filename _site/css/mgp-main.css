@@ -6458,7 +6458,7 @@ body {
   color: #79a736;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   text-shadow: 1px 1px 4px #222;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.19);
 }
 @media (max-width: 480px) {
   .cover-img .container {
