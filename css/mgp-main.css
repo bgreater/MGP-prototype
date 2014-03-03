@@ -6063,7 +6063,7 @@ body {
   text-shadow: 0 0 40px white;
   color: white !important;
 }
-@media (min-width: 768px) and (max-width: 985px) {
+@media (max-width: 985px) {
   .main-nav .main-nav-search {
     right: 0;
   }
@@ -6083,6 +6083,7 @@ body {
     z-index: 200;
     top: 0;
     margin: 5px !important;
+    font-size: 16px;
   }
 }
 @media (max-width: 768px) {
@@ -6460,6 +6461,9 @@ body {
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
 }
 @media (max-width: 480px) {
+  .cover-img .container {
+    width: 100%;
+  }
   .cover-img .container {
     min-height: 250px;
     padding: 0;
