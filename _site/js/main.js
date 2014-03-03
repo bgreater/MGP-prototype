@@ -85,7 +85,7 @@ $(document).ready(function() {
     if ($(window).width() < 500){
       $('#navbarsearch-input').animate({
           opacity: 100
-      }, 200, function(){
+      }, 10, function(){
          $('#navbarsearch-input').css({width:'250px'});
        });
     } else {
