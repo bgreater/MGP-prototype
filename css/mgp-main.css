@@ -6142,6 +6142,7 @@ body {
 .main-nav .navbar-collapse {
   border-top: none !important;
   box-shadow: none;
+  max-height: inherit;
 }
 .navbar-square-border {
   border-radius: 0px;
