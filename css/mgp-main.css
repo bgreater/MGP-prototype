@@ -5932,10 +5932,10 @@ body {
   -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.3), 0 0 28px rgba(0, 0, 0, 0.08);
   -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.3), 0 0 28px rgba(0, 0, 0, 0.08);
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.3), 0 0 28px rgba(0, 0, 0, 0.08);
-  background: url('../images/mgp-logo-nav.jpg') no-repeat;
+  background: url('http://media.mgpingredients.com/designimages/mgp-logo-nav.jpg') no-repeat;
   background-size: cover;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/mgp-logo-nav.jpg', sizingMethod='scale');
-  -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/mgp-logo-nav.jpg', sizingMethod='scale');
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://media.mgpingredients.com/designimages/mgp-logo-nav.jpg', sizingMethod='scale');
+  -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://media.mgpingredients.com/designimages/mgp-logo-nav.jpg', sizingMethod='scale');
 }
 @media (max-width: 768px) {
   .main-nav .navbar-brand {
