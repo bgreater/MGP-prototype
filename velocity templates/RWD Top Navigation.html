@@ -1,0 +1,211 @@
+## iterate through taxonmoy  ##
+
+## if there is a website configuration content item targeted to that section ##
+
+## display the secton here in the top nav ##
+
+## website configuration item will always be the first item targeted to that section ##
+
+##
+
+##set($topLevel = $cms.websiteSection("/"))
+
+#set($level1 = $util.newArrayList) ##
+
+#set($subSectionMap = $util.newHashMap) ##
+
+#set($superSubSectionMap = $util.newHashMap)
+
+#foreach($child in $topLevel.children) ##
+
+	#if (!$child.hideFromNav) ##
+
+		#set($foo = $level1.add($child)) ##
+
+		#set($level2 = $util.newArrayList) ##
+
+		#foreach ($grandChild in $child.children) ##
+
+			#if (!$grandChild.hideFromNav) ##
+
+				#set($foo = $level2.add($grandChild)) ##
+
+				#set($level3 = $util.newArrayList) ##
+
+        		#foreach ($greatGrandChild in $grandChild.children) ##
+
+        			#if (!$greatGrandChild.hideFromNav) ##
+
+        				#set($foo = $level3.add($greatGrandChild)) ##
+
+        			#end ##
+
+        		#end ##
+
+				#if($level3.size() > 0)
+
+					#set($foo = $superSubSectionMap.put("$grandChild.name", $level3)) ##
+
+				#end
+
+			#end ##
+
+		#end ##
+
+		#if($level2.size() > 0)
+
+			#set($foo = $subSectionMap.put("$child.name", $level2)) ##
+
+		#end
+
+	#end ##
+
+#end ##
+
+
+
+## Setting to allow the Website Configuration either Wrap the text in the flyouts or make the flyout width larger depending on the text size
+
+#set($noTextWrapClass = "")
+
+#if($string.equals($topLevel.topNavBehavior,"Make Flyout Width of Longest Text"))
+
+	#set($noTextWrapClass = " noTextWrap")
+
+#end
+
+
+
+<div class="boxPrimaryNav">
+
+
+
+$cms.helpText("This top navigation is dynamically generated from the order the website section are in within the CMS. <br><h4>Changing the order</h4>To change the order of this menu go to the clickability Platform and do the following:<br>go to Design >> Destinations >> $cms.domain <br>Next to any website section that has children there is a link that says Order. Click this link.<br> by either manually typing in the numbers or using the arrows place them in the order you want. <br> <b>IMPORTANT</b> make sure you hit Save in the bottom left corner before you close out the window or the order will NOT be saved!!")
+
+$cms.helpText("<h4>Hiding something from Navigation</h4>to hide a section from the navigation go to the Clickability CMS and do the following:<br>go to Design >> Destinations >> $cms.domain >> The Website Section you want to hide.<br> The scroll down to the YES/NO field 'Hide from Nav' and choose YES then save the website section")
+
+	<div class="top"><span></span></div>
+
+	<div class="center-content">
+
+        <ul class="level-0" id="cssmw0">
+
+			#if(!$hideAllNavigation)
+
+                #foreach($section in $level1)
+
+					## find out if the current path is selected
+
+				  #set($selectedClass = "")
+
+				  #if($firstLevelSection.path == $section.path)
+
+					#set($selectedClass = "current")
+
+				  #end
+
+                  <li class="$selectedClass">
+
+					<span><a href="$section.path">
+
+							#if($section.displayName && $section.displayName != "")
+
+								$section.displayName
+
+							#else
+
+								$section.name
+
+							#end
+
+					</a>
+
+					</span>
+
+                	#if($subSectionMap.get("$section.name"))
+
+                        <ul class="level-1$!{noTextWrapClass}">
+
+                    		#foreach($subSection in $subSectionMap.get("$section.name"))
+
+								#if($superSubSectionMap.get("$subSection.name"))
+
+									<li class="hasChildren">
+
+								#else
+
+									<li>
+
+								#end
+
+								<span><a href="$subSection.path">
+
+									#if($subSection.displayName && $subSection.displayName != "")
+
+        								$subSection.displayName
+
+        							#else
+
+        								$subSection.name
+
+        							#end
+
+								</a></span>
+
+								#if($superSubSectionMap.get("$subSection.name"))
+
+                                    <ul class="level-2$!{noTextWrapClass}">
+
+                                		#foreach($superSubSection in $superSubSectionMap.get("$subSection.name"))
+
+                							<li><span><a href="$superSubSection.path">
+
+            									#if($superSubSection.displayName && $superSubSection.displayName != "")
+
+                    								$superSubSection.displayName
+
+                    							#else
+
+                    								$superSubSection.name
+
+                    							#end
+
+											</a></span></li>
+
+                                		#end
+
+                                    </ul>
+
+								#end
+
+								</li>
+
+                    		#end
+
+                        </ul>
+
+                	#end
+
+                  </li>
+
+				#end
+
+			#end
+
+        </ul>
+
+        
+
+	</div>
+
+	<div class="bottom"><span></span></div>
+
+</div>
+
+#set($noTextWrapClass = false)
+
+
+
+
+
+
