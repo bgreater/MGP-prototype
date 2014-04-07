@@ -7,14 +7,14 @@ $cms.template("RWD Header")##
 <div class="cover-img">
   <div class="container $curSection.name.replaceAll(' ','-')" style="background-image: url($cms.hierarchyMedia('newHeaderImage').url)">
     <div class="title-wrap">
-      <h2>
+      <h1>
       ## Print Title
       #if($curSection.displayName && $curSection.displayName != "")##
         $curSection.displayName
       #else##
         $curSection.name
       #end##
-      </h2>
+      </h1>
       ## Sub Title
       <h6>
         $!curSection.subTitle
@@ -28,20 +28,23 @@ $cms.template("RWD Header")##
 ## Check to see how many rows are setup and build the arrays of the item browsers
 #set($rowsHashMap = $util.newHashMap)##
 #foreach($i in [1..4])##
-    #set ($rowType = "" )##
-    #set ($rowMods = "")##
-    #set ($rowType = $curSection.element("newRow${velocityCount}Type"))##  
-    #set ($rowMods = $curSection.element("newRow${velocityCount}Mods"))##
-    #if ($string.equals($rowType,"") && $rowMods.size() > 0)## If Modules added and Row Type not selected then default to EVEN ##
-        #set ($rowType = "even")##
+    #set($rowType = "")##
+    #set($rowMods = "")##
+    #set($sideBar = "")##
+    #set($sideBar = $curSection.rwdRightModules)##
+    #set($rowType = $curSection.element("rwdRow${velocityCount}Type"))##  
+    #set($rowMods = $curSection.element("rwdRow${velocityCount}Mods"))##
+    #if($string.equals($rowType,"") && $rowMods.size() > 0)## If Modules added and Row Type not selected then default to EVEN ##
+        #set($rowType = "even")##
   #end##
     #if($rowType && !$string.equals($rowType,""))##
       #set($foo = $rowsHashMap.put("$i",$string.toLowerCase($rowType)))##
     #end##
 #end##
 ## 
+$codeDebug.watchpoint("rowsHashMap")##
 $cms.template("RWD Display Middle Row Modules")
-###
+## $cms.template("Display Right Modules")
 ## OLD CODE 
 #*
 <div class="container_12 boxContentWrapper">
