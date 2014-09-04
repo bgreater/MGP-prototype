@@ -1,0 +1,94 @@
+#if($mainLeftWidth > 0)
+
+	<div class="grid_${mainLeftWidth} alpha">&nbsp;</div>
+
+	<div class="grid_$math.subtract(12,$mainLeftWidth) omega">
+
+#else
+
+	<div class="grid_12 alpha omega" style="width:700px;"> ## Added for case no 5400 ##
+
+#end
+
+
+
+    <div class="breadCrumb">
+
+    	#foreach($path in $pathArray)
+
+    		#set($bcSection = $cms.websiteSection($path))
+
+    		#if($bcSection.path == "/")
+
+    			#set($bcSectionName = "Home")
+
+    		#else
+
+    			#if($bcSection.displayName && $bcSection.displayName != "")
+
+    				#set($bcSectionName = $bcSection.displayName)
+
+    			#else
+
+    				#set($bcSectionName = $bcSection.name)
+
+    			#end
+
+    		#end
+
+    		#if($bcSection.path == $curSection.path && $string.indexOf($req.url,".html") == -1)
+
+    			$bcSectionName
+
+    		#else
+
+    			<a href="$bcSection.path">$bcSectionName</a>
+
+    		#end
+
+    		#if($velocityCount == $pathArray.size())
+
+    			#if($string.indexOf($req.url,".html") > -1)
+
+    				&raquo;
+
+    				#if($content.displayName && $content.displayName != "")
+
+    					$content.displayName
+
+    				#else
+
+    					$content.title
+
+    				#end
+
+    			#end
+
+    		#else
+
+    			&raquo;
+
+    		#end
+
+    	#end
+	<div style="float:right;">
+		<!--<style type="text/css">
+		.breadCrumb .stButton .chicklets {font-size: 6px; height: 16px; line-height: 16px; padding-left: 15px; padding-right: 1px; white-space: nowrap;}
+		</style>-->
+		<span class='st_sharethis_hcount' displayText='ShareThis'></span>
+	</div>
+    </div><!-- end div:breadCrumb -->
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
