@@ -1,7 +1,3 @@
-.dropdown-arrow-inverse {
-  border-bottom-color: #456020 !important;
-  border-top-color: #456020 !important;
-}
 .prettyprint {
   overflow: auto;
 }
@@ -28,9 +24,7 @@
 .demo-row:before,
 .demo-row:after {
   content: " ";
-  /* 1 */
   display: table;
-  /* 2 */
 }
 .demo-row:after {
   clear: both;
@@ -97,9 +91,7 @@
 .demo-content-wide:before,
 .demo-content-wide:after {
   content: " ";
-  /* 1 */
   display: table;
-  /* 2 */
 }
 .demo-content-wide:after {
   clear: both;

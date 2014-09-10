@@ -1,172 +1,127 @@
+//
+// Spaces
+// --------------------------------------------------
+
 // Should be used to modify the default spacing between objects (not between nodes of * the same object)
 // p,m = padding,margin
 // a,t,r,b,l,h,v = all,top,right,bottom,left,horizontal,vertical
 // x,s,m,l,n = extra-small(@x),small(@s),medium(@m),large(@l),none(0px)
+
 @x: 3px;
 @s: 5px;
 @m: 10px;
 @l: 20px;
+@h: 40px;
 
 .last-col {
   overflow: hidden;
 }
 
-.ptn, .pvn, .pan {
-  padding-top: 0;
-}
+.ptn, .pvn, .pan { padding-top: 0 !important; }
 
-.ptx, .pvx, .pax {
-  padding-top: @x;
-}
+.ptx, .pvx, .pax { padding-top: @x !important; }
 
-.pts, .pvs, .pas {
-  padding-top: @s;
-}
+.pts, .pvs, .pas { padding-top: @s !important; }
 
-.ptm, .pvm, .pam {
-  padding-top: @m;
-}
+.ptm, .pvm, .pam { padding-top: @m !important; }
 
-.ptl, .pvl, .pal {
-  padding-top: @l;
-}
+.ptl, .pvl, .pal { padding-top: @l !important; }
 
-.prn, .phn, .pan {
-  padding-right: 0;
-}
+.pth, .pvh, .pah { padding-top: @h !important; }
 
-.prx, .phx, .pax {
-  padding-right: @x;
-}
 
-.prs, .phs, .pas {
-  padding-right: @s;
-}
+.prn, .phn, .pan { padding-right: 0 !important; }
 
-.prm, .phm, .pam {
-  padding-right: @m;
-}
+.prx, .phx, .pax { padding-right: @x !important; }
 
-.prl, .phl, .pal {
-  padding-right: @l;
-}
+.prs, .phs, .pas { padding-right: @s !important; }
 
-.pbn, .pvn, .pan {
-  padding-bottom: 0;
-}
+.prm, .phm, .pam { padding-right: @m !important; }
 
-.pbx, .pvx, .pax {
-  padding-bottom: @x;
-}
+.prl, .phl, .pal { padding-right: @l !important; }
 
-.pbs, .pvs, .pas {
-  padding-bottom: @s;
-}
+.prh, .phh, .pah { padding-right: @h !important; }
 
-.pbm, .pvm, .pam {
-  padding-bottom: @m;
-}
 
-.pbl, .pvl, .pal {
-  padding-bottom: @l;
-}
 
-.pln, .phn, .pan {
-  padding-left: 0;
-}
+.pbn, .pvn, .pan { padding-bottom: 0 !important; }
 
-.plx, .phx, .pax {
-  padding-left: @x;
-}
+.pbx, .pvx, .pax { padding-bottom: @x !important; }
 
-.pls, .phs, .pas {
-  padding-left: @s;
-}
+.pbs, .pvs, .pas { padding-bottom: @s !important; }
 
-.plm, .phm, .pam {
-  padding-left: @m;
-}
+.pbm, .pvm, .pam { padding-bottom: @m !important; }
 
-.pll, .phl, .pal {
-  padding-left: @l;
-}
+.pbl, .pvl, .pal { padding-bottom: @l !important; }
 
-.mtn, .mvn, .man {
-  margin-top: 0px;
-}
+.pbh, .pvh, .pah { padding-bottom: @h !important; }
 
-.mtx, .mvx, .max {
-  margin-top: @x;
-}
 
-.mts, .mvs, .mas {
-  margin-top: @s;
-}
 
-.mtm, .mvm, .mam {
-  margin-top: @m;
-}
+.pln, .phn, .pan { padding-left: 0 !important; }
 
-.mtl, .mvl, .mal {
-  margin-top: @l;
-}
+.plx, .phx, .pax { padding-left: @x !important; }
 
-.mrn, .mhn, .man {
-  margin-right: 0px;
-}
+.pls, .phs, .pas { padding-left: @s !important; }
 
-.mrx, .mhx, .max {
-  margin-right: @x;
-}
+.plm, .phm, .pam { padding-left: @m !important; }
 
-.mrs, .mhs, .mas {
-  margin-right: @s;
-}
+.pll, .phl, .pal { padding-left: @l !important; }
 
-.mrm, .mhm, .mam {
-  margin-right: @m;
-}
+.plh, .phh, .pah { padding-left: @h !important; }
 
-.mrl, .mhl, .mal {
-  margin-right: @l;
-}
 
-.mbn, .mvn, .man {
-  margin-bottom: 0px;
-}
 
-.mbx, .mvx, .max {
-  margin-bottom: @x;
-}
+.mtn, .mvn, .man { margin-top: 0 !important; }
 
-.mbs, .mvs, .mas {
-  margin-bottom: @s;
-}
+.mtx, .mvx, .max { margin-top: @x !important; }
 
-.mbm, .mvm, .mam {
-  margin-bottom: @m;
-}
+.mts, .mvs, .mas { margin-top: @s !important; }
 
-.mbl, .mvl, .mal {
-  margin-bottom: @l;
-}
+.mtm, .mvm, .mam { margin-top: @m !important; }
 
-.mln, .mhn, .man {
-  margin-left: 0px;
-}
+.mtl, .mvl, .mal { margin-top: @l !important; }
 
-.mlx, .mhx, .max {
-  margin-left: @x;
-}
+.mth, .mvh, .mah { margin-top: @h !important; }
 
-.mls, .mhs, .mas {
-  margin-left: @s;
-}
 
-.mlm, .mhm, .mam {
-  margin-left: @m;
-}
 
-.mll, .mhl, .mal {
-  margin-left: @l;
-}
+.mrn, .mhn, .man { margin-right: 0 !important; }
+
+.mrx, .mhx, .max { margin-right: @x !important; }
+
+.mrs, .mhs, .mas { margin-right: @s !important; }
+
+.mrm, .mhm, .mam { margin-right: @m !important; }
+
+.mrl, .mhl, .mal { margin-right: @l !important; }
+
+.mrh, .mhh, .mah { margin-right: @h !important; }
+
+
+
+.mbn, .mvn, .man { margin-bottom: 0 !important; }
+
+.mbx, .mvx, .max { margin-bottom: @x !important; }
+
+.mbs, .mvs, .mas { margin-bottom: @s !important; }
+
+.mbm, .mvm, .mam { margin-bottom: @m !important; }
+
+.mbl, .mvl, .mal { margin-bottom: @l !important; }
+
+.mbh, .mvh, .mah { margin-bottom: @h !important; }
+
+
+
+.mln, .mhn, .man { margin-left: 0 !important; }
+
+.mlx, .mhx, .max { margin-left: @x !important; }
+
+.mls, .mhs, .mas { margin-left: @s !important; }
+
+.mlm, .mhm, .mam { margin-left: @m !important; }
+
+.mll, .mhl, .mal { margin-left: @l !important; }
+
+.mlh, .mhh, .mah { margin-left: @h !important; }
