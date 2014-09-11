@@ -8732,6 +8732,7 @@ body {
 .main-nav {
   position: relative;
   background: #618517;
+  height: 60px;
   background-image: -webkit-linear-gradient(top, #79a736 0%, #577927 100%);
   background-image: -o-linear-gradient(top, #79a736 0%, #577927 100%);
   background-image: linear-gradient(to bottom, #79a736 0%, #577927 100%);
