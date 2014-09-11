@@ -97,6 +97,229 @@
   }
 }
 
+.navbar {
+  font-size: floor(@component-font-size-base * 1.067); // ~16px
+  font-family: @font-family-alt;
+  border-radius: @border-radius-large;
+  border: none;
+
+  .navbar-brand {
+    border-radius: @border-radius-large 0 0 @border-radius-large;
+    color: mix(@brand-primary, white, 85%);
+    font-size: floor(@component-font-size-base * 1.60); // ~24px
+    line-height: 29.55px;
+    font-weight: 700;
+    padding: 23px 28px 24px 17px;
+    text-shadow: none;
+    display: inline-block;
+    
+    &:hover,
+    &:focus {
+      color: @brand-secondary;
+    }
+    &[class*="fui-"] {
+      font-weight: normal;
+    }
+    small { line-height: 1; }
+  }
+
+  .nav {
+    margin-right: 0;
+    display: inline-block;
+    float: left;
+
+    // First level nav
+    > li {
+      position: relative;
+      display: inline-block;
+
+      &:hover {
+        > ul {
+          opacity: 1;
+          top: 100%;
+          visibility: visible;
+          z-index: 100;
+          -webkit-transform: scale(1, 1);
+          // Show on hover
+          display: block\9;
+        }
+      }
+      &.active {
+        > a,
+        > a:hover,
+        > a:focus {
+          background: none;
+          color: @brand-secondary;
+          .box-shadow(none);
+        }
+      }
+      &:first-child {
+        border-radius: @border-radius-large @border-radius-large 0 0;
+      }
+      &:last-child {
+        border-radius: 0 0 @border-radius-large @border-radius-large;
+      }
+
+      // Second level nav
+      > ul {
+        padding-top: 13px;
+        top: 90%;
+        padding-left: 0;
+
+        // Third level nav
+        li {
+          &:hover {
+            ul {
+              opacity: 1;
+              -webkit-transform: scale(1, 1);
+              visibility: visible;
+              display: block\9;
+            }
+          }
+          ul {
+            left: 100%;
+          }
+        }
+      }
+
+      // First level link
+      > a {
+        color: mix(@brand-primary, white, 85%);
+        display: inline-block;
+        font-weight: 700;
+        font-size: @component-font-size-base; // ~15px
+        line-height: 28px;
+        padding: 22px @navbar-link-space;
+        text-shadow: none;
+        .transition(~"background-color .25s, color .25s, border-bottom-color .25s");
+
+        &:hover,
+        &:focus {
+          color: @brand-secondary;
+          background-color: transparent;
+        }
+        &[class*="fui-"] {
+          font-size: 24px;
+          font-weight: normal;
+        }
+        
+        > [class*="fui-"] {
+          font-size: 24px;
+          margin: -4px 0 0;
+          position: relative;
+          top: 4px;
+        }
+        
+        > [class*="fui-"] + * {
+          margin-left: 12px;
+        }
+      }
+    }
+
+    // Sub menu
+    ul {
+      border-radius: 4px;
+      left: 0;
+      list-style-type: none;
+      margin-left: 0;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      width: 185px;
+      // Trigger transform to hide nav completely without 'ghost' bug (when switching from :hover to initial)
+      -webkit-transform: scale(1, 0.99);
+      -webkit-transform-origin: 0 0;
+      // Don't show it at all by default since IE doesn't get modern transitions
+      visibility: hidden;
+      .transition(.25s ease-out);
+
+      // Deep level sub menu
+      ul {
+        left: 95%;
+        padding-left: 5px;
+      }
+
+      // Sub menu item
+      li {
+        background-color: @brand-primary;
+        padding: 0 3px 3px;
+        position: relative;
+
+        &:first-child {
+          border-radius: @border-radius-large @border-radius-large 0 0;
+          padding-top: 3px;
+        }
+        &:last-child {
+          border-radius: 0 0 @border-radius-large @border-radius-large;
+        }
+        &.active {
+          > a,
+          > a:hover,
+          > a:focus {
+            background-color: @brand-secondary;
+            color: @inverse;
+            padding-left: @navbar-sublink-space;
+            padding-right: @navbar-sublink-space;
+          }
+          & + li {
+            > a {
+              padding-left: @navbar-sublink-space;
+              padding-right: @navbar-sublink-space;
+            }
+          }
+        }
+      }
+
+      // Sub menu link
+      a {
+        border-radius: 0px;
+        color: @inverse;
+        display: block;
+        font-size: ceil(@component-font-size-base * 0.933);
+        padding: 6px @navbar-sublink-space;
+        text-decoration: none;
+
+        &:hover {
+          background-color: @brand-secondary;
+        }
+      }
+    }
+  }
+
+  // Expand/collapse button
+  .btn-navbar {
+    background: none;
+    border: none;
+    color: @brand-primary;
+    margin: 18px 15px;
+    padding: 3px 15px;
+    text-shadow: none;
+    display: none;
+
+    &:hover {
+      background: none;
+      color: @brand-secondary;
+    }
+    &:focus {
+      &:before {
+        content: "\e00b";
+      }
+    }
+    &:before {
+      content: "\e00c";
+      font-family: "Flat-UI-Icons";
+      font-size: ceil(@component-font-size-base * 1.467); // ~22px
+      font-style: normal;
+      font-weight: normal;
+      -webkit-font-smoothing: antialiased;
+    }
+    .icon-bar {
+      display: none;
+    }
+  }
+}
+
+
 //
 // Navbar alignment options
 //

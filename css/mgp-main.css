@@ -5654,6 +5654,189 @@ a.list-group-item > .badge,
     margin-left: 0;
   }
 }
+.navbar {
+  font-size: 14px;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  border-radius: 6px;
+  border: none;
+}
+.navbar .navbar-brand {
+  border-radius: 6px 0 0 6px;
+  color: #617841;
+  font-size: 22px;
+  line-height: 29.55px;
+  font-weight: 700;
+  padding: 23px 28px 24px 17px;
+  text-shadow: none;
+  display: inline-block;
+}
+.navbar .navbar-brand:hover,
+.navbar .navbar-brand:focus {
+  color: #79a736;
+}
+.navbar .navbar-brand[class*="fui-"] {
+  font-weight: normal;
+}
+.navbar .navbar-brand small {
+  line-height: 1;
+}
+.navbar .nav {
+  margin-right: 0;
+  display: inline-block;
+  float: left;
+}
+.navbar .nav > li {
+  position: relative;
+  display: inline-block;
+}
+.navbar .nav > li:hover > ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+  z-index: 100;
+  -webkit-transform: scale(1, 1);
+  display: block\9;
+}
+.navbar .nav > li.active > a,
+.navbar .nav > li.active > a:hover,
+.navbar .nav > li.active > a:focus {
+  background: none;
+  color: #79a736;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.navbar .nav > li:first-child {
+  border-radius: 6px 6px 0 0;
+}
+.navbar .nav > li:last-child {
+  border-radius: 0 0 6px 6px;
+}
+.navbar .nav > li > ul {
+  padding-top: 13px;
+  top: 90%;
+  padding-left: 0;
+}
+.navbar .nav > li > ul li:hover ul {
+  opacity: 1;
+  -webkit-transform: scale(1, 1);
+  visibility: visible;
+  display: block\9;
+}
+.navbar .nav > li > ul li ul {
+  left: 100%;
+}
+.navbar .nav > li > a {
+  color: #617841;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 28px;
+  padding: 22px 20px;
+  text-shadow: none;
+  -webkit-transition: background-color .25s, color .25s, border-bottom-color .25s;
+  -o-transition: background-color .25s, color .25s, border-bottom-color .25s;
+  transition: background-color .25s, color .25s, border-bottom-color .25s;
+}
+.navbar .nav > li > a:hover,
+.navbar .nav > li > a:focus {
+  color: #79a736;
+  background-color: transparent;
+}
+.navbar .nav > li > a[class*="fui-"] {
+  font-size: 24px;
+  font-weight: normal;
+}
+.navbar .nav > li > a > [class*="fui-"] {
+  font-size: 24px;
+  margin: -4px 0 0;
+  position: relative;
+  top: 4px;
+}
+.navbar .nav > li > a > [class*="fui-"] + * {
+  margin-left: 12px;
+}
+.navbar .nav ul {
+  border-radius: 4px;
+  left: 0;
+  list-style-type: none;
+  margin-left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 185px;
+  -webkit-transform: scale(1, 0.99);
+  -webkit-transform-origin: 0 0;
+  visibility: hidden;
+  -webkit-transition: 0.25s ease-out;
+  -o-transition: 0.25s ease-out;
+  transition: 0.25s ease-out;
+}
+.navbar .nav ul ul {
+  left: 95%;
+  padding-left: 5px;
+}
+.navbar .nav ul li {
+  background-color: #456020;
+  padding: 0 3px 3px;
+  position: relative;
+}
+.navbar .nav ul li:first-child {
+  border-radius: 6px 6px 0 0;
+  padding-top: 3px;
+}
+.navbar .nav ul li:last-child {
+  border-radius: 0 0 6px 6px;
+}
+.navbar .nav ul li.active > a,
+.navbar .nav ul li.active > a:hover,
+.navbar .nav ul li.active > a:focus {
+  background-color: #79a736;
+  color: #ffffff;
+  padding-left: 9px;
+  padding-right: 9px;
+}
+.navbar .nav ul li.active + li > a {
+  padding-left: 9px;
+  padding-right: 9px;
+}
+.navbar .nav ul a {
+  border-radius: 0px;
+  color: #ffffff;
+  display: block;
+  font-size: 14px;
+  padding: 6px 9px;
+  text-decoration: none;
+}
+.navbar .nav ul a:hover {
+  background-color: #79a736;
+}
+.navbar .btn-navbar {
+  background: none;
+  border: none;
+  color: #456020;
+  margin: 18px 15px;
+  padding: 3px 15px;
+  text-shadow: none;
+  display: none;
+}
+.navbar .btn-navbar:hover {
+  background: none;
+  color: #79a736;
+}
+.navbar .btn-navbar:focus:before {
+  content: "\e00b";
+}
+.navbar .btn-navbar:before {
+  content: "\e00c";
+  font-family: "Flat-UI-Icons";
+  font-size: 21px;
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+}
+.navbar .btn-navbar .icon-bar {
+  display: none;
+}
 .navbar-static-top {
   z-index: 1000;
   border-width: 0;
