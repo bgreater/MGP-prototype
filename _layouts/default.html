@@ -8,17 +8,21 @@ path: /MGP-prototype/
     <title>{% if page.title %} {{ page.title }} | {% endif %} {{ site.name }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Loading Flat UI -->
-    <link href="{{ page.path }}bootstrap/css/bootstrap.css" rel="stylesheet">
+        <!-- Loading Flat UI -->
+    <link rel="stylesheet" href="js/flexslider/flexslider.css" type="text/css" media="screen" />
+    <link href="{{ page.path }}dist/css/vendor/bootstrap.min.css" rel="stylesheet">
     <link href="{{ page.path }}css/mgp-main.css" rel="stylesheet">
     <link href="{{ page.path }}css/glyphicons-mgp.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600,700' rel='stylesheet' type='text/css'>
+    <link href="{{ page.path }}docs/assets/css/docs.css" rel="stylesheet">
     <link rel="shortcut icon" href="{{ page.path }}images/favicon.ico">
 
-    <!-- HTML5 shiv, for IE6-8 support of HTML5 elements. Respond.js for IE9 media query support. -->
+    <link rel="shortcut icon" href="../dist/img/favicon.ico">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
     <!--[if lt IE 9]>
-        <script src="{{ page.path }}js/html5shiv.js"></script>
-        <script src="{{ page.path }}js/respond.min.js"></script>
+      <script src="../dist/js/vendor/html5shiv.js"></script>
+      <script src="../dist/js/vendor/respond.min.js"></script>
     <![endif]-->
   </head>
   <body>
