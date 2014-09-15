@@ -8288,6 +8288,9 @@ body {
     width: 1170px;
   }
 }
+.container img {
+  max-width: 100%;
+}
 .header-banner {
   min-height: 50px;
 }
