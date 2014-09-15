@@ -8973,6 +8973,10 @@ h5,
 h6 {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
 .row h2,
 .row h3,
 .row h4 {
