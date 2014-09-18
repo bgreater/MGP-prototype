@@ -5378,7 +5378,7 @@ a.list-group-item > .badge,
   color: #79a736;
 }
 .navbar .btn-navbar:focus:before {
-  content: "\e601";
+  color: #2a3a13;
 }
 .navbar .btn-navbar:before {
   content: "\e61a";
@@ -7202,7 +7202,6 @@ body {
 .main-nav {
   position: relative;
   background: #618517;
-  height: 60px;
   background-image: -webkit-linear-gradient(top, #79a736 0%, #577927 100%);
   background-image: -o-linear-gradient(top, #79a736 0%, #577927 100%);
   background-image: linear-gradient(to bottom, #79a736 0%, #577927 100%);
