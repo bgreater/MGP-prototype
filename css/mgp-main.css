@@ -5378,7 +5378,7 @@ a.list-group-item > .badge,
   color: #79a736;
 }
 .navbar .btn-navbar:focus:before {
-  color: #2a3a13;
+  color: #add37a;
 }
 .navbar .btn-navbar:before {
   content: "\e61a";
