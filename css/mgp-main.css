@@ -7466,9 +7466,6 @@ body {
   background: none;
   color: #aad172 !important;
 }
-.main-nav .btn-navbar:focus:before {
-  content: "\e00b";
-}
 .main-nav .navbar-collapse {
   border-top: none !important;
   box-shadow: none;
