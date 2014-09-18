@@ -5378,11 +5378,11 @@ a.list-group-item > .badge,
   color: #79a736;
 }
 .navbar .btn-navbar:focus:before {
-  content: "\e00b";
+  content: "\e601";
 }
 .navbar .btn-navbar:before {
-  content: "\e00c";
-  font-family: "Flat-UI-Icons";
+  content: "\e61a";
+  font-family: "Flat-UI-pro-Icons";
   font-size: 21px;
   font-style: normal;
   font-weight: normal;
