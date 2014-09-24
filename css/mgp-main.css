@@ -7651,13 +7651,13 @@ body {
   background-color: black;
   border-bottom: 3px solid #dcdfd6;
   position: relative;
-  background-size: auto 100%;
 }
 .cover-img .container {
   position: relative;
   background: #000000 no-repeat right;
   min-height: 290px;
   padding-top: 1px;
+  background-size: auto 100%;
 }
 .cover-img .container img {
   position: absolute;
