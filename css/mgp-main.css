@@ -7651,6 +7651,7 @@ body {
   background-color: black;
   border-bottom: 3px solid #dcdfd6;
   position: relative;
+  background-size: auto 100%;
 }
 .cover-img .container {
   position: relative;
