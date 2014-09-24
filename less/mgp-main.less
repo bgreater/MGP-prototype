@@ -44,7 +44,7 @@ body {
     position: relative;
     border-radius: 0;
     height: 0;
-    width: 173px;
+    width: 150px;
     padding-top: 69px;
     display: block;
     line-height: 100;
@@ -666,6 +666,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 // Misc
+.breadcrumb > li:after {
+  color: #c7cfbc;
+}
+.breadcrumb .active {
+  color: #c7cfbc;
+}
+.breadcrumb .right {
+  float: right;
+}
+p.lead {
+  font-family: @font-family-alt;
+}
 hr {
   border: 0;
   border-top: 1px solid #eeeeee;
@@ -756,6 +768,33 @@ img.fluid {
 .no-margin {
   margin: 0;
 }
+
+//            FOOTER            
+.bottom-menu {
+  background: @darkGreenGray; 
+  color: lighten(@darkGreenGray, 30%);
+  padding: 39px 0 42px;
+  .bottom-links {
+    font-size: ceil(@component-font-size-base * 0.933); // ~14px
+    line-height: 1.286; // ~18px
+  }
+}
+.bottom-links,
+.bottom-icons {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: block;
+    float: left;
+    margin: 0 18px 0 0;
+  }
+}
+
+
+ 
+
 // For demo purposes only
 .mgp-headline {
   color: @brand-secondary;

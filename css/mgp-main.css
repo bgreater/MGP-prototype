@@ -7218,7 +7218,7 @@ body {
   position: relative;
   border-radius: 0;
   height: 0;
-  width: 173px;
+  width: 150px;
   padding-top: 69px;
   display: block;
   line-height: 100;
@@ -7885,6 +7885,18 @@ h6 {
   margin-bottom: 13.5px;
   font-size: 29px;
 }
+.breadcrumb > li:after {
+  color: #c7cfbc;
+}
+.breadcrumb .active {
+  color: #c7cfbc;
+}
+.breadcrumb .right {
+  float: right;
+}
+p.lead {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
 hr {
   border: 0;
   border-top: 1px solid #eeeeee;
@@ -7969,6 +7981,27 @@ img.fluid {
 }
 .no-margin {
   margin: 0;
+}
+.bottom-menu {
+  background: #363931;
+  color: #848b78;
+  padding: 39px 0 42px;
+}
+.bottom-menu .bottom-links {
+  font-size: 14px;
+  line-height: 1.286;
+}
+.bottom-links,
+.bottom-icons {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.bottom-links li,
+.bottom-icons li {
+  display: block;
+  float: left;
+  margin: 0 18px 0 0;
 }
 .mgp-headline {
   color: #79a736;
