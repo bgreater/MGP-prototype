@@ -20,116 +20,95 @@ $cms.template("RWD Header")##
         $!curSection.subTitle
       </h6>
     </div>
-  </div>
-</div>
+  </div><!-- /container -->
+</div><!-- /cover-img -->
 #end## 
-## Static markup need to make dynamic ## Stopped here 
+
 <div class="container">
 
-    <div class="row pad">
-    <div class="col-sm-12">
-      <ul class="breadcrumb">
-      <li><a href="#fakelink">Food</a></li>
-      <li><a href="#fakelink">Bakery Products</a></li>
-      <li><a href="#fakelink">Breads, Rolls, Bagels, Biscuits and Muffins</a></li>
-      <li class="active">Optein™</li>
-      <span class="right">
-        <span class="st_sharethis_hcount" displaytext="ShareThis" st_processed="yes"><span style="text-decoration:none;color:#000000;display:inline-block;cursor:pointer;" class="stButton"><span><span class="stMainServices st-sharethis-counter" style="background-image: url(http://w.sharethis.com/images/sharethis_counter.png);">&nbsp;</span><span class="stArrow"><span class="stButton_gradient stHBubble" style="display: inline-block;"><span class="stBubble_hcount">New</span></span></span></span></span></span>
-      </span>
-    </ul>
-    </div>
-    <div class="col-sm-8">
+  <div class="row pad">
+    
+    $cms.template("RWD Display Breadcrumbs")##
+
+    <div class="col-sm-8 col-content">
       
-      <section class="content">
-      <p class="lead">Optein™ is a highly versatile, lightly <a href="#">hydrolyzed wheat protein <span class="fui-exit glossary"></span></a> that provides a variety of nutritional, functional and sensory benefits in a range of food and beverage product applications.</p>
+      #if(!$content && $cms.websiteSection.useContentLayout)##
 
-      <p>A clinical study shows Optein’s effectiveness in aiding muscle recovery after exercise, which proves its superior functionality in nutritional and <a href="#">protein <span class="fui-exit glossary"></span></a> drink powder mixes, sports beverages, smoothies, and protein, energy and meal replacement bars.</p>
+        ## WSS Row render
+        #set($rowsHashMap = $util.newHashMap)##
+        #foreach($i in [1..4])##
+            #set($rowType = "")##
+            #set($rowMods = "")##
+            #set($sideBar = $util.newArrayList)##
+            #set($sideBar = $curSection.rwdRightModules)##
+            #set($rowType = $curSection.element("rwdRow${velocityCount}Type"))##  
+            #set($rowMods = $curSection.element("rwdRow${velocityCount}Mods"))##
+            #if($string.equals($rowType,"") && $rowMods.size() > 0)## If Modules added and Row Type not selected then default to EVEN ##
+                #set($rowType = "even")##
+          #end##
+            #if($rowType && !$string.equals($rowType,""))##
+              #set($foo = $rowsHashMap.put("$i",$string.toLowerCase($rowType)))##
+            #end##
+        #end##
+        ## 
+        $codeDebug.watchpoint("rowsHashMap")##
+        $cms.template("RWD Display Middle Row Modules")
+        
+      #else##
 
-      <p>Among the more unique attributes of Optein is that it provides approximately double the glutamine content of soy and whey proteins. Glutamine is reported to be effective in the prevention of fatigue and over-training syndrome among active athletes, rapid recovery of critically-ill patients, and replacement of the body’s glycogen.</p>
+        ## Content Render
+        <section class="content content-$content.typeName"><!-- .content -->
+          
+          $cms.template("Content-$content.typeName")
 
-      <p>As an ingredient for bakery applications, Optein can reduce mixing time while also increasing extensibility, which makes it a suitable replacement for animal-based L-cysteine. Also, because it is a wheat protein, it has a natural fit with flour-based dough systems and bakery mixes, as well as flour-based batters and breadings.</p>
+        </section><!-- / .content -->
+      #end##
 
-      <p>Furthermore, for consumers who adhere to strict vegetarian diets, Optein offers a logical solution for replacing whey protein, which is derived from animal milk.</p>
-
-      <p>Other qualities of Optein include its non-bitter flavor profile, especially compared to soy, its neutral pH level, its ability to increase protein contents in end product formulations and the fact that it is easily soluble in water and other liquids.</p>
-
-      <p>Please view <a href="#fakelink">partial data</a> from an excersie study on Optein™.</p> 
-
-      <div class="row">
-        <div class="col-sm-6">
-          <ul>
-            <li class="header">Benefits</li>
-            <li>Increases protein</li>
-            <li>Possesses neutral pH</li>
-            <li>Easily soluble in water</li>
-            <li>Contains high glutamine content</li>
-            <li>Aids in muscle recovery</li>
-            <li>Has non-bitter flavor profile</li>
-            <li>Reduces dough mixing time</li>
-            <li>Increases dough extensibility</li>
-            <li class="header">Cereals and Snacks</li>
-            <li>Extruded Cereals and Snacks</li>
-          </ul>
-        </div>
-        <div class="col-sm-6">
-          <ul>
-            <li class="header">Applications</li>
-            <li>Nutritional Bars and Drinks</li>
-            <li>Instant Drinks/Energy Bars</li>
-            <li class="header">Bakery Products</li>
-            <li>Breads, Rolls, Bagels, Biscuits and Muffins</li>
-            <li>Flour Tortillas and Flat Breads</li>
-            <li>Pizza Crust</li>
-          </ul>
-        </div>
-      </div>
-      <div class="row pad">
-      <h4><span class="fui-document"></span>  Studies &amp; Presentations</h4>
-      <ul>
-        <li><a href="#">Optein Presentation</a></li>
-      </ul>
-      </div>
-    </section>
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-4 col-sidebar">
+      #* 
       <aside class="sidebar">
-        <div class="title"><h5><!-- <span class="fui-book"></span>  -->Learn More</h5></div>
+        <div class="title"><h5>Learn More</h5></div>
         <div class="video pad">
           <span class="play glyphicon glyphicon-play-circle"></span>
           <img src="https://dl.dropboxusercontent.com/u/6142302/MGP/website/redesign/Wireframes/MGP-prototype/images/video-thumb2.jpg">
         </div>
       
         <a class="btn btn-embossed btn-lg btn-primary btn-block left">
-            <span class="fui-document before"></span>View Full Product List
+          <span class="fui-document before"></span>View Full Product List
         </a>
-      <br>
-          <a class="btn btn-embossed btn-lg btn-primary btn-block left">
-              <span class="fui-video before"></span> Food Videos
+        <br>
+        <a class="btn btn-embossed btn-lg btn-primary btn-block left">
+          <span class="fui-video before"></span> Food Videos
         </a>
-      <!-- <p>
-          <button class="btn btn-embossed btn-default btn-block left">
-              Nutritional &amp; Functional Properties Guide
-        </button>
-      </p> -->
-      <br>
-          <a class="btn btn-embossed btn-primary btn-block left">
-              View Request Form
+        <br>
+        <a class="btn btn-embossed btn-primary btn-block left">
+          View Request Form
         </a>
 
-      <p class="pad">
+        <p class="pad">
           Call 913.360.5299 <a href="#" class="right"><span class="fui-mail before"></span>E-mail</a>
-      </p>
-    </aside>
+        </p>
+      </aside>
       <aside class="alert alert-info pad">
-      <h4>Ask the Expert</h4>
-      <p>Jon Doe is our Food expert. He can help you with all of your food related question.</p>
-      <p><a class="btn btn-sm btn-primary">Expert Q&amp;A</a> <a class="btn btn-sm btn-info">Ask Question</a> </p> 
-    </aside>
+        <h4>Ask the Expert</h4>
+        <p>Jon Doe is our Food expert. He can help you with all of your food related question.</p>
+        <p><a class="btn btn-sm btn-primary">Expert Q&amp;A</a> <a class="btn btn-sm btn-info">Ask Question</a> </p> 
+      </aside>
+      *#
+      ## Do legacy left & Right Modules
+      #foreach($mod in $rightModules)##
+        <aside class="alert alert-info pad">
+        #set($gmModule = $mod)##
+        $cms.template("Get Module")## Figure out rendering of titles perhaps in the get module template
+        </aside>
+      #end##
     </div>
-  </div>
+
+  </div><!-- /row -->
 
 
-</div>
+</div><!-- /container -->
 
 #* OLD CODE
 
@@ -179,7 +158,6 @@ $cms.template("RWD Header")##
 
   </div>
 
-  
 
   $cms.template("Display Right Modules")
 
@@ -193,4 +171,7 @@ $cms.template("RWD Header")##
 
 $cms.template("Footer")
 *#
+## END OLD CODE
+##
+$cms.template("RWD Footer")
 

@@ -21,7 +21,7 @@
   </div> <!-- /bottom-menu-inverse -->
   ##
   #if($topLevel.tracking && $topLevel.tracking != "")##
-  	$topLevel.tracking
+    $topLevel.tracking
   #end##
   ##
   ## Show Lead form Modal only for detail pages
@@ -37,7 +37,7 @@
   <script src="/includes/bootstrap.min.js"></script>
   <script src="/includes/bootstrap-select.js"></script>
   <script src="/includes/bootstrap-switch.js"></script>
-  <script src="/includes/flexslider/jquery.flexslider-min.js"></script>
+  <script src="/includes/jquery.flexslider-min.js"></script>
   <script type="text/javascript" charset="utf-8">
     $(window).load(function() {
       $('.flexslider').flexslider();
@@ -126,41 +126,6 @@
     })(jQuery);
 
   </script> 
-  ##
-  ## Add request form link under left nav
-  ##
-  #if($string.indexOf($req.url,"/innovation/") > -1)##
-    <script type="text/javascript">
-    /* <![CDATA[ */
-    (function($){
-        $("#columnLeft .boxLeftSubNavigation").after("<div id='inovRequest' class='boxDefault boxContent'><a href='/requestform/'>Request a Sample</a></div>");
-    })(jQuery);
-    /* ]]> */
-    </script>
-  #end##
-  ##
-  #if ($cms.websiteSection.url == 'http://www.mgpingredients.com')
-  <script type="text/javascript">
-  /* <![CDATA[ */
-  !function ($) {
-    $('h2').filter(function(){
-    	return $(this).text().indexOf('Latest News') != -1
-    })
-    .append('<a id="rss-ico" href="/news-and-press/index.rss"><img src="http://media.mgpingredients.com/designimages/rss_icon.png" border="0"></a>');
-  }(window.jQuery)
-  /* ]]> */
-  </script>
-  #end
-  ##
-  ## #if ($cms.websiteSection.url == 'http://www.mgpingredients.com' && $req.ip != '12.200.212.2')
-  #if ($req.ip != '12.200.212.2')
-  <script type="text/javascript" src="http://j.clickdensity.com/cr.js"></script>
-  <script type="text/javascript">
-  //<![CDATA[
-    var clickdensity_keyElement = 'homelink';
-  //]]>
-  </script>
-  #end
   ##
   </body>
 </html>

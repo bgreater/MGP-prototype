@@ -1,94 +1,66 @@
-#if($mainLeftWidth > 0)
+## Bread Crumb
 
-	<div class="grid_${mainLeftWidth} alpha">&nbsp;</div>
+    <div class="col-sm-12">
 
-	<div class="grid_$math.subtract(12,$mainLeftWidth) omega">
+      <ul class="breadcrumb">
 
-#else
+        #foreach($path in $pathArray)##
 
-	<div class="grid_12 alpha omega" style="width:700px;"> ## Added for case no 5400 ##
+          #set($bcSection = $cms.websiteSection($path))##
 
-#end
+          #if($bcSection.path == "/")##
 
+            #set($bcSectionName = "Home")##
 
+          #else##
 
-    <div class="breadCrumb">
+            #if($bcSection.displayName && $bcSection.displayName != "")##
 
-    	#foreach($path in $pathArray)
+              #set($bcSectionName = $bcSection.displayName)##
 
-    		#set($bcSection = $cms.websiteSection($path))
+            #else##
 
-    		#if($bcSection.path == "/")
+              #set($bcSectionName = $bcSection.name)##
 
-    			#set($bcSectionName = "Home")
+            #end##
 
-    		#else
+          #end##
 
-    			#if($bcSection.displayName && $bcSection.displayName != "")
+          #if($bcSection.path == $curSection.path && $string.indexOf($req.url,".html") == -1)##
 
-    				#set($bcSectionName = $bcSection.displayName)
+            <li>$bcSectionName</li>
 
-    			#else
+          #else##
 
-    				#set($bcSectionName = $bcSection.name)
+            <li><a href="$bcSection.path">$bcSectionName</a></li>
 
-    			#end
+          #end##
 
-    		#end
+          #if($velocityCount == $pathArray.size())##
 
-    		#if($bcSection.path == $curSection.path && $string.indexOf($req.url,".html") == -1)
+            #if($string.indexOf($req.url,".html") > -1)##
 
-    			$bcSectionName
+              #if($content.displayName && $content.displayName != "")##
 
-    		#else
+                <li class="active">$content.displayName</li>
 
-    			<a href="$bcSection.path">$bcSectionName</a>
+              #else##
 
-    		#end
+                <li class="active">$content.title</li>
 
-    		#if($velocityCount == $pathArray.size())
+              #end##
 
-    			#if($string.indexOf($req.url,".html") > -1)
+            #end##
 
-    				&raquo;
+          #else##
 
-    				#if($content.displayName && $content.displayName != "")
+          #end##
 
-    					$content.displayName
+        #end##
 
-    				#else
+        <span class="right">
+          <span class='st_sharethis_hcount' displayText='ShareThis'></span>
+        </span>
 
-    					$content.title
-
-    				#end
-
-    			#end
-
-    		#else
-
-    			&raquo;
-
-    		#end
-
-    	#end
-	<div style="float:right;">
-		<!--<style type="text/css">
-		.breadCrumb .stButton .chicklets {font-size: 6px; height: 16px; line-height: 16px; padding-left: 15px; padding-right: 1px; white-space: nowrap;}
-		</style>-->
-		<span class='st_sharethis_hcount' displayText='ShareThis'></span>
-	</div>
-    </div><!-- end div:breadCrumb -->
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
+      </ul>
+    </div>

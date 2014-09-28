@@ -1,157 +1,146 @@
-#set($typeOfColumn = "middle")##
-## User is displaying the modules
-#foreach($i in $util.numericSort($rowsHashMap.keySet,"toString"))##
-  ## In the Setup template the is a hahmap $rowGroupHash that sets the numbers to letters
-  ## The $rowGroupClass is set so that each column in the row will be the same height using JS
-  ## Build an array of all of the modules in this row and limit the amount to a max of 4 if there is not a left or right sidebar
-  ## If there is a right or left sidebar the max is 2 in the middle
-  #set($modsArray = $util.newArrayList)##
-  #foreach($id in $curSection.element("rwdRow${i}Mods"))##
-    ## Find out how many the max is based on if there is a Right or left column
-    #set($maxModsMiddle = 4)## Do we need this?
-    ##if($mainLeftWidth > 0 || $mainRightWidth > 0)##
-      ##set($maxModsMiddle = 3)##
-    ##end##
-    #if($velocityCount <= $maxModsMiddle)##
-      #set($foo = $modsArray.add($id))##
-    #end##
-  #end##
-  ## Get back Full content items
-  #set($gibInputIB = $modsArray)##
-  #set($gibReturnUntargetedItems = true)##
-  $cms.template("Get IB Items")##
-  #set($modsArray = $gibOutputArray)##
-  #set($numMods = $modsArray.size())##
-  ## Do for non-empty rows
-  #if($numMods && $numMods > 0)##
-    $codeDebug.log("Found Mods")##
-    ## Determin the size of the containers based on what the user selected
-    #set($typeOfRow = $rowsHashMap.get($i))##
-    #if($typeOfRow.indexOf("green") != -1)##
-    <div class="landing-light-color-wrap">
-    #end##
-    <div class="container" id="row${i}">
-      #if($typeOfRow.indexOf("even") != -1 || $typeOfRow.equals("") || $numMods == 1 || $numMods == 4 || (!$sideBar.isEmpty() && $i == "1"))##
-        #if(!$sideBar.isEmpty() && $i == "1")##
-          #set($rowClass = "row row--sidebar pad")##
-        #elseif($numMods == 4 && $sideBar.isEmpty())##
-          #set($rowClass = "row row--four-even pad")##
-        #elseif($numMods == 3)##
-          #set($rowClass = "row row--three-even pad")##
-        #elseif($numMods == 2)##
-          #set($rowClass = "row row--two-even pad")##
-        #else##
-          #set($rowClass = "row row--one-even pad")##
-        #end##
-      #elseif($typeOfRow.indexOf("left") != -1)##
-        #if($numMods == 3)##
-          #set($rowClass = "row row--one-two pad")##
-        #elseif($numMods == 2)##
-          #set($rowClass = "row row--large-one pad")##
-        #end##
-      #elseif($typeOfRow.indexOf("right") != -1)##
-        #if($numMods == 3)##
-          #set($rowClass = "row row--two-one pad")##
-        #elseif($numMods == 2)##
-          #set($rowClass = "row row--one-large pad")##
-        #end##
-      #elseif($typeOfRow.equals("featured"))##
-        #set($rowClass = "row row--featured-two")##
+  #set($typeOfColumn = "middle")##
+  ## User is displaying the modules
+  #foreach($i in $util.numericSort($rowsHashMap.keySet,"toString"))##
+    ## In the Setup template the is a hahmap $rowGroupHash that sets the numbers to letters
+    ## The $rowGroupClass is set so that each column in the row will be the same height using JS
+    ## Build an array of all of the modules in this row and limit the amount to a max of 4 if there is not a left or right sidebar
+    ## If there is a right or left sidebar the max is 2 in the middle
+    #set($modsArray = $util.newArrayList)##
+    #foreach($id in $curSection.element("rwdRow${i}Mods"))##
+      ## Find out how many the max is based on if there is a Right or left column
+      #set($maxModsMiddle = 4)## Do we need this?
+      ##if($mainLeftWidth > 0 || $mainRightWidth > 0)##
+        ##set($maxModsMiddle = 3)##
+      ##end##
+      #if($velocityCount <= $maxModsMiddle)##
+        #set($foo = $modsArray.add($id))##
       #end##
-      #if($typeOfRow.indexOf("green") != -1)##
-        #set($rowClass = "$rowClass pad--small")##
-      #end##
-      <div class="$rowClass">
-      #set($modCounter = 1)##
-      #foreach($mod in $modsArray)##
-        #set($gmModule = $mod)## 
-        #if($typeOfRow.indexOf("even") != -1 || $typeOfRow.equals("") || $numMods == 1 || $numMods == 4 || (!$sideBar.isEmpty() && $i == "1"))##
-          #if(!$sideBar.isEmpty() && $i == "1")##
-            #set($colClass = "col-sm-12 content")##
-          #elseif($numMods == 4)##
-            #set($colClass = "col-sm-6 col-md-3 pad-inner-even")##
-          #elseif($numMods == 3)##
-            #set($colClass = "col-sm-4 pad-inner-even")##
-          #elseif($numMods == 2)##
-            #set($colClass = "col-sm-6 pad-inner-even")##
-          #else##
-            #set($colClass = "col-sm-12 pad-inner-even")##
-          #end##
-        #elseif($typeOfRow.indexOf("left") != -1)##
-          #if($numMods == 3)##
-            #if($modCounter == 1)##
-              #set($colClass = "col-sm-12 col-md-6 pad-inner-even")##
-            #else##
-              #set($colClass = "col-sm-6 col-md-3 pad-inner-even")## 
-            #end##
-          #elseif($numMods == 2)##
-            #if($modCounter == 1)##
-              #set($colClass = "col-sm-6 col-md-9 pad-inner-even")##
-            #else##
-              #set($colClass = "col-sm-6 col-md-3 pad-inner-even")## 
-            #end##
-          #end##
-        #elseif($typeOfRow.indexOf("right") != -1)##
-          #if($numMods == 3)##
-            #if($modCounter == $numMods)##
-              #set($colClass = "col-sm-12 col-md-6 pad-inner-even")##
-            #else##
-              #set($colClass = "col-sm-6 col-md-3 pad-inner-even")## 
-            #end##
-          #elseif($numMods == 2)##
-            #if($modCounter == $numMods)##
-              #set($colClass = "col-sm-6 col-md-9 pad-inner-even")##
-            #else##
-              #set($colClass = "col-sm-6 col-md-3 pad-inner-even")## 
-            #end##
-          #end##
-        #elseif($typeOfRow.equals("featured"))##
-          #if($modCounter == 1)##
-            #set($colClass = "col-sm-6 col-sm-push-6 standout pad-bottom")##
-          #else##
-            #set($colClass = "col-sm-6 col-sm-pull-6 pad pad-inner-right")##
-          #end##
+    #end##
+    ## Get back Full content items
+    #set($gibInputIB = $modsArray)##
+    #set($gibReturnUntargetedItems = true)##
+    $cms.template("Get IB Items")##
+    #set($modsArray = $gibOutputArray)##
+    #set($numMods = $modsArray.size())##
+    ## Do for non-empty rows
+    #if($numMods && $numMods > 0)##
+      $codeDebug.log("Found Mods")##
+      #if($cms.websiteSection.useContentLayout)##
+        #set($modCounter = 1)##
+        #foreach($mod in $modsArray)##
+          #set($gmModule = $mod)## 
+          ##
+          $cms.template("Get Module")##
+          ##
+          #set($modCounter = $math.add($modCounter,1))##
         #end##
-        ## Sidebar only
-        #if(!$sideBar.isEmpty() && $i == "1")##
-          #if($modCounter == 1)##
-          <div class="col-sm-8 pad-inner-even"> ## LEFT OFF HERE NEED TO FIGURE OUT CONTENT ROW RENDERING
-            <div class="row row--content">
-          #end##
-            <div class="$colClass">
-            ##
-              $cms.template("Get Module")##
-            ##
-            </div>
-          #if($modCounter == $numMods)##
-            </div>
-          </div>
-          ## Sidebar
-          ## End Siderbar
-          #end##
-        #else##
-          #if(!$typeOfRow.equals("featured") || $modCounter < 3)<div class="$colClass">#end##
-          #if($typeOfRow.equals("featured") && $modCounter == 1)##
-            <div class="pad">
+      #else##
+        ## Determin the size of the containers based on what the user selected
+        #set($typeOfRow = $rowsHashMap.get($i))##
+        #if($typeOfRow.indexOf("green") != -1)##
+        <div class="landing-light-color-wrap">
+        #end##
+        <div class="container" id="row${i}">
+          #if($typeOfRow.indexOf("even") != -1 || $typeOfRow.equals("") || $numMods == 1 || $numMods == 4)##
+            #if($numMods == 4)##
+              #set($rowClass = "row row--four-even pad")##
+            #elseif($numMods == 3)##
+              #set($rowClass = "row row--three-even pad")##
+            #elseif($numMods == 2)##
+              #set($rowClass = "row row--two-even pad")##
+            #else##
+              #set($rowClass = "row row--one-even pad")##
+            #end##
+          #elseif($typeOfRow.indexOf("left") != -1)##
+            #if($numMods == 3)##
+              #set($rowClass = "row row--one-two pad")##
+            #elseif($numMods == 2)##
+              #set($rowClass = "row row--large-one pad")##
+            #end##
+          #elseif($typeOfRow.indexOf("right") != -1)##
+            #if($numMods == 3)##
+              #set($rowClass = "row row--two-one pad")##
+            #elseif($numMods == 2)##
+              #set($rowClass = "row row--one-large pad")##
+            #end##
           #elseif($typeOfRow.equals("featured"))##
-            <div class="pad pad-inner-right">
+            #set($rowClass = "row row--featured-two")##
           #end##
-          ##
-            $cms.template("Get Module")##
-          ##
-          #if($typeOfRow.equals("featured"))##
-            </div>
+          #if($typeOfRow.indexOf("green") != -1)##
+            #set($rowClass = "$rowClass pad--small")##
           #end##
-          #if(!$typeOfRow.equals("featured") || $modCounter < 3 || $modCounter == $numMods)</div>#end##
+          <div class="$rowClass">
+          #set($modCounter = 1)##
+          #foreach($mod in $modsArray)##
+            #set($gmModule = $mod)## 
+            #if($typeOfRow.indexOf("even") != -1 || $typeOfRow.equals("") || $numMods == 1 || $numMods == 4)##
+              #if($numMods == 4)##
+                #set($colClass = "col-sm-6 col-md-3 pad-inner-even")##
+              #elseif($numMods == 3)##
+                #set($colClass = "col-sm-4 pad-inner-even")##
+              #elseif($numMods == 2)##
+                #set($colClass = "col-sm-6 pad-inner-even")##
+              #else##
+                #set($colClass = "col-sm-12 pad-inner-even")##
+              #end##
+            #elseif($typeOfRow.indexOf("left") != -1)##
+              #if($numMods == 3)##
+                #if($modCounter == 1)##
+                  #set($colClass = "col-sm-12 col-md-6 pad-inner-even")##
+                #else##
+                  #set($colClass = "col-sm-6 col-md-3 pad-inner-even")## 
+                #end##
+              #elseif($numMods == 2)##
+                #if($modCounter == 1)##
+                  #set($colClass = "col-sm-6 col-md-9 pad-inner-even")##
+                #else##
+                  #set($colClass = "col-sm-6 col-md-3 pad-inner-even")## 
+                #end##
+              #end##
+            #elseif($typeOfRow.indexOf("right") != -1)##
+              #if($numMods == 3)##
+                #if($modCounter == $numMods)##
+                  #set($colClass = "col-sm-12 col-md-6 pad-inner-even")##
+                #else##
+                  #set($colClass = "col-sm-6 col-md-3 pad-inner-even")## 
+                #end##
+              #elseif($numMods == 2)##
+                #if($modCounter == $numMods)##
+                  #set($colClass = "col-sm-6 col-md-9 pad-inner-even")##
+                #else##
+                  #set($colClass = "col-sm-6 col-md-3 pad-inner-even")## 
+                #end##
+              #end##
+            #elseif($typeOfRow.equals("featured"))##
+              #if($modCounter == 1)##
+                #set($colClass = "col-sm-6 col-sm-push-6 standout pad-bottom")##
+              #else##
+                #set($colClass = "col-sm-6 col-sm-pull-6 pad pad-inner-right")##
+              #end##
+            #end##
+            #if(!$typeOfRow.equals("featured") || $modCounter < 3)<div class="$colClass">#end##
+              #if($typeOfRow.equals("featured") && $modCounter == 1)##
+              <div class="pad">
+              #elseif($typeOfRow.equals("featured"))##
+              <div class="pad pad-inner-right">
+              #end##
+              ##
+              $cms.template("Get Module")##
+              ##
+              #if($typeOfRow.equals("featured"))##
+              </div>
+              #end##
+            #if(!$typeOfRow.equals("featured") || $modCounter < 3 || $modCounter == $numMods)</div>#end##
+            #set($modCounter = $math.add($modCounter,1))##
+          #end##
+          </div>
+        </div>
+        #if($typeOfRow.indexOf("green") != -1)##
+        </div>
         #end##
-        #set($modCounter = $math.add($modCounter,1))##
       #end##
-      </div>
-    </div>
-    #if($typeOfRow.indexOf("green") != -1)##
-    </div>
     #end##
+    <!-- end: row${i} -->
+    #set($rowGroupClass = false)##
   #end##
-  <!-- end: row${i} -->
-  #set($rowGroupClass = false)##
-#end##
+  
