@@ -70,6 +70,7 @@
         padding-top: 13px;
         top: 90%;
         padding-left: 0;
+        .dropdown-arrow(@brand-primary);
 
         // Third level nav
         li {
@@ -207,12 +208,12 @@
     }
     &:focus {
       &:before {
-        color: lighten(@brand-primary, 40%);
+        content: "\e00b";
       }
     }
     &:before {
-      content: "\e61a";
-      font-family: "Flat-UI-pro-Icons";
+      content: "\e00c";
+      font-family: "Flat-UI-Icons";
       font-size: ceil(@component-font-size-base * 1.467); // ~22px
       font-style: normal;
       font-weight: normal;
@@ -235,7 +236,7 @@
 // Alternate Color
 // --------------------------------------------------
 .navbar-inverse {
-  background: @brand-primary;
+	background: @brand-primary;
   border: none;
 
 
@@ -298,15 +299,15 @@
     }
   }
 
-  .nav.navbar-right {
-    .dropdown-menu {
-      left: -100%;
-      margin-left: 17px;
-    }
-    .open > .dropdown-menu:before {
-      display: block !important;
-    }
-  }
+	.nav.navbar-right {
+		.dropdown-menu {
+			left: -100%;
+			margin-left: 17px;
+		}
+		.open > .dropdown-menu:before {
+			display: block !important;
+		}
+	}
   // Round corders of the pull-right dropdown
   .nav.navbar-right > li {
     > a {
@@ -451,10 +452,10 @@
       padding: 3px 5px 3px @navbar-link-space + 3;
 
       .input-group-btn {
-        .btn {
-          background-color: mix(@brand-primary, black, 85%);
-          color: lighten(@brand-primary, 13%);
-        }
+	      .btn {
+		      background-color: mix(@brand-primary, black, 85%);
+	        color: lighten(@brand-primary, 13%);
+	      }
       }      
       .form-control {
         background-color: mix(@brand-primary, black, 85%);
@@ -465,11 +466,11 @@
         border-color: @brand-secondary;
       }
       &.focus {
-        .input-group-btn {
-          .btn {
-            background-color: mix(@brand-primary, black, 85%);
-          }
-        }  
+	      .input-group-btn {
+		      .btn {
+			      background-color: mix(@brand-primary, black, 85%);
+		      }
+				}  
       }
     }
   }
@@ -480,9 +481,9 @@
     padding: 20px (@navbar-link-space - 15) 19px @navbar-link-space;
     max-width: 229px;
 
-    .form-group {
-      margin-bottom: 0;
-    }
+		.form-group {
+			margin-bottom: 0;
+		}
     .form-control {
       background-color: @inverse;
       border: 2px solid transparent;
@@ -494,9 +495,9 @@
       border-color: @brand-secondary;
     }
     .input-group-btn .btn {
-      border-color: transparent;
-      color: mix(@brand-primary, white, 50%);
-      font-size: floor(@component-font-size-base * 1.067); // ~16px
+	    border-color: transparent;
+	    color: mix(@brand-primary, white, 50%);
+	    font-size: floor(@component-font-size-base * 1.067); // ~16px
     }
   }
 }
@@ -555,9 +556,9 @@
         padding-bottom: 13px;
       }
       .nav {
-        margin-left: 0;
-        margin-right: 0;
-        
+      	margin-left: 0;
+      	margin-right: 0;
+      	
         > li {
           &.active {
             > a,
@@ -600,23 +601,23 @@
       float: none;
     }
     .btn-navbar {
-      float: right;
-      display: block;
+	    float: right;
+	    display: block;
     }
     .navbar-collapse {
-      padding: 0;
+    	padding: 0;
     }
     .navbar-form {
-      max-width: none;
-      padding: 20px 20px 19px;
+	    max-width: none;
+	    padding: 20px 20px 19px;
     }
     .nav {
-      float: none !important;
-      display: block;
-      margin-bottom: 10px;  
-      margin-right: 0;
-      margin-left: 0;   
-      
+    	float: none !important;
+    	display: block;
+    	margin-bottom: 10px;  
+    	margin-right: 0;
+    	margin-left: 0;  	
+    	
       > li,
       > li.dropdown {
         &:hover {
@@ -693,15 +694,15 @@
         display: inline !important;
       }
       li {
-        display: block;
+	      display: block;
       }
       a {
-        display: block !important;
+	      display: block !important;
       }
     }
 
     .nav-collapse {
-      width: 100%;
+    	width: 100%;
       .clearfix();
       
       .navbar-search {

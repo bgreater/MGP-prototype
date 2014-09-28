@@ -10,9 +10,9 @@ path: /MGP-prototype/
 
     <!-- Loading Flat UI -->
     <link rel="stylesheet" href="js/flexslider/flexslider.css" type="text/css" media="screen" />
-    <link href="{{ page.path }}docs/assets/css/docs.css" rel="stylesheet">
-    <link href="{{ page.path }}dist/css/vendor/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ page.path }}bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="{{ page.path }}css/mgp-main.css" rel="stylesheet">
+    <link href="{{ page.path }}css/glyphicons-mgp.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600,700' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="{{ page.path }}images/favicon.ico">
 
@@ -38,8 +38,7 @@ path: /MGP-prototype/
     <!-- End Copied  -->
 
     <!-- Load JS here for greater good =============================-->    
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="{{ page.path }}dist/js/vendor/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="{{ page.path }}js/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="{{ page.path }}js/jquery.ui.touch-punch.min.js"></script>
     <script src="{{ page.path }}js/bootstrap.min.js"></script>
@@ -52,16 +51,13 @@ path: /MGP-prototype/
         $('.flexslider').flexslider();
       });
     </script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="{{ page.path }}dist/js/flat-ui-pro.js"></script>
-    <script src="{{ page.path }}docs/assets/js/prettify.js"></script>
-    <script src="{{ page.path }}docs/assets/js/application-docs.js"></script>
-    <script>
-      videojs.options.flash.swf = "{{ page.path }}dist/js/vendors/video-js.swf"
-    </script>
 
+    <script src="{{ page.path }}js/flatui-checkbox.js"></script>
+    <script src="{{ page.path }}js/flatui-radio.js"></script>
     <script src="{{ page.path }}js/jquery.tagsinput.js"></script>
     <script src="{{ page.path }}js/jquery.placeholder.js"></script>
+    <script src="{{ page.path }}bootstrap/js/google-code-prettify/prettify.js"></script>
+    <script src="{{ page.path }}js/application.js"></script>
     <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
     <script type="text/javascript">stLight.options({publisher: "c2d0dd1f-e3b8-43a2-9ee8-a76fd80a3431"}); </script>
   </body>

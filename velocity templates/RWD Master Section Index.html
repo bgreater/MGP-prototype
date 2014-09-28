@@ -1,6 +1,3 @@
-#if($cms.websiteSection.useContentLayout)##
-$cms.template("RWD Master Content Details")##
-#else##
 ##
 ##
 $cms.template("RWD Header")##
@@ -33,7 +30,7 @@ $cms.template("RWD Header")##
 #foreach($i in [1..4])##
     #set($rowType = "")##
     #set($rowMods = "")##
-    #set($sideBar = $util.newArrayList)##
+    #set($sideBar = "")##
     #set($sideBar = $curSection.rwdRightModules)##
     #set($rowType = $curSection.element("rwdRow${velocityCount}Type"))##  
     #set($rowMods = $curSection.element("rwdRow${velocityCount}Mods"))##
@@ -126,6 +123,5 @@ $cms.template("RWD Display Middle Row Modules")
 ##
 $cms.template("RWD Footer")
 
-#end##
 
 
